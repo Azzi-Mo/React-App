@@ -1,11 +1,17 @@
 import React from "react";
-class WelcomClass extends React.Component
-{
- render()
- {
- return (
-    <h1>Hello {this.props.title}</h1>
+class WelcomClass extends React.Component {
+  constructor(props) {
+    super(props);
 
- ) }
+    this.state = {
+      Fname: "FristState",
+    };
+  }
+  // state = {
+  //     Fname: 'FristState'
+  // }
+  render() {
+    return <h1>Hello {this.state.Fname}</h1>;
+  }
 }
-export default WelcomClass
+export default WelcomClass;
