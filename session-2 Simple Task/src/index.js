@@ -1,23 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 // import App from './App';
-import NavBar from './Componenet/NavBar';
-import Slider from './Componenet/Slider';
-import './Componenet/Css Style/MainStyle.css'
-import reportWebVitals from './reportWebVitals';
-import CardInfo from './Componenet/Cardinfo';
+import NavBar from "./Componenet/NavBar";
+import Slider from "./Componenet/Slider";
+import "./Componenet/Css Style/MainStyle.css";
+import reportWebVitals from "./reportWebVitals";
+import CardInfo from "./Componenet/Cardinfo";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { BrowserRouter } from "react-router-dom";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode> 
-  <section className='contain'>
-  <NavBar />
-   <Slider/>
-   <CardInfo/>
-   </section>
- 
-
+  <React.StrictMode>
+    <BrowserRouter>
+      <section className="contain">
+        <NavBar />
+        <Slider />
+        <CardInfo />
+      </section>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
