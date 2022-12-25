@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 function NavBar(props) {
   return (
     <>
@@ -27,9 +27,9 @@ function NavBar(props) {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/#">
+                <Link className="nav-link" to="/CardInfo">
                   Features
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/#">
