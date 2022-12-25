@@ -1,7 +1,7 @@
-function MyApp(){
+function MyApp(props){
     return(
 
-        <h1>Hello My App </h1>
+        <h1>Hello {props.title} </h1>
     )
 }
 export default MyApp
