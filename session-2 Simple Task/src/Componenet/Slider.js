@@ -2,14 +2,16 @@ import React from "react";
 import img1 from './imgs/pexels-photo-1314584.webp'
 import img2 from './imgs/pexels-photo-1698482.webp'
 import img3 from './imgs/pexels-photo-5203196.jpeg'
+import './Css Style/MainStyle.css'
 
 function Slider() {
   return (
     <>
-      <div style={{height:'100vh'}}
+      <div 
         id="carouselExampleControls"
-        class="carousel slide"
+        class="carousel slide style"
         data-ride="carousel"
+        
       >
         <div class="carousel-inner">
           <div class="carousel-item active">
