@@ -6,6 +6,7 @@ import NavBar from './Componenet/NavBar';
 import Slider from './Componenet/Slider';
 import './Componenet/Css Style/MainStyle.css'
 import reportWebVitals from './reportWebVitals';
+import CardInfo from './Componenet/Cardinfo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,6 +14,7 @@ root.render(
   <section className='contain'>
   <NavBar />
    <Slider/>
+   <CardInfo/>
    </section>
  
 
