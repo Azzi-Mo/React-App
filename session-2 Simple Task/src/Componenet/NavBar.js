@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 function NavBar(props) {
   return (
     <>
+    {/* download this book u should read it : the almanack of naval ravikant */}
       <div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="/#">
