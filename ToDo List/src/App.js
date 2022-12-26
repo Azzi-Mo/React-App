@@ -10,8 +10,6 @@ import "./App.css";
 function App() {
   // tasks todo list state
   const [toDo, setTodo] = useState([
-    // { id: 1, title: "task 1", status: true },
-    // { id: 2, title: "task 2", status: false },
   ]);
 
   // temp state
