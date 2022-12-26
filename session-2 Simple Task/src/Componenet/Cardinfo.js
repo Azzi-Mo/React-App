@@ -10,7 +10,8 @@ function CardInfo() {
   }, []);
   return (
     <>
-      <section>
+
+      <section className="">
         {products.map((product) => {
           return (
             <>
