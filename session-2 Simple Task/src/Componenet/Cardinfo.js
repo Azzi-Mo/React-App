@@ -11,7 +11,7 @@ function CardInfo() {
   return (
     <>
 
-      <section className="">
+      <section className="Sec_Handler">
         {products.map((product) => {
           return (
             <>
