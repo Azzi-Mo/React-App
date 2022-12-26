@@ -10,6 +10,18 @@
 }
 .Sec_Handler {
 }
+
+@media (max-width: 767px) {
+   .contain {
+     width: 750px;
+   }
+   .Sec_Handler {
+     display: grid;
+     grid-template-columns: [] 40% [] 40%[];
+     margin:  0 auto;
+     justify-content: space-between;
+   }
+ }
 @media (min-width: 768px) {
   .contain {
     width: 750px;
@@ -42,7 +54,7 @@
     display: grid;
     grid-template-columns: [] [] [];
   }
-  .Sec_Handler {
+    .Sec_Handler {
    display: grid;
    grid-template-columns: [] 30% [] 30%[]30%;
    margin:  0 auto;

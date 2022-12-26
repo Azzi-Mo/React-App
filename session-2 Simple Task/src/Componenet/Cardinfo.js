@@ -26,7 +26,7 @@ function CardInfo() {
                   <h5 className="card-title">{product.category}</h5>
                   <p className="card-text">{product.title}</p>
                   <a href="/#" className="btn btn-primary">
-                    Go somewhere
+                    Buy
                   </a>
                 </div>
               </div>
