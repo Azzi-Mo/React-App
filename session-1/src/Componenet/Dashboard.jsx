@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Nav from "./Nav";
+import { Link } from "react-router-dom";
 function MyApp(props) {
 
 
@@ -13,9 +13,8 @@ function MyApp(props) {
 
   return (
     <>
-      <Nav />
       <button type="button" className="btn btn-success">
-        Add Product
+        <Link style={{color:"white",textDecoration:"none"}} to={'/AddForm'}>Add Product</Link>
       </button>
 
       <table className="table">

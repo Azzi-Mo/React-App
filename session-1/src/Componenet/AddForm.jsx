@@ -37,3 +37,5 @@ function AddForm() {
     </>
   );
 }
+
+export default AddForm
