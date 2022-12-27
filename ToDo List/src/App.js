@@ -95,7 +95,9 @@ function App() {
               >
                 Update
               </button>
-              <button className="btn btn-lg btn-warning">Cancle</button>
+              <button 
+              onClick={Cancelupdate}
+              className="btn btn-lg btn-warning">Cancle</button>
             </div>
           </div>
         </>
