@@ -1,5 +1,4 @@
-body
-{
+body {
   background: #333;
   color: white;
 }
@@ -7,24 +6,20 @@ body
   text-align: center;
 }
 
-.taskBg
-{
+.taskBg {
   background-color: #555;
   border-radius: 6px;
   margin-bottom: 20px;
-  padding: 10px 140 px 10px 15px ;
+  padding: 10px 140 px 10px 15px;
   text-align: left;
   font-size: 22px;
   position: relative;
-  
 }
-.taskBg div{
+.taskBg div {
   display: flex;
   align-items: center;
-
 }
-.taskNumber
-{
+.taskNumber {
   color: #999;
   border: 1px solid #999;
   border-radius: 50%;
@@ -36,43 +31,33 @@ body
   margin-right: 8px;
   align-items: center;
   justify-content: center;
-
 }
-.taskBg  .tasktext
-{
+.taskBg .tasktext {
   flex: 1;
 }
-.taskBg .done .tasktext
- {
-
-
+.taskBg .done .tasktext {
   text-decoration: line-through;
   opacity: 0.3;
+}
 
- }
- 
- .taskBg .iconsWrap
- {
+.taskBg .iconsWrap {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 15px;
   width: auto;
   display: inline-block;
- }
+}
 
- .taskBg .iconsWrap span
- {
+.taskBg .iconsWrap span {
   display: inline-block;
   margin: 0px 10px;
   cursor: pointer;
   color: #00ff89;
- }
- .taskBg .iconsWrap span:hover
- {
+}
+.taskBg .iconsWrap span:hover {
   color: yellow;
- }
- .mr-20
- {
+}
+.mr-20 {
   margin-right: 20px;
- }
+}
