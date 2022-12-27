@@ -11,7 +11,7 @@ class WelcomClass extends React.Component {
   //     Fname: 'FristState'
   // }
   render() {
-    return <h1>Hello {this.state.Fname}</h1>;
+    return <h1 className="container">Hello {this.state.Fname}</h1>;
   }
 }
 export default WelcomClass;

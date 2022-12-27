@@ -1,17 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
 // import App from './App';
-import MyApp from './Componenet/FuncComponent';
-import reportWebVitals from './reportWebVitals';
-import WelcomClass from './Componenet/ClassComponent';
+import MyApp from "./Componenet/Dashboard";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode> 
-   <MyApp title='func component'/>
-   <WelcomClass title='class pomponenet'/>
-
+  <React.StrictMode>
+    <MyApp title="func component" />
   </React.StrictMode>
 );
 
