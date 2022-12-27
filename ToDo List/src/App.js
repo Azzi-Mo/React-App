@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
   faPen,
-  faTrachCan,
+  faAddressBook
 } from '@fortawesome/free-solid-svg-icons';
 import "./App.css";
 function App() {
@@ -44,6 +44,7 @@ function App() {
 
       {toDo && toDo.length ? '' : 'No Tasks...'}
       {toDo && toDo 
+      .sort((a,b)=> a.id > b.id ? 1 : -1)
       .map((task , index) => {
         return (
           <React.Fragment>
@@ -65,7 +66,7 @@ function App() {
 
               </span>
               <span>
-              <FontAwesomeIcon icon={faTrachCan}/>
+              <FontAwesomeIcon icon={faAddressBook}/>
 
               </span>
 
