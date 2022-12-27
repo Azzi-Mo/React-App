@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
   faPen,
-  faAddressBook
-} from '@fortawesome/free-solid-svg-icons';
+  faAddressBook,
+} from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 function App() {
   // tasks todo list state
@@ -34,52 +34,70 @@ function App() {
   const updateTask = () => {};
 
   return (
-
     <div className="container App">
-      <br/><br/>
-      <h2/>To Do List App (ReactJS) <h2/>
-      <br/><br/>
+      <br />
+      <br />
+      <h2 />
+      To Do List App (ReactJS) <h2 />
+      <br />
+      <br />
 
+ 
+      {/* update Task  */}
+      <div className="row">
+        <div className="col">
+          <input className="form-control form-control-lg"/>
+        </div>
+        <div className="col-auto">
+          <button className="btn btn-lg btn-success mr-20">Update</button>
+          <button className="btn btn-lg btn-warning">Cancle</button>
+        </div>
+      </div>
+
+     {/* add TASK */}
+
+     <div className="row">
+        <div className="col">
+          <input className="form-control-lg"/>
+        </div>
+        <div className="col-auto">
+          <button className="btn btn-lg btn-success">Add Task</button>
+        </div>
+     </div>
+       <br/>
       {/* Display ToDos */}
-
-      {toDo && toDo.length ? '' : 'No Tasks...'}
-      {toDo && toDo 
-      .sort((a,b)=> a.id > b.id ? 1 : -1)
-      .map((task , index) => {
-        return (
-          <React.Fragment>
-          
-          <div className="col taskBg">
-
-             <div className={task.status ? 'done': ''}>
-
-             <span className="taskNumber">{index+1}</span>
-             <span className="tasktext">{task.title}</span>
-
-             </div>
-             <div className="iconsWrap">
-              <span>
-                <FontAwesomeIcon icon={faCircleCheck}/>
-              </span>
-              <span>
-              <FontAwesomeIcon icon={faPen}/>
-
-              </span>
-              <span>
-              <FontAwesomeIcon icon={faAddressBook}/>
-
-              </span>
-
-             </div>
-
-          </div>
-          </React.Fragment>
-        )
-      })}
-
+      {toDo && toDo.length ? "" : "No Tasks..."}
+      {toDo &&
+        toDo
+          .sort((a, b) => (a.id > b.id ? 1 : -1))
+          .map((task, index) => {
+            return (
+              <React.Fragment>
+                <div className="col taskBg">
+                  <div className={task.status ? "done" : ""}>
+                    <span className="taskNumber">{index + 1}</span>
+                    <span className="tasktext">{task.title}</span>
+                  </div>
+                  <div className="iconsWrap">
+                    <span title='Completed / Not Completed'>
+                     
+                      <FontAwesomeIcon icon={faCircleCheck} />
+                    </span>
+                    <span title='Edit'>
+                    
+                      <FontAwesomeIcon icon={faPen} />
+                    </span>
+                    <span title='Delet'>
+                  =
+                      <FontAwesomeIcon icon={faAddressBook} />
+                    </span>
+                  </div>
+                </div>
+              </React.Fragment>
+            );
+          })}
     </div>
-
-  )
+  );
 }
 
 export default App;
