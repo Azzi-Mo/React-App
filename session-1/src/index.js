@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
-import { Route, Router, Routes } from "react-router-dom";
 import AddForm from "./Componenet/AddForm.jsx";
 
 import reportWebVitals from "./reportWebVitals";
@@ -13,16 +12,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App />
-      <Routes>
-        <Route
-          path="/AddForm"
-          element={
-            <>
-              <AddForm />
-            </>
-          }
-        ></Route>
-      </Routes>
     </BrowserRouter>
   </React.StrictMode>
 );

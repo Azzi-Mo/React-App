@@ -1,21 +1,17 @@
 import "./App.css";
 import Dashboard from "./Componenet/Dashboard.jsx";
-import NavBar from  './Componenet/Nav.jsx'
+import NavBar from "./Componenet/Nav.jsx";
 import AddForm from "./Componenet/AddForm";
 import { Route, Router, Routes } from "react-router-dom";
-
 
 function App() {
   return (
     <>
-       <NavBar/>
-      <Dashboard />
+      <NavBar />
       <Routes>
-        <Route path="/AddForm" element={
-          <>
-            <AddForm/>
-          </>
-        } />
+      <Route path="Home" element={ <> <Dashboard /> </>  } />
+
+        <Route path="AddForm" element={ <> <AddForm /> </>  } />
       </Routes>
     </>
   );
