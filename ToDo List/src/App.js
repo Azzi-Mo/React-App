@@ -67,7 +67,14 @@ function App() {
 
 
   // update task
-  const updateTask = () => {};
+  const updateTask = () => {
+
+     let filterRecords  = [...toDo].filter( task => task.id !== updateData.id);
+     let updatedObject = [...filterRecords , updateData]
+     setTodo(updatedObject);
+     setUpdateData('')
+
+  };
 
   return (
     <div className="container App">
@@ -88,7 +95,9 @@ function App() {
           className="form-control form-control-lg" />
         </div>
         <div className="col-auto">
-          <button className="btn btn-lg btn-success mr-20">Update</button>
+          <button 
+          onClick={updateTask}
+          className="btn btn-lg btn-success mr-20">Update</button>
           <button className="btn btn-lg btn-warning">Cancle</button>
         </div>
       </div>
