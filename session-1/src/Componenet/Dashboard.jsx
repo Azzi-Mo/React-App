@@ -1,8 +1,16 @@
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import Nav from './Nav'
 function MyApp(props) {
+
+  useEffect(()=>
+  {
+    fetch('')
+  })
+
+
   return (
     <>
+    <Nav/>
       <button type="button" class="btn btn-success">
         Add Product
       </button>
@@ -14,6 +22,7 @@ function MyApp(props) {
             <th scope="col">First</th>
             <th scope="col">Last</th>
             <th scope="col">Handle</th>
+            <th scope="col">Handle</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +31,12 @@ function MyApp(props) {
             <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
+            <td>
+              <button type="button" class="btn btn-primary" >view</button>
+              <button type="button" class="btn btn-success" >Edit</button>
+              <button type="button" class="btn btn-danger" >delet</button>
+
+            </td>
           </tr>
         </tbody>
       </table>
