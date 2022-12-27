@@ -5,6 +5,7 @@ import {
   faCircleCheck,
   faPen,
   faAddressBook,
+  faTasksAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
 function App() {
@@ -19,13 +20,37 @@ function App() {
   const [updateData, setUpdateData] = useState("");
 
   // Ddd task
-  const addTask = () => {};
+  const addTask = () => {
+    if (newTask) {
+      let num = toDo.length + 1;
+      let newEntry = { id: num, title: newTask, statsu: false };
+      setTodo([...toDo, newEntry]);
+      setNewTask("");
+    }
+  };
 
   // Delet task
-  const DeletTask = (id) => {};
+  const DeletTask = (id) => {
+    let newTask = toDo.filter(task => task.id !== id)
+    setTodo(newTask)
+  };
 
   // Mark task as done or completed
-  const MarkDone = (id) => {};
+  const MarkDone = (id) => {
+    let newTask = toDo.map(task => {
+      if(task.id === id )
+      {
+        return (
+          {...task,status: !task.status}
+        )
+      }
+      return task;
+    })
+    setTodo(newTask)
+  };
+
+
+
   // Cancel update
   const Cancelupdate = (id) => {};
   // Change task for update
@@ -41,30 +66,32 @@ function App() {
       To Do List App (ReactJS) <h2 />
       <br />
       <br />
-
- 
       {/* update Task  */}
       <div className="row">
         <div className="col">
-          <input className="form-control form-control-lg"/>
+          <input className="form-control form-control-lg" />
         </div>
         <div className="col-auto">
           <button className="btn btn-lg btn-success mr-20">Update</button>
           <button className="btn btn-lg btn-warning">Cancle</button>
         </div>
       </div>
-
-     {/* add TASK */}
-
-     <div className="row">
+      {/* add TASK */}
+      <div className="row">
         <div className="col">
-          <input className="form-control-lg"/>
+          <input
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+            className="form-control-lg"
+          />
         </div>
         <div className="col-auto">
-          <button className="btn btn-lg btn-success">Add Task</button>
+          <button onClick={addTask} className="btn btn-lg btn-success">
+            Add Task
+          </button>
         </div>
-     </div>
-       <br/>
+      </div>
+      <br />
       {/* Display ToDos */}
       {toDo && toDo.length ? "" : "No Tasks..."}
       {toDo &&
@@ -79,16 +106,18 @@ function App() {
                     <span className="tasktext">{task.title}</span>
                   </div>
                   <div className="iconsWrap">
-                    <span title='Completed / Not Completed'>
-                     
+                    <span title="Completed / Not Completed"
+                    onClick={(e) => MarkDone(task.id)}
+                    >
                       <FontAwesomeIcon icon={faCircleCheck} />
                     </span>
-                    <span title='Edit'>
-                    
+                    <span title="Edit">
                       <FontAwesomeIcon icon={faPen} />
                     </span>
-                    <span title='Delet'>
-                  =
+                    <span title="Delet" 
+                    onClick={()=> DeletTask(task.id)}
+                    >
+                      
                       <FontAwesomeIcon icon={faAddressBook} />
                     </span>
                   </div>
