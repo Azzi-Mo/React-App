@@ -3,7 +3,9 @@ import { useState } from "react";
 function MyApp(props) {
   return (
     <>
-        <button type="button" class="btn btn-success">Add Product</button>
+      <button type="button" class="btn btn-success">
+        Add Product
+      </button>
 
       <table class="table">
         <thead>
