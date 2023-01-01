@@ -8,3 +8,31 @@
     padding-bottom: 80px;
     text-align: center;
 }
+.Blogs .container .row >:first-child
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.Blogs .container .row >:last-child
+{
+ display: grid;
+ grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+ gap: 40px;
+
+}
+
+.Blogs .container .row >:last-child .box
+{
+
+    text-align: left;
+}
+
+
+.Blogs .container .row >:last-child .box img
+{
+ width: 100%;
+ max-width: 100%;
+ border-radius: 20px;
+ max-lllheight: 300px
+
+}

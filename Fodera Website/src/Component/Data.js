@@ -7,22 +7,23 @@ const Data = [
         img:Blog1,
         title:"Rainbow Vegetable Sandwich",
         time:"Time: 15 - 20 Minutes | Serves: 1",
-        oldPrice:"$11.70"
+        oldPrice:"$11.70",
+        newPrice:"$10.50"
     },
     {
         img:Blog2,
         title:"Vegetarian Burger",
         time:"Time: 15 - 20 Minutes | Serves: 1",
-        oldPrice:"$10.50"
-
+        oldPrice:"$10.50",
+        newPrice:"$9.20"
 
     },
     {
         img:Blog3,
         title:"Raspberry Stuffed French Toast",
         tile:"Time: 15 - 20 Minutes | Serves: 1",
-        oldPrice:"$13.20"
-
+        oldPrice:"$13.20",
+        newPrice:"$12.50"
 
     }
 ]

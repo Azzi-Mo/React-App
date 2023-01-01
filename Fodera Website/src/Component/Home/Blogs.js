@@ -1,8 +1,7 @@
+import Data from "../Data.js";
 import "../Css_Style/Blogs.css";
-import Data from '../Data.js'
 const Blogs = () => {
-
-    console.log(Data);
+  console.log(Data);
 
   return (
     <>
@@ -20,20 +19,28 @@ const Blogs = () => {
               </p>
             </div>
             <div className="col-md-12 col-lg-12">
-              <div className="box">
-                <div>
-                  <img></img>
-                </div>
-                <div>
-                  <h3>Rainbow Vegetable Sandwich</h3>
-                  <p>Time: 15 - 20 Minutes | Serves: 1</p>
-                  <span>
-                    $10.50<h6></h6>$11.70
-                  </span>
-                </div>
-              </div>
+              {Data.map((item) => {
+                return (
+                  <>
+                    <div className="box" key={item.id}>
+                      <div>
+                        <img src={item.img} alt="img"></img>
+                      </div>
+                      <div>
+                        <h3>{item.title}</h3>
+                        <p>{item.time}</p>
+                        <span>
+                          {item.newPrice}
+                          <h6></h6>
+                          {item.oldPrice}
+                        </span>
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
 
-              <div className="box">
+              {/* <div className="box">
                 <div>
                   <img></img>
                 </div>
@@ -44,9 +51,9 @@ const Blogs = () => {
                     $10.50<h6></h6>$11.70
                   </span>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="box">
+              {/* <div className="box">
                 <div>
                   <img></img>
                 </div>
@@ -57,7 +64,7 @@ const Blogs = () => {
                     $10.50<h6></h6>$11.70
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
