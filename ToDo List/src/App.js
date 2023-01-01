@@ -16,7 +16,7 @@ function App() {
   const [newTask, setNewTask] = useState("");
   const [updateData, setUpdateData] = useState("");
 
-  // Ddd task
+  // add task
   const addTask = () => {
     if (newTask) {
       let num = toDo.length + 1;
