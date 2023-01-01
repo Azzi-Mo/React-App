@@ -2,7 +2,7 @@
 {
 
     text-align: left;
-    height: 400px;
+    height: auto;
 }
 .ingredients img{
 
@@ -14,4 +14,10 @@
     height: auto;
 
 
+}
+.ingredients .container
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    /* text-align: center; */
 }

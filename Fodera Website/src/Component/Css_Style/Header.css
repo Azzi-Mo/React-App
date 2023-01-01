@@ -44,6 +44,9 @@ header .container > div h1
 header .container > div button
 {
   box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  height: 50px;
+  width: 35%;
+
 }
 @media(max-width:767px)
 {

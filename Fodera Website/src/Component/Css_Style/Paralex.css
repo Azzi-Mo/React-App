@@ -1,0 +1,16 @@
+.paralex
+{
+    background: url("../imgs/paralex.jpg") center no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+    height: auto;
+}
+.paralex .container 
+{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+}
