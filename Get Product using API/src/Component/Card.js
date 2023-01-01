@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
 // import CardInfo from "./CardInfo";
 function Card(props) {
-    const {prod} = props;
-  return(
+  const { prod } = props;
+  return (
     <>
-      <div className="card" style={{width: '18rem'}}>
-      <img className="card-img-top" src={prod.image} alt="Card image cap"/>
+      <div className="card" style={{ width: "18rem" }}>
+        <img className="card-img-top" src={prod.image} alt="Card image cap" />
         <div className="card-body">
           <h5 className="card-title">{prod.title}</h5>
           <p className="card-text">
