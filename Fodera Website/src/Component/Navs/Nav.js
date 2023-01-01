@@ -7,7 +7,8 @@ import logo from "../imgs/logo.png";
 
 const Navs = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <section className="NavBar">
+      <Navbar bg="light" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} alt="logo"></img>
@@ -29,6 +30,7 @@ const Navs = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
+    </section>
   );
 };
 

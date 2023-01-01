@@ -13,15 +13,15 @@ const ingredients = () =>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam et purus a odio finibus bibendum in sit amet leo. Mauris feugiat erat tellus.Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts</p>
 
               <span>
-              <i></i>
+              <i className="fa-solid fa-user"></i>
               <p></p>
               </span>
               <span>
-              <i></i>
+              <i className="fa-solid fa-user"></i>
               <p></p>
               </span>
               <span>
-              <i></i>
+              <i className="fa-solid fa-user"></i>
               <p></p>
               </span>
 
