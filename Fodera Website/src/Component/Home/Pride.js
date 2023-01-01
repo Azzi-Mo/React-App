@@ -10,7 +10,7 @@ const Pride = () =>
           <div className="row">
           
            <div className="col-md-6">
-           <img src={pridimg}></img>
+           <img src={pridimg} alt='pridimg'></img>
            </div>
 
            <div className="col-md-6">

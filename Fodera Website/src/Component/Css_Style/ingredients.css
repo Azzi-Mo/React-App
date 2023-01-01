@@ -1,0 +1,17 @@
+.ingredients
+{
+
+    text-align: left;
+    height: 400px;
+}
+.ingredients img{
+
+    background-size: cover;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    text-align:right;
+    height: auto;
+
+
+}
