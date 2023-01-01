@@ -1,11 +1,13 @@
-import Header from "./Header"
-
-function Home()
-{
-    return(
-        <>
-        <Header/>
-        </>
-    )
+import Header from "./Header";
+import "../Css_Style/Home.css";
+import SecNumber from "./SecNumber";
+function Home() {
+  return (
+    <>
+      <Header />
+      <SecNumber/>
+     
+    </>
+  );
 }
-export default Home
+export default Home;
