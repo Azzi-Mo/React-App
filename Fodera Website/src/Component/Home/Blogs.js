@@ -1,5 +1,9 @@
 import "../Css_Style/Blogs.css";
+import Data from '../Data.js'
 const Blogs = () => {
+
+    console.log(Data);
+
   return (
     <>
       <section className="Blogs">
