@@ -4,6 +4,7 @@ import Pride from "./Pride";
 import Ingred from './ingredients'
 import "../Css_Style/Home.css";
 import Paralex from "./paralex";
+import Blogs from "./Blogs";
 function Home() {
   return (
     <>
@@ -12,7 +13,7 @@ function Home() {
       <Pride/>
       <Ingred/>
       <Paralex/>
-
+       <Blogs/>
     </>
   );
 }
