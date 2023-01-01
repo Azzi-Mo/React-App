@@ -1,5 +1,10 @@
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  
 }
 header {
   background: url("../imgs/3.jpg") center no-repeat;
@@ -9,7 +14,6 @@ header {
   text-align: left;
   height: calc(100vh - 117px);
   display: flex;
-  /* align-content: center; */
 }
 
 header .container 
@@ -21,9 +25,10 @@ header .container
 header .container > div h1
 
 {
-
+  color: #43121d;
   line-height: 1.5;
-  font-weight: bold;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
   font-size: 30px;
   
 }

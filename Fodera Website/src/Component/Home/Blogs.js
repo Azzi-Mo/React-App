@@ -26,14 +26,18 @@ const Blogs = () => {
                       <div>
                         <img src={item.img} alt="img"></img>
                       </div>
-                      <div>
+                      <div className="info">
                         <h3>{item.title}</h3>
                         <p>{item.time}</p>
                         <span>
                           {item.newPrice}
-                          <h6></h6>
+                          <h6>
                           {item.oldPrice}
+                          </h6>
                         </span>
+                        <div class="bottom-wrap">
+                              <a href="" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modalContactForm">Order Now</a>
+                            </div>
                       </div>
                     </div>
                   </>

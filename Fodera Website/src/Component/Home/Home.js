@@ -5,6 +5,7 @@ import Ingred from './ingredients'
 import "../Css_Style/Home.css";
 import Paralex from "./paralex";
 import Blogs from "./Blogs";
+import Testimonials from "./Testimonials";
 function Home() {
   return (
     <>
@@ -14,6 +15,7 @@ function Home() {
       <Ingred/>
       <Paralex/>
        <Blogs/>
+       <Testimonials/>
     </>
   );
 }

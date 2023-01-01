@@ -21,7 +21,7 @@ const Data = [
     {
         img:Blog3,
         title:"Raspberry Stuffed French Toast",
-        tile:"Time: 15 - 20 Minutes | Serves: 1",
+        time:"Time: 15 - 20 Minutes | Serves: 1",
         oldPrice:"$13.20",
         newPrice:"$12.50"
 
