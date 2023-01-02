@@ -1,20 +1,14 @@
 
-*
-{
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto', sans-serif;
-}
+
 .paralex
 {
-    background: url("../imgs/paralex.jpg") center no-repeat;
+    background: url("../imgs/paralex.jpg") center no-repeat fixed;
     background-size: cover;
     width: 100%;
     max-width: 100%;
     text-align: left;
     display: flex;
-    height: auto;
+    height: 450px;
 }
 .paralex .container 
 {
@@ -22,4 +16,36 @@
     padding-bottom: 80px;
     text-align: center;
 
+}
+.paralex .container .row h1
+{
+    color: #a82d49;
+}
+@media(min-width:991px)
+{
+    .paralex .container .row h1
+    {
+        padding: 0 130px;
+        font-family: "Quicksand", sans-serif;
+
+    }
+}
+@media(max-width:767px)
+{
+    .paralex .container .row p
+    {
+        padding: 0 50px;
+        font-family: "Quicksand", sans-serif;
+        
+    }
+}
+@media(min-width:767px)
+{
+    .paralex .container .row p
+    {
+        padding: 0 160px;
+        font-family: "Quicksand", sans-serif;
+        /* color: red; */
+
+    }
 }

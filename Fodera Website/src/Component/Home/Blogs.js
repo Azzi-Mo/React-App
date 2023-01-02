@@ -36,7 +36,7 @@ const Blogs = () => {
                           </h6>
                         </span>
                         <div class="bottom-wrap">
-                              <a href="" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modalContactForm">Order Now</a>
+                              <a href="/#" className="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modalContactForm">Order Now</a>
                             </div>
                       </div>
                     </div>

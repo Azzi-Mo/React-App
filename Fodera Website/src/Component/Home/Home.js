@@ -8,7 +8,7 @@ import Testimonials from "./Testimonials";
 import Frequent from "./Frequent";
 import Parallax from "./Parallax";
 import Subscribe from "./Subscribe";
-import "../Css_Style/Home.css";
+// import "../Css_Style/Home.css";
 
 
 function Home() {

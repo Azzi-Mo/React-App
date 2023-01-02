@@ -20,5 +20,31 @@
     background-size: cover;
     width: 100%;
     max-width: 100%;
-    height: auto
+    height: auto;
+    border-radius: 10px;
+}
+.pride .container div:last-child
+{
+    padding:0 20px;
+
+}
+.pride .container div:last-child h1
+{
+ font-size: 35px;
+ line-height: 1.5;
+ color: #43121d
+}
+.pride .container div:last-child p
+{
+    color: #555555
+}
+.pride .container div:last-child  button
+{
+    background: #a82d49;
+    border: 3px solid #a82d49;
+    color: #fff;
+    width: 50%;
+    height: 50px;
+    border: none;
+    margin: 25px 0;
 }
