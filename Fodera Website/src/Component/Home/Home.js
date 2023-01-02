@@ -7,7 +7,7 @@ import Blogs from "./Blogs";
 import Testimonials from "./Testimonials";
 import Frequent from "./Frequent";
 
-import "../Css_Style/Home.css";
+
 import Parallax from "./Parallax";
 
 function Home() {

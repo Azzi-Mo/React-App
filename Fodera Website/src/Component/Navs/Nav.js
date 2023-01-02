@@ -12,7 +12,7 @@ const Navs = () => {
 
       <Navbar bg="light" expand="lg">
 
-        <Container>
+        <Container className="container">
           <Navbar.Brand href="#home">
             <img src={logo} className='logo' alt="logo"></img>
           </Navbar.Brand>

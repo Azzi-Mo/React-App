@@ -1,0 +1,37 @@
+* {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+
+}
+@media (max-width: 767px) {
+  .ingredients .container .row button 
+  {
+    width: 40%;
+    height: 50px;
+    font-size: 20px;
+  }
+  .pride .container .row button
+  {
+    width: 40%;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+h1{
+  color: #43121d;
+  line-height: 1.5;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+}
+p
+{
+  color: #555;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  font-family: "Quicksand", sans-serif;
+}

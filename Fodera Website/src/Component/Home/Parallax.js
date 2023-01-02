@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import '../Css_Style/Paralex2.css'
+import '../Css_Style/Parallax.css'
 const Parallax = () =>
 {
     return (

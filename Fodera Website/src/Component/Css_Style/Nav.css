@@ -4,8 +4,7 @@
     .NavBar .container
     {
      max-height: 80px;
-     border: 1px solid red;
-     position: relative;
+
     }
 
 }
@@ -16,8 +15,9 @@
     background-color: blue;
 }
 
-.NavBar .navbar-brand
-{
-    height: 100%;
 
-} */
+ .container a img
+{
+    max-height: 100%;
+
+}  */

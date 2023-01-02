@@ -1,10 +1,4 @@
-* {
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Oswald", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Roboto", sans-serif;
-}
+
 header {
   background: url("../imgs/3.jpg") center no-repeat;
   background-size: cover;
@@ -19,17 +13,7 @@ header .container {
   display: flex;
   align-items: center;
 }
-header .container > div h1 {
-  color: #43121d;
-  line-height: 1.5;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-}
 
-header .container > div p {
-  color: #555555;
-}
 header .container > div button {
   border: none;
   margin: 25px;
