@@ -1,7 +1,5 @@
-
-
 import Carousel from "react-bootstrap/Carousel";
-import '../Css_Style/Testimonials.css'
+import "../Css_Style/Testimonials.css";
 
 function Testimonials() {
   return (
@@ -11,7 +9,6 @@ function Testimonials() {
           <p>Testimonials</p>
           <div className="slider">
             <Carousel>
-
               <Carousel.Item interval={1000}>
                 <img
                   className="d-block w-100"
@@ -25,7 +22,6 @@ function Testimonials() {
                     Nulla vitae elit libero, a pharetra augue mollis interdum.
                   </p>
                 </Carousel.Caption>
-
               </Carousel.Item>
               <Carousel.Item interval={500}>
                 <img
@@ -40,7 +36,6 @@ function Testimonials() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </Carousel.Caption>
-
               </Carousel.Item>
               <Carousel.Item>
                 <img
@@ -57,7 +52,6 @@ function Testimonials() {
                   </p>
                 </Carousel.Caption>
               </Carousel.Item>
-
             </Carousel>
           </div>
         </div>

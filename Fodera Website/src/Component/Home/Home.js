@@ -6,6 +6,8 @@ import "../Css_Style/Home.css";
 import Paralex from "./paralex";
 import Blogs from "./Blogs";
 import Testimonials from "./Testimonials";
+import Frequent from "./Frequent";
+
 function Home() {
   return (
     <>
@@ -16,6 +18,7 @@ function Home() {
       <Paralex/>
        <Blogs/>
        <Testimonials/>
+       <Frequent/>
     </>
   );
 }

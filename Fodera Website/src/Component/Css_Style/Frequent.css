@@ -1,0 +1,40 @@
+.Frequent
+{
+   padding-top: 80px;
+   padding-bottom: 80px;
+}
+.Frequent .container .head
+{
+    color: #43121d;
+    margin-bottom: 15px;
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: 700;
+    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 0.1px;
+    text-align: center;
+    padding: 80px 0;
+}
+.Frequent .container .info
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px ,1fr));
+    gap: 40px;
+}
+.Frequent .container .info span h1
+{
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    color: #43121d;
+    font-family: 'Quicksand', sans-serif;
+}
+.Frequent .container .info span p
+{
+    font-size: 16px;
+    color: #555;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.5px;
+}
