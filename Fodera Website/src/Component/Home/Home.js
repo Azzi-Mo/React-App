@@ -6,9 +6,10 @@ import Paralex from "./paralex";
 import Blogs from "./Blogs";
 import Testimonials from "./Testimonials";
 import Frequent from "./Frequent";
-
-import "../Css_Style/Home.css";
 import Parallax from "./Parallax";
+import Subscribe from "./Subscribe";
+import "../Css_Style/Home.css";
+
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function Home() {
        <Testimonials/>
        <Frequent/>
        <Parallax/>
+       <Subscribe/>
 
     </>
   );
