@@ -1,10 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Oswald', sans-serif;
-  font-family: 'Poppins', sans-serif;
-  font-family: 'Roboto', sans-serif;
-  
+  font-family: "Open Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 header {
   background: url("../imgs/3.jpg") center no-repeat;
@@ -16,70 +15,55 @@ header {
   display: flex;
 }
 
-header .container 
-{
+header .container {
   display: flex;
   align-items: center;
-  
 }
-header .container > div h1
-
-{
+header .container > div h1 {
   color: #43121d;
   line-height: 1.5;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 700;
   font-size: 30px;
-  
 }
 
-header .container > div p
-{
+header .container > div p {
   color: #555555;
 }
-header .container > div button
-{
+header .container > div button {
   border: none;
-  margin: 25px ;
+  margin: 25px;
 }
-header .container > div h1
-{
+header .container > div h1 {
   padding-bottom: 30px;
 }
-header .container > div button
-{
+header .container > div button {
   box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
   height: 50px;
   width: 35%;
-
 }
-@media(max-width:767px)
-{
-  header .container > div h1
-  {
+@media (max-width: 767px) {
+  header .container > div h1 {
     width: 80%;
-
   }
-  header .container > div button
-  {
+  header .container > div P {
+    width: 80%;
+  }
+  header .container > div button {
     display: block;
     width: 50%;
     height: 50px;
     border: none;
     margin: 25px 0;
-    
   }
 }
 
-header .container  button:nth-child(3)
-{
+header .container button:nth-child(3) {
   background: #a82d49;
   border: 3px solid #a82d49;
   color: #fff;
 }
-header .container  button:nth-child(4)
-
-{
+header .container button:nth-child(4) {
   color: #000;
   background-color: #ffffff;
   border: 3px solid #fff;

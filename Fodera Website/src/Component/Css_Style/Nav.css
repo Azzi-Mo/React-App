@@ -1,0 +1,23 @@
+/* 
+@media(max-width:767px)
+{
+    .NavBar .container
+    {
+     max-height: 80px;
+     border: 1px solid red;
+     position: relative;
+    }
+
+}
+
+.NavBar .navbar-brand
+{
+    position: absolute;
+    background-color: blue;
+}
+
+.NavBar .navbar-brand
+{
+    height: 100%;
+
+} */
