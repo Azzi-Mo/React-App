@@ -10,7 +10,7 @@ const Hero = () => {
       
      <HeroVideo src='./assets/hero.mp4' autoPlay muted></HeroVideo>
      <Container>
-        <MainHeading></MainHeading>
+        <MainHeading>Your data is secure with us </MainHeading>
         <HeroText> We provide the best security systems for clients all over the world</HeroText>
         <ButtonWrapper>
             <Link to='signup'>
