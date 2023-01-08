@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import { FaTimes } from "react-icons/fa";
 import { CgMenuRight } from "react-icons/cg";
 import { IconContext } from "react-icons";
@@ -11,7 +11,7 @@ import {
   NavMenu,
   NavLinks,
   NavItem,
-} from "./NavbarStyle.js";
+} from "./NavbarStyles.js";
 import { useLocation, useHistory } from "react-router-dom";
 import { data } from "../../data/NavbarData";
 const Navbar = () => {

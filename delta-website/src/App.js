@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalStyle from "./globalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import Navbar from "./component/Navbar/Navbar";
 // pages
 import HomePage from "./pages/HomePage";
 import PricingPage from "./pages/PricingPage";
@@ -11,6 +11,7 @@ function App() {
   return (
     <Router>
       <GlobalStyle />
+      <Navbar />
       <Switch>
         <Route path="/" exact component={HomePage} />
         <Route path="/pricing" exact component={PricingPage} />
