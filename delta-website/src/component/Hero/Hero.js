@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <HeroSection>
       
-     <HeroVideo src='./assets/hero.mp4'></HeroVideo>
+     <HeroVideo src='./assets/hero.mp4' autoPlay muted></HeroVideo>
      <Container>
         <MainHeading></MainHeading>
         <HeroText> We provide the best security systems for clients all over the world</HeroText>
