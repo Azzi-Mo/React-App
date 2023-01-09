@@ -53,7 +53,7 @@ function Footer() {
 						</FooterLinkItems>
 					))}
 				</FooterGrid>
-				<FooterRights>Delta © 2021</FooterRights>
+				<FooterRights>Delta © 2020</FooterRights>
 			</FooterWrapper>
 		</Section>
 	);
