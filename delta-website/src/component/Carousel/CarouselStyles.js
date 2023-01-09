@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 export const CarouselImage = styled.img`
 	width: 100%;
 	height: 300px;
-	border-radius: 10px 10px 0 0;
+	border-radius: 5px 5px 0 0;
 	object-fit: cover;
 	vertical-align: middle;
 `;
@@ -16,9 +16,10 @@ export const ImageWrapper = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	border-radius: 10px;
+	border-radius: 5px;
 	outline: none;
 	height: 430px;
+	border:1px solid red;
 	@media screen and (min-width: 440px) {
 		border: 1px solid #bebebe;
 	}
@@ -66,7 +67,8 @@ export const CardButton = styled.button`
 	font-weight: 600;
 	margin: auto 0 0 0;
 	border: none;
-	border-radius: 0 0 10px 10px;
+	border-radius: 0 0 5px 5px;
+
 	&:hover {
 		background-color: #112f4a;
 		transition: background-color 0.2s ease-in;
