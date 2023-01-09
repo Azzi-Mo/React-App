@@ -1,5 +1,5 @@
-import React from "react";
-const theme = { color: "red" };
+// import React from "react";
+
 function App() {
   return 
 }
