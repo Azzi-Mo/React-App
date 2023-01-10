@@ -3,6 +3,7 @@ import HomePage from "./Pages/HomePages";
 import GlobalStyle from './globalStyles';
 import Navbar from './Component/Navbar/Navbar'
 import { BrowserRouter as Router , Switch , Route} from "react-router-dom";
+import Footer from "./Component/Footer/Footer";
 function App() {
   return <Router>
 
@@ -11,6 +12,7 @@ function App() {
     <Switch>
       <Route path='/' exact component={HomePage}/>
     </Switch>
+    <Footer/>
 
   </Router>
 }
