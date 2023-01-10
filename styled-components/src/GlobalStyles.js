@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export const Containers = styled.div`
+export const Container = styled.div`
 	width: 100%;
 	max-width: 1300px;
 	margin: 0 auto;

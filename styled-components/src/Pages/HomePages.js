@@ -1,11 +1,8 @@
 import React from 'react'
+import Hero from '../Component/Hero/Hero'
 
 function HomePages() {
-  return (
-    <div>
-       hello home 
-    </div>
-  )
+  return <Hero/>
 }
 
 export default HomePages
