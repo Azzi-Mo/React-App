@@ -5,7 +5,7 @@
 
 }
 .parallax2 {
-    background: url('../imgs/download.jpg') no-repeat center fixed;
+    background: url('../../Data/imgs/download.jpg') no-repeat center fixed;
     background-size: cover;
 }
 
@@ -28,7 +28,7 @@
 .parallax-content2 {
   padding: 70px 0;
   position: relative;
-  background: url("../imgs/download.jpg") no-repeat center fixed;
+  background: url('../../Data/imgs/download.jpg') no-repeat center fixed;
   background-size: cover;
 }
 /* .parallax2 {
