@@ -1,4 +1,4 @@
-import "../Css_Style/Paralex.css";
+import "./ParalexStyles.css";
 const Paralex = () => {
   return (
     <>

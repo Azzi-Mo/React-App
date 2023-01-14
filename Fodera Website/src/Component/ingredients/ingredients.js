@@ -1,5 +1,5 @@
-import imgbyhand from '../imgs/2.png'
-import '../Css_Style/ingredients.css'
+import imgbyhand from '../../../public/imgs/2.png'
+import './ingredientsStyles.css'
 const ingredients = () =>
 {
     return (

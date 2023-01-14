@@ -1,5 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
-import "../Css_Style/Testimonials.css";
+import "./TestimonialsStyles.css";
 
 function Testimonials() {
   return (

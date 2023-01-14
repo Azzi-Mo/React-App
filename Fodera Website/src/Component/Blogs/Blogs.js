@@ -1,4 +1,4 @@
-import Data from "../../Data/Data.js";
+import Data from "../../Data/Data";
 import "./BlogStyles.css";
 const Blogs = () => {
   console.log(Data);

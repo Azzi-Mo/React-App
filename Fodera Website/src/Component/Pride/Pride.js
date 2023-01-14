@@ -1,4 +1,4 @@
-import "../Css_Style/prid.css";
+import "./pridStyles.css";
 import pridimg from "../imgs/1.jpg";
 const Pride = () => {
   return (

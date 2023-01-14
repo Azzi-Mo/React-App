@@ -1,4 +1,4 @@
-import  '../Css_Style/secNumber.css'
+import  './secNumberStyles.css'
 const SecNumber = () =>
 {
     return (
