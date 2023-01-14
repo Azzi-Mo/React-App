@@ -1,5 +1,5 @@
 
-import '../Css_Style/Frequent.css'
+import './FrequentStyles.css'
 
 const Frequent = () => {
   return (

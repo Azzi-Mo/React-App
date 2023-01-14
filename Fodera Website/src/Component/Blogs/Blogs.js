@@ -1,5 +1,5 @@
 import Data from "../../Data/Data.js";
-import "../Css_Style/Blogs.css";
+import "./BlogStyles.css";
 const Blogs = () => {
   console.log(Data);
 
