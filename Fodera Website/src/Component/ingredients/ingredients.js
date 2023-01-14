@@ -1,4 +1,4 @@
-import imgbyhand from '../../../public/imgs/2.png'
+import imgbyhand from '../../Data/imgs/2.png'
 import './ingredientsStyles.css'
 const ingredients = () =>
 {

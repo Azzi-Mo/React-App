@@ -1,5 +1,5 @@
 import "./pridStyles.css";
-import pridimg from "../imgs/1.jpg";
+import pridimg from "../../Data/imgs/1.jpg";
 const Pride = () => {
   return (
     <>
