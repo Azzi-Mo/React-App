@@ -14,6 +14,10 @@ export default function HeroBanner() {
           <Link href='/product/ID'>
             <button type='button'>BUTTON TEXT</button>
           </Link>
+          <div className='desc'>
+            <h5>Descriptions</h5>
+            <p>DESCRIPTION</p>
+          </div>
          </div>
 
        </div>
