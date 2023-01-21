@@ -1,8 +1,8 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-// import {schemaTypes} from './schemas/schema.js'
-import createSchema from './schemas/schema.js'
+import {schemaTypes} from './schemas/schema.js'
+// import createSchema from './schemas/schema.js'
 
 
 export default defineConfig({
@@ -15,6 +15,6 @@ export default defineConfig({
   plugins: [deskTool(), visionTool()],
 
   schema: {
-    types: createSchema,
+    types: schemaTypes,
   },
 })
