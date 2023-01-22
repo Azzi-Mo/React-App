@@ -15,15 +15,14 @@ import {
 
 function Hero() {
   return (
-    <HeroSection>
+    <HeroSection id='hero'>
       <Row justify="center" align="center" height="100%" padding="2rem">
         <Column align="center" mb="10%">
-          <MainHeading>
-            {" "}
-            Every Create Music
+          <MainHeading>Every Create Music </MainHeading>
             <TextWrapper
               color="white"
-              size="clamp(1rem,3vm,1.3rem)"
+              size="clamp(1rem,3vw,1.3rem)"
+              margin="0 0 2rem"
               lineHeight="1.1rem"
               maxwidth='480px'
               align="center"
@@ -45,7 +44,7 @@ function Hero() {
               </Button>
             </ButtonContainer>
 
-          </MainHeading>
+         
         </Column>
       </Row>
     </HeroSection>
