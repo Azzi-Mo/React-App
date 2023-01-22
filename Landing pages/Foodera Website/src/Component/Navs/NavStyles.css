@@ -1,24 +1,37 @@
-/* 
-@media(max-width:767px)
+.NavBar
 {
-    .NavBar .container
-    {
-     max-height: 80px;
-
-    }
+    position: fixed;
+    width: 100%;
+}
+.NavBar a:not(:last-child)
+{
+    font-size: 15px;
+    line-height: 1.6;
+    color: #a82d49;
+    font-weight: 600;
+}
+.NavBar a:last-child
+{
+    background-color: #a82d49;
+    border: 3px solid #a82d49;
+    color:white;
+    transition: all 0.5s;
+    font-size: 13px;
+    /* line-height: 1.6; */
+    font-weight: 600;
+    letter-spacing: 3px;
+    
+}
+.NavBar a:last-child:hover
+{
+    background-color: transparent;
+    color: #a82d49 ;
 
 }
 
-.NavBar .navbar-brand
+.NavBar button
 {
-    position: absolute;
-    background-color: blue;
+
+    border: none !important;
+    outline: none;
 }
-
-
- .container a img
-{
-    max-height: 100%;
-
-}  */
-

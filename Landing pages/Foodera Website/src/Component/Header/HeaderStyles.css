@@ -6,6 +6,7 @@ header {
   text-align: left;
   height: calc(100vh - 117px);
   display: flex;
+
 }
 
 header .container {
