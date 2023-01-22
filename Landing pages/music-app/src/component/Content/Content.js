@@ -66,6 +66,18 @@ function Content(props) {
                   </Box>
                 )}
               </TopLine>
+              <Heading
+              initial={inittial}
+              transition={transition}
+              animate={animation}
+              inverse={inverse}
+              >
+                {headline}
+              </Heading>
+              <Subtitle
+              initial={initial}
+              trasition={{delay:0.7, duration:0.6}}
+              ></Subtitle>
             </TextWrapper>
           </SmallColumn>
         </ContentRow>
