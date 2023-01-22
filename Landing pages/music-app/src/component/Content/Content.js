@@ -1,6 +1,6 @@
-import React from "react";
+import React ,{ useEffect}from "react";
 import { Link } from "react-router-dom";
-import { container, Button, Section } from "react-router-dom";
+import {Container, Button, Section } from "../../globalStyle";
 import {
   ContentRow,
   TextWrapper,
@@ -12,11 +12,10 @@ import {
   BigColumn,
   SmallColumn,
   Box,
-} from "./ContentStyles";
-import { useInview } from "react-intersection-observer";
+} from "./ContentStyles.js";
+import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
-import { Container } from "../../globalStyle";
-import { useEffect } from "react";
+
 function Content(props) {
   const {
     primary,
@@ -39,7 +38,7 @@ function Content(props) {
   const transition = { delay: 0.3, duuration: 0.6 };
   const animation = useAnimation();
 
-  const { ref, inView } = useInview({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.2 });
 
   useEffect(() => {
     if (inView) {
