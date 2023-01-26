@@ -10,29 +10,37 @@ const Home = () => {
   useEffect(() => {
     setTimeout(() => {
       fetch("http://localhost:8000/blogs")
-        .then((res) =>{
-          if(!res.ok)
-          {
-             throw Error('could not fetch the data for the resourse')
+        .then((res) => {
+
+          if (!res.ok) {
+            throw Error("could not fetch the data for the resourses");
           }
-          return  res.json()
+          return res.json();
+
         })
+
         .then((data) => {
+
           setBlogs(data);
           setPending(false);
-          setError(null)
+          setError(null);
+
         })
         .catch((error) => {
-          setPending(false)
+
+          setPending(false);
           setError(error.message);
-        })
+
+        });
     }, 1000);
   }, []);
   return (
     <div className="home">
-      { error && <div>{error}</div>}
+
+      {error && <div>{error}</div>}
       {isPending && <div> loading... </div>}
       {blogs && <BlogList blogs={blogs} title="All Blogs" />}
+
     </div>
   );
 };
