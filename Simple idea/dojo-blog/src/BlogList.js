@@ -1,8 +1,5 @@
 import React from "react";
-const BlogList = (props) => 
-{
-
-
+const BlogList = (props) => {
   const { blogs, title } = props;
   return (
     <div className="blog-list">
@@ -13,7 +10,6 @@ const BlogList = (props) =>
             <div className="blog-preview" key={blog.id}>
               <h2>{blog.title}</h2>
               <p>written by {blog.author}</p>
-             
             </div>
           </>
         );
