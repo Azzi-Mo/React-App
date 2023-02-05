@@ -1,0 +1,28 @@
+.peopelProfile
+{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    padding: 10px;
+    width: 500px;
+    align-items: center;
+    height: 150px;
+
+}
+.peopelProfile div:nth-child(1)
+{
+ border: 1px solid red;
+ width:20%;
+ 
+}
+
+.peopelProfile div:nth-child(2)
+{
+ border: 1px solid rgb(55, 255, 0);
+ width: 80%;
+}
+
+.peopelProfile img{
+    max-width: 100%;
+}
+ 

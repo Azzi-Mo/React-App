@@ -1,7 +1,8 @@
 
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import PeopelProfile from "./component/PeopelProfile";
+import PeopelProfile from "./component/PeopelProfile/PeopelProfile";
+
 
 function App() {
   return (
