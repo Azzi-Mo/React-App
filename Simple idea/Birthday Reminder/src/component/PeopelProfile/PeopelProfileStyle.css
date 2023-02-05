@@ -1,28 +1,66 @@
 .peopelProfile
 {
     display: flex;
+    align-items: center;
+    position: relative;
     flex-direction:row;
     width: 100%;
-    padding: 10px;
+    padding: 5px;
     width: 500px;
-    align-items: center;
-    height: 150px;
+    height: 100px;
+    /* border: 1px solid red; */
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 7%)
 
+}
+p{
+    margin: 0;
 }
 .peopelProfile div:nth-child(1)
 {
- border: 1px solid red;
+ /* border: 1px solid rgb(30, 0, 255); */
  width:20%;
+ overflow: hidden;
+ height: 100%;
+ display: flex;
+ align-items: center;
  
 }
-
+.peopelProfile .name
+{
+font-size: 16px;
+font-weight: bold;
+padding: 0 0 5px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.peopelProfile .age
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #979797;
+}
 .peopelProfile div:nth-child(2)
 {
- border: 1px solid rgb(55, 255, 0);
+ /* border: 1px solid rgb(55, 255, 0); */
  width: 80%;
+ height: 100%;
+ padding: 5px;
+ display: flex;
+ flex-direction: column;
+ /* align-content: center; */
+ justify-content: center;
+
+
 }
 
 .peopelProfile img{
-    max-width: 100%;
+
+    overflow: hidden;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center;
+    height: 75px;
+    object-fit: cover;
+    width: 75px;
+
 }
  
