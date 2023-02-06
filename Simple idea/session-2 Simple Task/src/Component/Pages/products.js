@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function Products() {
+  
   const [Products, setProducts] = useState([]);
+
   const GetAllProd = () => {
     fetch("http://localhost:9000/products")
       .then((res) => res.json())
@@ -17,6 +19,7 @@ function Products() {
   useEffect(() => {
     GetAllProd();
   }, []);
+
   
   // fUNC TO DELETE PRODUCTS
   const deProductID = (PID) => {
