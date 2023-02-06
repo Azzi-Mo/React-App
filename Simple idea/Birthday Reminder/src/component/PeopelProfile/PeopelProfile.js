@@ -3,12 +3,17 @@ import "./PeopelProfileStyle.css";
 import Swal from "sweetalert2";
 
 export default function PeopelProfile() {
+
   const [data, setData] = useState([]);
 
-  useEffect(() => {
+  const GetAllData = ()=>{
+
     fetch("http://localhost:5000/peopels")
-      .then((res) => res.json())
-      .then((data) => setData(data));
+    .then((res) => res.json())
+    .then((data) => setData(data));
+  }
+  useEffect(() => {
+    GetAllData()
   }, []);
 
   // fUNC TO DELETE PRODUCTS
@@ -26,7 +31,7 @@ export default function PeopelProfile() {
         Swal.fire("Deleted!", `Your ID ${PID} has been deleted.`, "success");
         fetch(`http://localhost:5000/peopels/${PID}`, { method: "delete" })
           .then((res) => res.json())
-          .then((data) => setData(data));
+          .then((data) => GetAllData());
       }
     });
   };
@@ -38,13 +43,13 @@ export default function PeopelProfile() {
           <div className="peopelProfile" key={peopel.id}>
             <div>
               <img src={peopel.image} alt="" />
+              <div className="content">
+                <p className="name">{peopel.name}</p>
+                <p className="age">{peopel.age}</p>
+              </div>
             </div>
 
-            <div className="content">
-              <p className="name">{peopel.name}</p>
-              <p className="age">{peopel.age}</p>
-            </div>
-            <button
+            <button className="btn"
               onClick={() => {
                 deProductID(peopel.id, peopel.name);
               }}

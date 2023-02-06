@@ -1,23 +1,23 @@
+p {
+  margin: 0;
+}
 .peopelProfile {
   display: flex;
   align-items: center;
-  position: relative;
   flex-direction: row;
   width: 100%;
   padding: 5px;
-
   height: 100px;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 7%);
-}
-p {
-  margin: 0;
+  justify-content: space-around;
 }
 .peopelProfile div:nth-child(1) {
   overflow: hidden;
   height: 100%;
   display: flex;
   align-items: center;
+  width: 60%;
 }
 .peopelProfile .name {
   font-size: 16px;
@@ -30,7 +30,7 @@ p {
   color: #979797;
 }
 .peopelProfile div:nth-child(2) {
-  width: 80%;
+  /* width: 60%; */
   height: 100%;
   padding: 10px;
   display: flex;
@@ -47,3 +47,21 @@ p {
   object-fit: cover;
   width: 75px;
 }
+.peopelProfile button:nth-child(3)
+{
+
+}
+.btn
+{
+  max-width:20%;
+  background-color: #f42222;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
