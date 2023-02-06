@@ -1,57 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./PeopelProfileStyle.css";
-import Swal from "sweetalert2";
+import Fetching from "./Fetching";
 
 export default function PeopelProfile() {
-
-  const [data, setData] = useState([]);
-
-  const GetAllData = ()=>{
-
-    fetch("http://localhost:5000/peopels")
-    .then((res) => res.json())
-    .then((data) => setData(data));
-  }
-  useEffect(() => {
-    GetAllData()
-  }, []);
-
-  // fUNC TO DELETE PRODUCTS
-  const deProductID = (PID, name) => {
-    Swal.fire({
-      title: ` You will delet ( ${name} )`,
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire("Deleted!", `Your ID ${PID} has been deleted.`, "success");
-        fetch(`http://localhost:5000/peopels/${PID}`, { method: "delete" })
-          .then((res) => res.json())
-          .then((data) => GetAllData());
-      }
-    });
-  };
-
+  const { peoples, deletedID  } = Fetching();
   return (
     <>
-      {data.map((peopel) => {
+      {peoples.map((person) => {
         return (
-          <div className="peopelProfile" key={peopel.id}>
+          <div className="peopelProfile" key={person.id}>
             <div>
-              <img src={peopel.image} alt="" />
+              <img src={person.image} alt="" />
               <div className="content">
-                <p className="name">{peopel.name}</p>
-                <p className="age">{peopel.age}</p>
+                <p className="name">{person.name}</p>
+                <p className="age">{person.age}</p>
               </div>
             </div>
 
-            <button className="btn"
+            <button
+              className="btn"
               onClick={() => {
-                deProductID(peopel.id, peopel.name);
+                deletedID(person.id, person.name);
               }}
             >
               Remove{" "}
