@@ -3,7 +3,8 @@ import "./PeopelProfileStyle.css";
 import Fetching from "./Fetching";
 
 export default function PeopelProfile() {
-  const { peoples, deletedID  } = Fetching();
+  const { peoples, deletedID  } = Fetching('http://localhost:5000/peopels');
+
   return (
     <>
       {peoples.map((person) => {

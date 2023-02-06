@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
-
-const Fetching = (props) => {
+const Fetching = (url) => {
   const [peoples, setpeoples] = useState([]);
+
   const GetAllData = () => {
     fetch(url)
       .then((res) => res.json())
@@ -11,7 +11,7 @@ const Fetching = (props) => {
   };
   useEffect(() => {
     GetAllData();
-  }, []);
+  },[url]);
 
   // FUNC TO DELETE PRODUCTS
   const deletedID = (PID, name) => {
@@ -25,13 +25,17 @@ const Fetching = (props) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire("Deleted!", `Your ID ${PID} has been deleted.`, "success");
+        Swal.fire("Deleted!", `( ${name} ) has been deleted.`, "success");
         fetch(`${url}/${PID}`, { method: "delete" })
           .then((res) => res.json())
           .then((data) => GetAllData());
       }
     });
   };
+
+
+  return { peoples, deletedID };
+
 };
 
 export default Fetching;
