@@ -13,7 +13,7 @@ const Fetching = (url) => {
     GetAllData();
   },[url]);
 
-  // FUNC TO DELETE PRODUCTS
+  // FUNC TO DELETE PERSON OPTION 1
   const deletedID = (PID, name) => {
     Swal.fire({
       title: ` You will delet ( ${name} )`,
@@ -33,7 +33,15 @@ const Fetching = (url) => {
     });
   };
 
-
+  // FUNC TO DELETE PERSON OPTION 2
+  // const deletedID = (PID)=>
+  // {
+  //   fetch(`${url}/${PID}`, {method:'DELETE'})
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       GetAllData()
+  //     });
+  // }
   return { peoples, deletedID };
 
 };
