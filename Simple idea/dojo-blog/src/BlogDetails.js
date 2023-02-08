@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useEffect";
 
 export default function BlogDetails() {
@@ -9,6 +9,15 @@ export default function BlogDetails() {
     isPending,
     error,
   } = useFetch(`http://localhost:8000/blogs/${id}`);
+  const history = useHistory()
+  const handleClick = ()=>{
+    fetch(`http://localhost:8000/blogs/${id}`,{
+        method:'DELETE'
+        
+    }).then(()=>{
+   history.push('/')
+    })
+  }
   return (
     <div className="blog-details">
       {isPending && <div>Loading...</div>}
@@ -18,6 +27,7 @@ export default function BlogDetails() {
           <h2>{blog.title}</h2>
           <p>written by {blog.author}</p>
           <div>{blog.body}</div>
+          <button onClick={handleClick}>Delet</button>
         </article>
       )}
     </div>
