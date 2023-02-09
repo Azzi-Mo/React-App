@@ -42,8 +42,8 @@ const Create = () => {
         ></textarea>
         <label>Blog author:</label>
         <select value={author} onChange={(e) => setAuthor(e.target.value)}>
-          <option value="mario">Aziz</option>
-          <option value="yoshi">Ahmed</option>
+          <option value="Aziz">Aziz</option>
+          <option value="Ahmed">Ahmed</option>
         </select>
         {!isPending && <button>Add Blog</button>}
         {isPending && <button disabled>Add loading</button>}

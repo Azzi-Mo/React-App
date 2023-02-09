@@ -1,0 +1,37 @@
+.from {
+  width: 100%;
+  display: grid;
+  grid-template-columns: [] 100%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  padding: 10px 5px;
+}
+form input {
+  width: 50%;
+  height: 25px;
+  border: 0;
+  outline: none;
+  border: 1px solid #e0e0e0;
+}
+
+form button {
+  background-color: rgb(24, 201, 142);
+  padding: 10px;
+  width: 30%;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 15px;
+  border: 0;
+}
+form button:hover {
+  background-color: rgb(25, 172, 123);
+  cursor: pointer;
+}

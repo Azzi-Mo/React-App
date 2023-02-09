@@ -1,14 +1,18 @@
-
-
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import PeopelProfile from "./component/PeopelProfile/PeopelProfile";
-
-
+import Home from "./Home";
+import { BrowserRouter, BrowserRouter as Router , Route , Switch } from "react-router-dom";
 function App() {
   return (
-    <Router>
-      <PeopelProfile/>
-    </Router>
+    <BrowserRouter>
+     <div>
+      <Switch>
+      
+       
+      <Route exact path={'/'}>
+      <Home/></Route>
+
+      </Switch>
+     </div>
+    </BrowserRouter>
   );
 }
 

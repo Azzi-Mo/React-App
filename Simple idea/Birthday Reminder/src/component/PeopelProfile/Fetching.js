@@ -42,7 +42,7 @@ const Fetching = (url) => {
   //       GetAllData()
   //     });
   // }
-  return { peoples, deletedID };
+  return { peoples, deletedID , GetAllData};
 
 };
 
