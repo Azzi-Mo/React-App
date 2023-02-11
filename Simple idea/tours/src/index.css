@@ -234,3 +234,9 @@ Variables
     border: 1px solid var(--clr-red-dark);
   }
   
+  span
+  {
+    color: rgb(72, 182, 255);
+    font-weight: bold;
+    cursor: pointer;
+  }

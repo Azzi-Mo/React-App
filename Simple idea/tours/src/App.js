@@ -17,7 +17,7 @@ export default function App() {
     }
     catch(error)
     {
-        setLoding(true)
+        setLoding(false)
         console.log(error);
     }
     console.log(tours);
@@ -29,7 +29,7 @@ export default function App() {
   if (loading) {
     return (
       <main>
-        <Loading />
+         <Loading />
       </main>
     );
   }
@@ -37,7 +37,7 @@ export default function App() {
   return (
     <>
       <main>
-        <Tours />
+        <Tours tours={tours} />
       </main>
     </>
   );
