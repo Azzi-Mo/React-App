@@ -40,7 +40,9 @@ export default function App() {
     return (
       <main className="title">
         <h2>no more tours</h2>
-        <button className="btn" onClick={()=>fetchTours()}>Refresh</button>
+        <button className="btn" onClick={() => fetchTours()}>
+          Refresh
+        </button>
       </main>
     );
   }
