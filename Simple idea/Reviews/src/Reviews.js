@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-expressions */
 import React from "react";
 import peopel from "./data";
 import { useState } from "react";
@@ -8,18 +9,30 @@ export default function Reviews() {
   const [index, setIndex] = useState(0);
   const { name, image, job, text } = peopel[index];
 
+  const checkNumber = (number) => {
+    if (number > peopel.length - 1) return 0;
+    if (number < 0) return peopel.length - 1;
+    return number;
+  };
+
   const prevPerson = () => {
     setIndex((index) => {
       const newIndex = index + 1;
-      return newIndex;
+      return checkNumber(newIndex);
     });
   };
 
   const nextPerson = () => {
     setIndex((index) => {
       const newIndex = index - 1;
-      return newIndex;
+      return checkNumber(newIndex);
     });
+  };
+
+  const randomPerson = () => {
+    let randomNumber = Math.floor(Math.random() * peopel.length);
+    if (randomNumber === index) randomNumber = index + 1;
+    setIndex(checkNumber(randomNumber));
   };
 
   return (
@@ -34,15 +47,17 @@ export default function Reviews() {
       <p className="job">{job}</p>
       <p className="info">{text}</p>
       <div className="button-container">
-        <button className="prev-btn" onClick={prevPerson}>
+        <button className="prev-btn" onClick={nextPerson}>
           <FaChevronLeft />
         </button>
-        <button className="next-btn" onClick={nextPerson}>
+        <button className="next-btn" onClick={prevPerson}>
           <FaChevronRight />
         </button>
       </div>
 
-      <button className="random-btn">Surprise Me</button>
+      <button className="random-btn" onClick={randomPerson}>
+        Surprise Me
+      </button>
     </article>
   );
 }
