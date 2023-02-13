@@ -1,7 +1,6 @@
 import React , { useState } from "react";
 import data from "./data";
 import SingleQuestion from "./singleQuestion";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   const [questions, setQuestion] = useState(data);
