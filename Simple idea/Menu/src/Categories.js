@@ -1,7 +1,9 @@
-const Categories = () => {
+const Categories = ({filterItems}) => {
     return (
         <>
-        <h1>Categories</h1></>
+        <div className="btn-container">
+        <button className="filter-btn" onClick={filterItems('breakfast')}>breakfast</button>
+        </div></>
     )
 
 }
