@@ -11,7 +11,7 @@ function App() {
         <h3>question and answers about login</h3>
         <section className="info">
           {questions.map((question) => {
-            return <SingleQuestion key={question.id} {...SingleQuestion} />;
+            return <SingleQuestion key={question.id} {...question} />;
           })}
         </section>
       </div>
