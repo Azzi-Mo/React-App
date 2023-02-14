@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { FaAngleDoubleRight } from "react-icons/fa";
-import dataInfo from "./data";
 
 const url = "https://course-api.com/react-tabs-project";
 function App() {
   const [loading, setLoading] = useState(true);
   const [jobs, setJobs] = useState([]);
   const [value, setValue] = useState(0);
-
-  const { company, dates, duties, title } = dataInfo;
-  console.log(duties);
 
   const fetchJobs = async () => {
     const response = await fetch(url);
@@ -29,14 +25,28 @@ function App() {
       </section>
     );
   }
+  const { company, dates, duties, title } = jobs[value];
   return (
     <section className="section">
       <div className="title">
         <h2>expierencs</h2>
         <div className="underline"></div>
       </div>
-      <div className="job-center">
+      <div className="jobs-center">
         {/* btn container */}
+        <div className="btn-container">
+          {jobs.map((item, indx) => {
+            return (
+              <button
+                key={item.id}
+                onClick={() => setValue(indx)}
+                className={`job-btn ${indx === value && 'active-btn' }`}
+              >
+                {item.company}
+              </button>
+            );
+          })}
+        </div>
         {/* job info */}
 
         <article className="job-info">
