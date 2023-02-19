@@ -10,7 +10,7 @@ function App() {
   const [alert, setAlert] = useState({ show: false, msg: "", type: "" });
 
   // start handel submit function
-
+  console.log(list);
   const handelSubmit = (e) => {
     e.preventDefault();
 
@@ -19,7 +19,22 @@ function App() {
       // setAlert({ show: true, msg: "Please Enter Value", type: "danger" })
       showAlert(true, "Please Enter Value", "danger");
     } else if (name && isEditing) {
+
+
+      setList(
+        list.map((item) => {
+          if (item.id === editID) {
+            return {...item,title:name};
+          }
+          return item
+        })
+        
+        );
+        setName('')
+        isEditing(false)
+        editID(null)
     } else {
+      showAlert(true, "item add to the list", "success");
       const newItems = { id: new Date().getTime().toString(), title: name };
       setList([...list, newItems]);
       setName("");
@@ -35,10 +50,40 @@ function App() {
   };
 
   // end handeling alert
+
+  // start handeling clear list
+  const clearList = () => {
+    showAlert(true, "clear list ", "danger");
+    setList([]);
+  };
+
+  // end handeling clear list
+
+  // start editeing items
+
+  const editingItem = (id) => {
+    const cpesifcItem = list.find((item) => item.id === id);
+    setisEditing(true);
+    setEditID(id);
+    setName(cpesifcItem.title);
+  };
+
+  // end editeing items
+
+  // start removeing items
+
+  const removeItem = (id) => {
+    showAlert(true, "clear item ", "danger");
+    const newItem = list.filter((item) => item.id !== id);
+    setList(newItem);
+  };
+
+
+  // end removeing items
   return (
     <section className="section-center" onSubmit={handelSubmit}>
       <form className="grocery-form">
-        {alert.show && <Alert {...alert} removeAlert={showAlert}/>}
+        {alert.show && <Alert {...alert} removeAlert={showAlert} list={list} />}
         <h3> grocery bud</h3>
         <div className="form-control">
           <input
@@ -56,8 +101,14 @@ function App() {
 
       {list.length > 0 && (
         <div className="grocery-container">
-          <List items={list} />
-          <button className="clear-btn">clear items</button>
+          <List
+            items={list}
+            removeItem={removeItem}
+            editingItem={editingItem}
+          />
+          <button className="clear-btn" onClick={clearList}>
+            clear items
+          </button>
         </div>
       )}
     </section>
