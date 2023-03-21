@@ -6,9 +6,9 @@ import './Component/Style/Styles.scss'
 
 const App = () => {
   return (
-    <section>
+
       <NavBar />
-    </section>
+
   );
 };
 
