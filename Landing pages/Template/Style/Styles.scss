@@ -1,0 +1,19 @@
+@import "./normalize.css";
+html {
+  border: 1px solid red;
+}
+* {
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Work Sans", sans-serif;
+  .navbar {
+    display: flex;
+    //
+    .logo {
+      width: 60px;
+    }
+    .icon {
+      cursor: pointer;
+      position: relative;
+    }
+  }
+}
