@@ -1,12 +1,11 @@
 import React from 'react';
-import './Style/Styles.scss'
-const MyComponent = () => {
+const NavBar = () => {
   return (
     <div>
       <h1>Hello, World!</h1>
-      <p>This is my first React component.</p>
+      <p>This is NavBar.</p>
     </div>
   );
 }
 
-export default MyComponent;
+export default NavBar;
