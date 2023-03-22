@@ -11,7 +11,7 @@ const NavBar = () => {
         />
       </div>
       <div className="icon">
-        <i class="fa-solid fa-bars"></i>
+        <i className="fa-solid fa-bars"></i>
         <ul>
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
