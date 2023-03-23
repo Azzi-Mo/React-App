@@ -265,40 +265,56 @@ $large: 1200px;
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
-
   .portfolio-content {
-    display: flex;
+    grid-gap: 30px;
+    margin-top: 80px;
+    align-items: center;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-gap: 30px;
     margin-top: 80px;
 
-    align-items: center;
-  }
-  .info {
-    padding: 20px;
-  }
-  h3 {
-    margin: 0;
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-  }
-  p {
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 0;
-  }
+    .card {
+      background-color: white;
+      padding: 0;
 
+      img {
+        max-width: 100%;
+        border-style: none;
+      }
+      .info {
+        padding: 20px;
+        h3 {
+          // margin: 0;
+          font-weight: bold;
+          font-size: 1.17em;
+        }
 
+        p {
+          color: #777;
+          line-height: 1.5;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
 @media only screen and (max-width: $desktop - 1) {
   .portfolio {
     .portfolio-content {
       display: flex;
       flex-direction: column;
+      justify-items: center;
+    }
+  }
+}
+
+@media only screen and (min-width: $desktop - 1) {
+  .portfolio {
+    .portfolio-content {
+      display: flex;
+      flex-direction: row;
       justify-items: center;
     }
   }

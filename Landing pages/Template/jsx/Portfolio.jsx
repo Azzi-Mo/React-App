@@ -8,9 +8,9 @@ const Portfolio = () => {
       <SpecialHeading name_p1={name_p1} name_p2={name_p2} />
 
       <div className="portfolio" id="portfolio">
-        <div className="container ">
+        <div className="container">
           <div className="portfolio-content ">
-            <div className="card row col-md-8 col-lg-4 col-mlg-12">
+            <div className="card ">
               <img decoding="async" src="./imgaes/portfolio-1.jpg" alt="" />
               <div className="info">
                 <h3>Project Here</h3>
@@ -21,7 +21,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="card   col-md-8 col-lg-4 col-mlg-12">
+            <div className="card  ">
               <img decoding="async" src="./imgaes/portfolio-2.jpg" alt="" />
               <div className="info">
                 <h3>Project Here</h3>
@@ -32,7 +32,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="card   col-md-8 col-lg-4 col-mlg-12">
+            <div className="card  ">
               <img decoding="async" src="./imgaes/portfolio-3.jpg" alt="" />
               <div className="info">
                 <h3>Project Here</h3>
