@@ -1,6 +1,6 @@
 import React from "react";
 
-const Head = () => {
+const Landing = () => {
   return (
     <div className="Landing">
       <img src="./imgaes/landing.jpg" className="Landing_img"></img>
@@ -12,4 +12,4 @@ const Head = () => {
   );
 };
 
-export default Head;
+export default Landing;

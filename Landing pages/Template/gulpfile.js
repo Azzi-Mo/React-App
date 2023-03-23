@@ -34,49 +34,55 @@ function compileSass() {
   );
 }
 
-gulp.task("build-js", function () {
-  return (
-    gulp
-      .src(["./jsx/Landing.jsx"])
-      .pipe(
-        babel({
-          presets: ["@babel/env", "@babel/preset-react"],
-        })
-      )
-      .pipe(sourcemaps.init())
-      .pipe(react())
-      // .pipe(concat("bundle.js"))
-      .pipe(uglify())
-      .pipe(sourcemaps.write())
-      // .pipe(react())
-      // .pipe(eslint())
-      // .pipe(eslint.format())
-      // .pipe(eslint.failOnError())
-      .pipe(gulp.dest("./src/Component"))
-  );
+gulp.task("NavBar", function () {
+  return gulp
+    .src(["./jsx/NavBar.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
 });
 
-gulp.task("compile-components", function () {
-  return (
-    gulp
-      .src(["./jsx/NavBar.jsx"])
-      .pipe(
-        babel({
-          presets: ["@babel/env", "@babel/preset-react"],
-        })
-      )
-      .pipe(sourcemaps.init())
-      .pipe(react())
-      // .pipe(concat("bundle.js"))
-      .pipe(uglify())
-      .pipe(sourcemaps.write())
-      // .pipe(react())
-      // .pipe(eslint())
-      // .pipe(eslint.format())
-      // .pipe(eslint.failOnError())
-      .pipe(gulp.dest("./src/Component"))
-  );
+gulp.task("Landing", function () {
+  return gulp
+    .src(["./jsx/Landing.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
 });
+
+gulp.task("Features", function () {
+  return gulp
+    .src(["./jsx/Features.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
+});
+
+gulp.task("sass", compileSass);
+gulp.task("default", gulp.series("NavBar"));
+gulp.task("default", gulp.series("Landing"));
+gulp.task("default", gulp.series("Features"));
 
 gulp.task("lint", function () {
   return gulp
@@ -86,12 +92,9 @@ gulp.task("lint", function () {
     .pipe(eslint.failAfterError());
 });
 
-gulp.task("sass", compileSass);
-gulp.task("default", gulp.series("build-js"));
-gulp.task("default", gulp.series("compile-components"));
-
 gulp.task("watch", function () {
   gulp.watch("./Style/Styles.scss", compileSass);
-  gulp.watch(["./jsx/Landing.jsx"], gulp.series("build-js"));
-  gulp.watch(["./jsx/NavBar.jsx"], gulp.series("compile-components"));
+  gulp.watch(["./jsx/Landing.jsx"], gulp.series("Landing"));
+  gulp.watch(["./jsx/NavBar.jsx"], gulp.series("NavBar"));
+  gulp.watch(["./jsx/Features.jsx"], gulp.series("Features"));
 });

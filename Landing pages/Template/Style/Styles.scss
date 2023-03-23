@@ -6,6 +6,8 @@
   --section-padding: 60px;
   --section-background: #f6f6f6;
   --main-duration: 0.5s;
+  
+
 }
 
 // Define breakpoints
@@ -46,6 +48,7 @@ $large: 1200px;
   }
   .icon i {
     display: none;
+    font-size: 20px;
   }
   .icon ul {
     margin: 0;
@@ -151,3 +154,32 @@ $large: 1200px;
 }
 
 // end Landing
+
+// start features
+.features {
+  .container
+  {
+    margin: auto;
+
+  }
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+  .feat {
+    padding: 20px;
+    text-align: center;
+    i {
+      color: var(--main-color);
+    }
+    h3 {
+      font-weight: 800;
+      margin: 30px 0;
+    }
+    p {
+      line-height: 1.8;
+      color: #777;
+      font-size: 17px;
+    }
+  }
+}
+// end features

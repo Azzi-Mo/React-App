@@ -1,7 +1,7 @@
 import React from "react";
 const NavBar = () => {
   return (
-    <div className="navbar container">
+    <section className="navbar container">
       <div className="Logo">
         <img
           decoding="async"
@@ -19,7 +19,7 @@ const NavBar = () => {
             <li><a href="#about">About</a></li>
           </ul>
       </div>
-    </div>
+    </section>
 
 
   );
