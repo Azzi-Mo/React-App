@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const gulp = require("gulp");
 const react = require("gulp-react");
 const babel = require("gulp-babel");
@@ -36,12 +37,12 @@ function compileSass() {
 gulp.task("build-js", function () {
   return (
     gulp
-      .src(["./jsx/Head.jsx"])
-      // .pipe(
-      //   babel({
-      //     presets: ["@babel/env", "@babel/preset-react"],
-      //   })
-      // )
+      .src(["./jsx/Landing.jsx"])
+      .pipe(
+        babel({
+          presets: ["@babel/env", "@babel/preset-react"],
+        })
+      )
       .pipe(sourcemaps.init())
       .pipe(react())
       // .pipe(concat("bundle.js"))
@@ -51,7 +52,7 @@ gulp.task("build-js", function () {
       // .pipe(eslint())
       // .pipe(eslint.format())
       // .pipe(eslint.failOnError())
-      // .pipe(gulp.dest("./src/Component"))
+      .pipe(gulp.dest("./src/Component"))
   );
 });
 
@@ -59,11 +60,11 @@ gulp.task("compile-components", function () {
   return (
     gulp
       .src(["./jsx/NavBar.jsx"])
-      // .pipe(
-      //   babel({
-      //     presets: ["@babel/env", "@babel/preset-react"],
-      //   })
-      // )
+      .pipe(
+        babel({
+          presets: ["@babel/env", "@babel/preset-react"],
+        })
+      )
       .pipe(sourcemaps.init())
       .pipe(react())
       // .pipe(concat("bundle.js"))
@@ -73,13 +74,13 @@ gulp.task("compile-components", function () {
       // .pipe(eslint())
       // .pipe(eslint.format())
       // .pipe(eslint.failOnError())
-      // .pipe(gulp.dest("./src/Component"))
+      .pipe(gulp.dest("./src/Component"))
   );
 });
 
-
-gulp.task('lint', function() {
-  return gulp.src(['./jsx/*.jsx', '!node_modules/**'])
+gulp.task("lint", function () {
+  return gulp
+    .src(["./jsx/*.jsx", "!node_modules/**"])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -91,6 +92,6 @@ gulp.task("default", gulp.series("compile-components"));
 
 gulp.task("watch", function () {
   gulp.watch("./Style/Styles.scss", compileSass);
-  gulp.watch(["./jsx/Head.jsx"], gulp.series("build-js"));
+  gulp.watch(["./jsx/Landing.jsx"], gulp.series("build-js"));
   gulp.watch(["./jsx/NavBar.jsx"], gulp.series("compile-components"));
 });

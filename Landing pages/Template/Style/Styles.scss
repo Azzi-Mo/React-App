@@ -1,40 +1,153 @@
 @import "./normalize.css";
-html {
-  border: 1px solid red;
+
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --main-duration: 0.5s;
 }
+
+// Define breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+$large: 1200px;
+
+// Define media queries
+@media only screen and (max-width: $mobile) {
+  // Styles for mobile screens
+}
+
+@media only screen and (min-width: $tablet) and (max-width: $desktop - 1) {
+  // Styles for tablet screens
+}
+
+@media only screen and (min-width: $desktop) and (max-width: $large - 1) {
+  // Styles for desktop screens
+}
+
+@media only screen and (min-width: $large) {
+  // Styles for large screens
+}
+
 * {
   font-family: "Ubuntu", sans-serif;
   font-family: "Work Sans", sans-serif;
-  .navbar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+//  start navbar
+.navbar {
+  .logo {
+    max-width: 80px;
+  }
+  .icon i {
+    display: none;
+  }
+  .icon ul {
+    margin: 0;
+    padding: 0;
     display: flex;
-    //
-    .logo {
-      width: 60px;
+  }
+  .icon ul li {
+    padding: 10px;
+    list-style: none;
+    transition: all 0.5s ease-in-out;
+  }
+  .icon ul li:hover {
+    background: var(--secondary-color);
+    a {
+      color: var(--section-background);
+      transition: all 0.4s ease-in-out;
     }
+  }
+  .icon ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .icon ul li a:hover {
+    color: var(--section-background);
+  }
+}
+@media only screen and (max-width: $mobile) {
+  // Styles for medium screens
+
+  .navbar {
+    padding: 20px;
     .icon {
-      cursor: pointer;
       position: relative;
     }
     .icon ul {
-      list-style: none;
+      display: block;
       position: absolute;
-      top: 33px;
-      right: 50%;
-      display: flex;
-      background-color: #f8f8f8;
-      padding: 20px;
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      a {
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        color: #333;
-        text-decoration: none;
-        margin-left: 30px;
-      }
-      a:hover {
-        color: #666;
-      }
+      min-width: 200px;
+      right: 0;
+      top: 30px;
+      background: #f6f6f6;
+      display: none;
+      z-index: 1;
+    }
+    .icon ul ::before {
+      content: "";
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #f6f6f6 transparent;
+      position: absolute;
+      right: 0px;
+      top: -20px;
+    }
+    .icon i {
+      display: block;
+      cursor: pointer;
+    }
+    .icon ul li {
+      text-align: center;
+    }
+    .icon:hover ul {
+      display: block;
     }
   }
 }
+
+//  end navbar
+
+// start Landing
+
+.Landing {
+  height: calc(100vh - 60px);
+  width: 100%;
+  overflow: hidden;
+  // background-image: url('../public/imgaes/imgaes/landing.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  div {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    h1,
+    p {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 50px;
+      color: var(--main-color);
+    }
+    p {
+      font-size: 19px !important;
+      line-height: 1.8;
+    }
+  }
+}
+
+// end Landing
