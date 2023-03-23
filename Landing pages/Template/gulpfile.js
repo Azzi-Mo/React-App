@@ -33,7 +33,7 @@ function compileSass() {
       .pipe(browserSync.stream())
   );
 }
-
+//NavBar
 gulp.task("NavBar", function () {
   return gulp
     .src(["./jsx/NavBar.jsx"])
@@ -48,7 +48,7 @@ gulp.task("NavBar", function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./src/Component"));
 });
-
+//Landing
 gulp.task("Landing", function () {
   return gulp
     .src(["./jsx/Landing.jsx"])
@@ -63,7 +63,7 @@ gulp.task("Landing", function () {
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./src/Component"));
 });
-
+//Features
 gulp.task("Features", function () {
   return gulp
     .src(["./jsx/Features.jsx"])
@@ -79,7 +79,7 @@ gulp.task("Features", function () {
     .pipe(gulp.dest("./src/Component"));
 });
 
-
+//SpecialHeading
 gulp.task("SpecialHeading", function () {
   return gulp
     .src(["./jsx/SpecialHeading.jsx"])
@@ -95,10 +95,28 @@ gulp.task("SpecialHeading", function () {
     .pipe(gulp.dest("./src/Component"));
 });
 
+//Services
 
 gulp.task("Services", function () {
   return gulp
     .src(["./jsx/Services.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
+});
+
+//Portfolio
+
+gulp.task("Portfolio", function () {
+  return gulp
+    .src(["./jsx/Portfolio.jsx"])
     .pipe(
       babel({
         presets: ["@babel/env", "@babel/preset-react"],
@@ -117,7 +135,7 @@ gulp.task("default", gulp.series("Landing"));
 gulp.task("default", gulp.series("Features"));
 gulp.task("default", gulp.series("Services"));
 gulp.task("default", gulp.series("SpecialHeading"));
-
+gulp.task("default", gulp.series("Portfolio"));
 
 gulp.task("lint", function () {
   return gulp
@@ -134,5 +152,5 @@ gulp.task("watch", function () {
   gulp.watch(["./jsx/Features.jsx"], gulp.series("Features"));
   gulp.watch(["./jsx/Services.jsx"], gulp.series("Services"));
   gulp.watch(["./jsx/SpecialHeading.jsx"], gulp.series("SpecialHeading"));
-
+  gulp.watch(["./jsx/Portfolio.jsx"], gulp.series("Portfolio"));
 });

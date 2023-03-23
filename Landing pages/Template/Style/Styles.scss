@@ -258,3 +258,48 @@ $large: 1200px;
     display: none;
   }
 }
+
+//portfolio
+
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+
+  .portfolio-content {
+    display: flex;
+    grid-gap: 30px;
+    margin-top: 80px;
+
+    align-items: center;
+  }
+  .info {
+    padding: 20px;
+  }
+  h3 {
+    margin: 0;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+
+}
+@media only screen and (max-width: $desktop - 1) {
+  .portfolio {
+    .portfolio-content {
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+    }
+  }
+}

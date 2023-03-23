@@ -1,11 +1,11 @@
 import React from "react";
 import SpecialHeading from "./SpecialHeading";
 const services = () => {
-  const name = "Services";
-  const age = "Don't be busy, be productive";
+  const name_p1 = "Services";
+  const name_p2 = "Don't be busy, be productive";
   return (
     <>
-      <SpecialHeading name={name} age={age} />
+      <SpecialHeading name_p1={name_p1} name_p2={name_p2} />
 
       <div className="services" id="services">
         <div className="container">
