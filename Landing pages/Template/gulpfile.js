@@ -79,10 +79,45 @@ gulp.task("Features", function () {
     .pipe(gulp.dest("./src/Component"));
 });
 
+
+gulp.task("SpecialHeading", function () {
+  return gulp
+    .src(["./jsx/SpecialHeading.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
+});
+
+
+gulp.task("Services", function () {
+  return gulp
+    .src(["./jsx/Services.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
+});
+
 gulp.task("sass", compileSass);
 gulp.task("default", gulp.series("NavBar"));
 gulp.task("default", gulp.series("Landing"));
 gulp.task("default", gulp.series("Features"));
+gulp.task("default", gulp.series("Services"));
+gulp.task("default", gulp.series("SpecialHeading"));
+
 
 gulp.task("lint", function () {
   return gulp
@@ -97,4 +132,7 @@ gulp.task("watch", function () {
   gulp.watch(["./jsx/Landing.jsx"], gulp.series("Landing"));
   gulp.watch(["./jsx/NavBar.jsx"], gulp.series("NavBar"));
   gulp.watch(["./jsx/Features.jsx"], gulp.series("Features"));
+  gulp.watch(["./jsx/Services.jsx"], gulp.series("Services"));
+  gulp.watch(["./jsx/SpecialHeading.jsx"], gulp.series("SpecialHeading"));
+
 });

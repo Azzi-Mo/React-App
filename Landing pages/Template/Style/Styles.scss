@@ -6,8 +6,6 @@
   --section-padding: 60px;
   --section-background: #f6f6f6;
   --main-duration: 0.5s;
-  
-
 }
 
 // Define breakpoints
@@ -40,6 +38,25 @@ $large: 1200px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+////////////////
+
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+
+///////////////
 
 //  start navbar
 .navbar {
@@ -157,10 +174,8 @@ $large: 1200px;
 
 // start features
 .features {
-  .container
-  {
+  .container {
     margin: auto;
-
   }
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
@@ -183,3 +198,63 @@ $large: 1200px;
   }
 }
 // end features
+
+// start Services
+// end Services
+
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  .services-content .image {
+    text-align: center;
+    position: relative;
+  }
+  .services-content .srv {
+    display: flex;
+    gap: 25px;
+  }
+
+  .services-content .srv {
+    i,
+    h3 {
+      display: block;
+      font-size: 1.17em;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+    }
+
+    i {
+      color: var(--main-color);
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    p {
+      color: #444;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+  }
+  .services-content .image::before {
+    content: "";
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+  }
+  .services-content .image img {
+    width: 260px;
+  }
+}
+
+@media only screen and (max-width: $desktop - 1) {
+  // Styles for tablet screens
+  .services-content div .image {
+    display: none;
+  }
+}
