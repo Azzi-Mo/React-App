@@ -51,12 +51,22 @@ $large: 1200px;
   font-weight: 800;
   letter-spacing: -3px;
   margin: 0;
+  padding: 40px 0 0;
 }
 .special-heading + p {
   margin: -30px 0 0;
   font-size: 20px;
   text-align: center;
   color: #797979;
+}
+
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+  }
 }
 
 ///////////////
@@ -328,8 +338,8 @@ $large: 1200px;
 //About
 
 .about {
-  padding-top: var(--section-padding);
-  padding-bottom: cvar(--section-padding);
+  padding: var(--section-padding) 0;
+
   .about-content {
     display: flex;
     gap: 10%;
@@ -348,7 +358,6 @@ $large: 1200px;
       margin-bottom: 50px;
     }
     hr {
-      // color: var(--main-color);
       border: 2px solid var(--main-color);
       width: 50%;
       position: relative;
@@ -362,8 +371,6 @@ $large: 1200px;
   }
 }
 @media only screen and (max-width: 991px) {
-  // CSS rules for tablets
-
   .about-content {
     align-items: center;
     flex-direction: column;
@@ -379,7 +386,6 @@ $large: 1200px;
         margin-bottom: 50px;
       }
       hr {
-        // color: var(--main-color);
         border: 2px solid var(--main-color);
         width: 50%;
         position: relative;
@@ -391,5 +397,67 @@ $large: 1200px;
         margin-top: 20px;
       }
     }
+  }
+}
+
+// start Contact
+
+// end Contact
+.contact {
+  background-color: var(--section-background);
+  padding: var(--section-padding) 0;
+  .info {
+    padding: var(--section-padding) 0;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    .label {
+      font-size: 35px;
+      font-weight: 800;
+      color: var(--secondary-color);
+      letter-spacing: -2px;
+      margin-bottom: 15px;
+    }
+    .link {
+      display: block;
+      font-size: 35px;
+      font-weight: 800;
+      color: var(--main-color);
+      text-decoration: none;
+    }
+    .social {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      font-size: 16px;
+      i {
+        margin-left: 10px;
+        color: var(--secondary-color);
+      }
+    }
+  }
+}
+/* Start Footer */
+.footer {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.footer span {
+  font-weight: bold;
+  color: var(--main-color);
+}
+/* End Footer */
+
+@media only screen and (max-width: 991px) {
+  .contact .info .label,
+  .contact .info .link {
+    font-size: 25px;
+    font-weight: 800;
+    // color: var(--main-color);
+    text-decoration: none;
   }
 }

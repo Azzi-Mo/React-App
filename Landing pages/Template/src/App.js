@@ -5,6 +5,7 @@ import Features from "./Component/Features"
 import Services from "./Component/Services"
 import Portfolio from "./Component/Portfolio"
 import About from "./Component/About"
+import Contact from "./Component/Contact"
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,6 +22,7 @@ const App = () => {
     <Services/>
     <Portfolio />
     <About />
+    <Contact />
     </>
     );
   };
