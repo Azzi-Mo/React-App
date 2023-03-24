@@ -9,7 +9,7 @@ const About = () => {
       <SpecialHeading name_p1={name_p1} name_p2={name_p2} />
       <div className="about">
         <div className="container ">
-          <div className="about-content col-lg-6 col-md-12">
+          <div className="about-content ">
             <div className="image">
               <img decoding="async" src="./imgaes/about.jpg" alt="" />
             </div>

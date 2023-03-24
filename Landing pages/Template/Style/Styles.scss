@@ -8,28 +8,30 @@
   --main-duration: 0.5s;
 }
 
-
 // Define breakpoints
 $mobile: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 $large: 1200px;
 
-// Define media queries
-@media only screen and (max-width: $mobile) {
-  // Styles for mobile screens
+// Mobile devices (up to 767px)
+@media only screen and (max-width: 767px) {
+  // CSS rules for mobile devices
 }
 
-@media only screen and (min-width: $tablet) and (max-width: $desktop - 1) {
-  // Styles for tablet screens
+// Tablets (768px to 991px)
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  // CSS rules for tablets
 }
 
-@media only screen and (min-width: $desktop) and (max-width: $large - 1) {
-  // Styles for desktop screens
+// Desktop devices (992px to 1199px)
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  // CSS rules for desktop devices
 }
 
-@media only screen and (min-width: $large) {
-  // Styles for large screens
+// Large desktop devices (1200px and above)
+@media only screen and (min-width: 1200px) {
+  // CSS rules for large desktop devices
 }
 
 * {
@@ -38,11 +40,6 @@ $large: 1200px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-html
-{
-  border: 1px solid red;
-
 }
 
 ////////////////
@@ -333,11 +330,63 @@ html
 .about {
   padding-top: var(--section-padding);
   padding-bottom: cvar(--section-padding);
-  .container .about-content {
-    // display: grid;
-    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  .about-content {
+    display: flex;
   }
   .about-content .image img {
     max-width: 100%;
+  }
+  .text {
+    padding: 40px 0;
+    justify-content: center;
+    p:nth-child(1) {
+      font-weight: bold;
+      line-height: 2;
+      margin-bottom: 50px;
+    }
+    hr {
+      // color: var(--main-color);
+      border: 2px solid var(--main-color);
+      width: 50%;
+      position: relative;
+      margin: auto;
+    }
+    p:nth-child(3) {
+      line-height: 2;
+      color: #777;
+      margin-top: 20px;
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  // CSS rules for tablets
+
+  .about-content {
+    align-items: center;
+    flex-direction: column;
+    .image {
+      width: 250px;
+    }
+    .text {
+      padding: 40px 0;
+      text-align: center;
+      p:nth-child(1) {
+        font-weight: bold;
+        line-height: 2;
+        margin-bottom: 50px;
+      }
+      hr {
+        // color: var(--main-color);
+        border: 2px solid var(--main-color);
+        width: 50%;
+        position: relative;
+        margin: auto;
+      }
+      p:nth-child(3) {
+        line-height: 2;
+        color: #777;
+        margin-top: 20px;
+      }
+    }
   }
 }
