@@ -332,11 +332,14 @@ $large: 1200px;
   padding-bottom: cvar(--section-padding);
   .about-content {
     display: flex;
+    gap: 10%;
+    align-items: center;
   }
   .about-content .image img {
     max-width: 100%;
   }
   .text {
+    max-width: 50%;
     padding: 40px 0;
     justify-content: center;
     p:nth-child(1) {
