@@ -129,6 +129,22 @@ gulp.task("Portfolio", function () {
     .pipe(gulp.dest("./src/Component"));
 });
 
+//About
+gulp.task("About", function () {
+  return gulp
+    .src(["./jsx/About.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
+});
+
 gulp.task("sass", compileSass);
 gulp.task("default", gulp.series("NavBar"));
 gulp.task("default", gulp.series("Landing"));
@@ -136,6 +152,8 @@ gulp.task("default", gulp.series("Features"));
 gulp.task("default", gulp.series("Services"));
 gulp.task("default", gulp.series("SpecialHeading"));
 gulp.task("default", gulp.series("Portfolio"));
+gulp.task("default", gulp.series("About"));
+
 
 gulp.task("lint", function () {
   return gulp
@@ -153,4 +171,6 @@ gulp.task("watch", function () {
   gulp.watch(["./jsx/Services.jsx"], gulp.series("Services"));
   gulp.watch(["./jsx/SpecialHeading.jsx"], gulp.series("SpecialHeading"));
   gulp.watch(["./jsx/Portfolio.jsx"], gulp.series("Portfolio"));
+  gulp.watch(["./jsx/About.jsx"], gulp.series("About"));
+
 });

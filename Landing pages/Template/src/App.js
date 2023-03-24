@@ -4,6 +4,7 @@ import Landing from "./Component/Landing";
 import Features from "./Component/Features"
 import Services from "./Component/Services"
 import Portfolio from "./Component/Portfolio"
+import About from "./Component/About"
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -19,6 +20,7 @@ const App = () => {
     <Features />
     <Services/>
     <Portfolio />
+    <About />
     </>
     );
   };

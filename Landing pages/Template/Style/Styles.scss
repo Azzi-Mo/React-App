@@ -8,6 +8,7 @@
   --main-duration: 0.5s;
 }
 
+
 // Define breakpoints
 $mobile: 480px;
 $tablet: 768px;
@@ -37,6 +38,11 @@ $large: 1200px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+html
+{
+  border: 1px solid red;
+
 }
 
 ////////////////
@@ -200,7 +206,6 @@ $large: 1200px;
 // end features
 
 // start Services
-// end Services
 
 .services {
   padding-top: var(--section-padding);
@@ -258,8 +263,9 @@ $large: 1200px;
     display: none;
   }
 }
+// end Services
 
-//portfolio
+// start portfolio
 
 .portfolio {
   padding-top: var(--section-padding);
@@ -317,5 +323,21 @@ $large: 1200px;
       flex-direction: row;
       justify-items: center;
     }
+  }
+}
+
+// end portfolio
+
+//About
+
+.about {
+  padding-top: var(--section-padding);
+  padding-bottom: cvar(--section-padding);
+  .container .about-content {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  .about-content .image img {
+    max-width: 100%;
   }
 }
