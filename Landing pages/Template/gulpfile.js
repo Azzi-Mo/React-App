@@ -11,7 +11,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const eslint = require("gulp-eslint");
 const failedReporter = require("gulp-eslint-failed-reporter");
-const plumber = require('gulp-plumber');
+const plumber = require("gulp-plumber");
 const eslintReact = require('eslint-plugin-react');
 // const concat = require("gulp-concat");
 // const responsive = require('gulp-responsive');
@@ -38,52 +38,55 @@ function compileSass() {
 }
 //NavBar
 gulp.task("NavBar", function () {
-  return (
-    gulp
-      .src(["./jsx/NavBar.jsx"])
-      // .pipe(
-      //   babel({
-      //     presets: ["@babel/env", "@babel/preset-react"],
-      //   })
-      // )
-      .pipe(sourcemaps.init())
-      .pipe(react())
-      .pipe(uglify())
-      .pipe(sourcemaps.write())
-      .pipe(eslint())
-      // .pipe(eslint({ fix: true }))
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError())
-      .pipe(
-        eslint.results((results) => {
-          console.log(`Total Results: ${results.length}`);
-          console.log(`Total Warnings: ${results.warningCount}`);
-          console.log(`Total Errors: ${results.errorCount}`);
-        })
-      )
-      .pipe(plumber())
-    .pipe(eslint({
-      plugins: ['react'],
-      parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      rules: {
-        'react/jsx-uses-vars': 'error',
-        'no-func-assign': 'error',
-        'no-unsafe-finally': 'error',
-        'no-unused-vars': 'error',
-        'no-unused-labels': 'error',
-        'no-unsafe-negation': 'error'
-      }
-    }))
+  return gulp
+    .src(["./jsx/NavBar.jsx"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(eslint())
+    .pipe(eslint({ fix: true }))
+    .pipe(eslint({ configFile: '.eslintrc.json' }))
+    // .pipe(eslint({ configFile: '.eslintrc.json' }))
     .pipe(eslint.format())
-      .pipe(failedReporter())
-      .pipe(gulp.dest("./src/Component"))
-  );
+    .pipe(eslint.failAfterError())
+    .pipe(
+      eslint.results((results) => {
+        console.log(`Total Results: ${results.length}`);
+        console.log(`Total Warnings: ${results.warningCount}`);
+        console.log(`Total Errors: ${results.errorCount}`);
+      })
+    )
+    .pipe(plumber())
+    .pipe(
+      eslint({
+        plugins: ["react"],
+        parserOptions: {
+          ecmaVersion: 2021,
+          sourceType: "module",
+          ecmaFeatures: {
+            jsx: true,
+          },
+        },
+        rules: {
+          "react/jsx-uses-vars": "error",
+          "no-func-assign": "error",
+          "no-unsafe-finally": "error",
+          "no-unused-vars": "error",
+          "no-unused-labels": "error",
+          "no-unsafe-negation": "error",
+          "no-console": "off",
+        },
+      })
+    )
+    .pipe(eslint.format())
+    .pipe(failedReporter())
+    .pipe(gulp.dest("./src/Component"));
 });
 //Landing
 gulp.task("Landing", function () {
@@ -227,31 +230,35 @@ gulp.task("default", gulp.series("Data"));
 
 gulp.task("lint", function () {
   return gulp
-    .src(["./jsx/*.jsx", "!node_modules/**"])
-    .pipe(eslint())
+    .src(['./jsx/*.js', "!node_modules/**"])
     .pipe(plumber())
-    .pipe(eslint({
-      plugins: ['react'],
-      parserOptions: {
-        ecmaVersion: 2021,
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true
-        }
-      },
-      rules: {
-        'react/jsx-uses-vars': 'error',
-        'no-func-assign': 'error',
-        'no-unsafe-finally': 'error',
-        'no-unused-vars': 'error',
-        'no-unused-labels': 'error',
-        'no-unsafe-negation': 'error'
-      }
-    }))
+    .pipe(eslint())
+    .pipe(eslint({ configFile: '.eslintrc.json' }))
     .pipe(eslint.format())
+    .pipe(
+      eslint({
+        plugins: ["react"],
+        parserOptions: {
+          ecmaVersion: 2021,
+          sourceType: "module",
+          ecmaFeatures: {
+            jsx: true,
+          },
+        },
+        rules: {
+          "react/jsx-uses-vars": "error",
+          "no-func-assign": "error",
+          "no-unsafe-finally": "error",
+          "no-unused-vars": "error",
+          "no-unused-labels": "error",
+          "no-unsafe-negation": "error",
+          "no-console": "off",
+        },
+      })
+    )
     .pipe(eslint.failAfterError());
 });
-// gulp.task('build', gulp.series('lint', /* other build tasks */));
+gulp.task("build", gulp.series("lint" /* other build tasks */));
 
 gulp.task("watch", function () {
   gulp.watch("./Style/Styles.scss", compileSass);
@@ -264,4 +271,7 @@ gulp.task("watch", function () {
   gulp.watch(["./jsx/About.jsx"], gulp.series("About"));
   gulp.watch(["./jsx/Contact.jsx"], gulp.series("Contact"));
   gulp.watch(["./jsx/Data.js"], gulp.series("Data"));
+  gulp.watch(['./jsx/*.js'], lint);
 });
+
+  exports.default = gulp.series(lint, watch);
