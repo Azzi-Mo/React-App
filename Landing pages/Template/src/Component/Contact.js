@@ -1,2 +1,42 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var _react=_interopRequireDefault(require("react")),_SpecialHeading=_interopRequireDefault(require("./SpecialHeading"));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var Contact=function(){return _react.default.createElement(_react.default.Fragment,null,_react.default.createElement("div",{className:"contact",id:"contact"},_react.default.createElement(_SpecialHeading.default,{name_p1:"Contact",name_p2:"We are born to create"}),_react.default.createElement("div",{className:"container"},_react.default.createElement("div",{className:"info row"},_react.default.createElement("p",{className:"label"},"Feel free to drop us a line at:"),_react.default.createElement("a",{href:"mailto:leonagency@mail.com?subject=Contact",className:"link"},"leonagency@mail.com"),_react.default.createElement("div",{className:"social"},"Find Us On Social Networks",_react.default.createElement("i",{className:"fab fa-youtube"}),_react.default.createElement("i",{className:"fab fa-facebook-f"}),_react.default.createElement("i",{className:"fab fa-twitter"}))))),_react.default.createElement("div",{className:"footer"},"© 2023 ",_react.default.createElement("span",null,"Leon")," All Right Reserved"))},_default=Contact;exports.default=_default;
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkNvbnRhY3QuanMiXSwibmFtZXMiOlsiT2JqZWN0IiwiZGVmaW5lUHJvcGVydHkiLCJleHBvcnRzIiwidmFsdWUiLCJkZWZhdWx0IiwiX3JlYWN0IiwiX2ludGVyb3BSZXF1aXJlRGVmYXVsdCIsInJlcXVpcmUiLCJfU3BlY2lhbEhlYWRpbmciLCJvYmoiLCJfX2VzTW9kdWxlIiwiQ29udGFjdCIsImNyZWF0ZUVsZW1lbnQiLCJGcmFnbWVudCIsImNsYXNzTmFtZSIsImlkIiwibmFtZV9wMSIsIm5hbWVfcDIiLCJocmVmIiwiX2RlZmF1bHQiXSwibWFwcGluZ3MiOiJBQUFBLGFBRUFBLE9BQU9DLGVBQWVDLFFBQVMsYUFBYyxDQUMzQ0MsTUFBTyxDQUFBLEMsQ0FDUixFQUNERCxRQUFRRSxRQUFVLEtBQUEsRUFDbEIsSUFBSUMsT0FBU0MsdUJBQXVCQyxRQUFRLE9BQU8sQ0FBQyxFQUNoREMsZ0JBQWtCRix1QkFBdUJDLFFBQVEsa0JBQWtCLENBQUMsRUFDeEUsU0FBU0QsdUJBQXVCRyxHQUFPLE9BQU9BLEdBQU9BLEVBQUlDLFdBQWFELEVBQU0sQ0FBRUwsUUFBU0ssQ0FBRyxDQUFHLENBQzdGLElBQUlFLFFBQVUsV0FHWixPQUFvQk4sT0FBT0QsUUFBUVEsY0FBY1AsT0FBT0QsUUFBUVMsU0FBVSxLQUFtQlIsT0FBT0QsUUFBUVEsY0FBYyxNQUFPLENBQy9IRSxVQUFXLFVBQ1hDLEdBQUksUyxFQUNVVixPQUFPRCxRQUFRUSxjQUFjSixnQkFBZ0JKLFFBQVMsQ0FDcEVZLFFBTlksVUFPWkMsUUFOWSx1QixDQU9iLEVBQWdCWixPQUFPRCxRQUFRUSxjQUFjLE1BQU8sQ0FDbkRFLFVBQVcsVyxFQUNHVCxPQUFPRCxRQUFRUSxjQUFjLE1BQU8sQ0FDbERFLFVBQVcsVSxFQUNHVCxPQUFPRCxRQUFRUSxjQUFjLElBQUssQ0FDaERFLFVBQVcsTyxFQUNWLGlDQUFpQyxFQUFnQlQsT0FBT0QsUUFBUVEsY0FBYyxJQUFLLENBQ3BGTSxLQUFNLDZDQUNOSixVQUFXLE0sRUFDVixxQkFBcUIsRUFBZ0JULE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUMxRUUsVUFBVyxRLEVBQ1YsNkJBQTJDVCxPQUFPRCxRQUFRUSxjQUFjLElBQUssQ0FDOUVFLFVBQVcsZ0IsQ0FDWixFQUFnQlQsT0FBT0QsUUFBUVEsY0FBYyxJQUFLLENBQ2pERSxVQUFXLG1CLENBQ1osRUFBZ0JULE9BQU9ELFFBQVFRLGNBQWMsSUFBSyxDQUNqREUsVUFBVyxnQixDQUNaLENBQUMsQ0FBQyxDQUFDLENBQUMsRUFBZ0JULE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUN2REUsVUFBVyxRLEVBQ1YsVUFBMkJULE9BQU9ELFFBQVFRLGNBQWMsT0FBUSxLQUFNLE1BQU0sRUFBRyxxQkFBcUIsQ0FBQyxDLEVBRXRHTyxTQUFXUixRQUNmVCxRQUFRRSxRQUFVZSIsImZpbGUiOiJDb250YWN0LmpzIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5cbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwge1xuICB2YWx1ZTogdHJ1ZVxufSk7XG5leHBvcnRzLmRlZmF1bHQgPSB2b2lkIDA7XG52YXIgX3JlYWN0ID0gX2ludGVyb3BSZXF1aXJlRGVmYXVsdChyZXF1aXJlKFwicmVhY3RcIikpO1xudmFyIF9TcGVjaWFsSGVhZGluZyA9IF9pbnRlcm9wUmVxdWlyZURlZmF1bHQocmVxdWlyZShcIi4vU3BlY2lhbEhlYWRpbmdcIikpO1xuZnVuY3Rpb24gX2ludGVyb3BSZXF1aXJlRGVmYXVsdChvYmopIHsgcmV0dXJuIG9iaiAmJiBvYmouX19lc01vZHVsZSA/IG9iaiA6IHsgZGVmYXVsdDogb2JqIH07IH1cbnZhciBDb250YWN0ID0gZnVuY3Rpb24gQ29udGFjdCgpIHtcbiAgdmFyIG5hbWVfcDEgPSBcIkNvbnRhY3RcIjtcbiAgdmFyIG5hbWVfcDIgPSBcIldlIGFyZSBib3JuIHRvIGNyZWF0ZVwiO1xuICByZXR1cm4gLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoX3JlYWN0LmRlZmF1bHQuRnJhZ21lbnQsIG51bGwsIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiZGl2XCIsIHtcbiAgICBjbGFzc05hbWU6IFwiY29udGFjdFwiLFxuICAgIGlkOiBcImNvbnRhY3RcIlxuICB9LCAvKiNfX1BVUkVfXyovX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChfU3BlY2lhbEhlYWRpbmcuZGVmYXVsdCwge1xuICAgIG5hbWVfcDE6IG5hbWVfcDEsXG4gICAgbmFtZV9wMjogbmFtZV9wMlxuICB9KSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIiwge1xuICAgIGNsYXNzTmFtZTogXCJjb250YWluZXJcIlxuICB9LCAvKiNfX1BVUkVfXyovX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcImRpdlwiLCB7XG4gICAgY2xhc3NOYW1lOiBcImluZm8gcm93XCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJwXCIsIHtcbiAgICBjbGFzc05hbWU6IFwibGFiZWxcIlxuICB9LCBcIkZlZWwgZnJlZSB0byBkcm9wIHVzIGEgbGluZSBhdDpcIiksIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiYVwiLCB7XG4gICAgaHJlZjogXCJtYWlsdG86bGVvbmFnZW5jeUBtYWlsLmNvbT9zdWJqZWN0PUNvbnRhY3RcIixcbiAgICBjbGFzc05hbWU6IFwibGlua1wiXG4gIH0sIFwibGVvbmFnZW5jeUBtYWlsLmNvbVwiKSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIiwge1xuICAgIGNsYXNzTmFtZTogXCJzb2NpYWxcIlxuICB9LCBcIkZpbmQgVXMgT24gU29jaWFsIE5ldHdvcmtzXCIsIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiaVwiLCB7XG4gICAgY2xhc3NOYW1lOiBcImZhYiBmYS15b3V0dWJlXCJcbiAgfSksIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiaVwiLCB7XG4gICAgY2xhc3NOYW1lOiBcImZhYiBmYS1mYWNlYm9vay1mXCJcbiAgfSksIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiaVwiLCB7XG4gICAgY2xhc3NOYW1lOiBcImZhYiBmYS10d2l0dGVyXCJcbiAgfSkpKSkpLCAvKiNfX1BVUkVfXyovX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcImRpdlwiLCB7XG4gICAgY2xhc3NOYW1lOiBcImZvb3RlclwiXG4gIH0sIFwiXFx4QTkgMjAyMyBcIiwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJzcGFuXCIsIG51bGwsIFwiTGVvblwiKSwgXCIgQWxsIFJpZ2h0IFJlc2VydmVkXCIpKTtcbn07XG52YXIgX2RlZmF1bHQgPSBDb250YWN0O1xuZXhwb3J0cy5kZWZhdWx0ID0gX2RlZmF1bHQ7Il19
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _SpecialHeading = _interopRequireDefault(require("./SpecialHeading"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Contact = function Contact() {
+  var name_p1 = "Contact";
+  var name_p2 = "We are born to create";
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "contact",
+    id: "contact"
+  }, /*#__PURE__*/_react.default.createElement(_SpecialHeading.default, {
+    name_p1: name_p1,
+    name_p2: name_p2
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "info row"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "label"
+  }, "Feel free to drop us a line at:"), /*#__PURE__*/_react.default.createElement("a", {
+    href: "mailto:leonagency@mail.com?subject=Contact",
+    className: "link"
+  }, "leonagency@mail.com"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "social"
+  }, "Find Us On Social Networks", /*#__PURE__*/_react.default.createElement("i", {
+    className: "fab fa-youtube"
+  }), /*#__PURE__*/_react.default.createElement("i", {
+    className: "fab fa-facebook-f"
+  }), /*#__PURE__*/_react.default.createElement("i", {
+    className: "fab fa-twitter"
+  }))))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "footer"
+  }, "\xA9 2023 ", /*#__PURE__*/_react.default.createElement("span", null, "Leon"), " All Right Reserved"));
+};
+var _default = Contact;
+exports.default = _default;
+//# sourceMappingURL=Contact.js.map

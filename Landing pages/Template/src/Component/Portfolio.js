@@ -1,2 +1,51 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;var _react=_interopRequireDefault(require("react")),_SpecialHeading=_interopRequireDefault(require("./SpecialHeading"));function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}var Portfolio=function(){return _react.default.createElement(_react.default.Fragment,null,_react.default.createElement(_SpecialHeading.default,{name_p1:"Portfolio",name_p2:"If you do it right, it will last forever."}),_react.default.createElement("div",{className:"portfolio",id:"portfolio"},_react.default.createElement("div",{className:"container"},_react.default.createElement("div",{className:"portfolio-content "},_react.default.createElement("div",{className:"card "},_react.default.createElement("img",{decoding:"async",src:"./imgaes/portfolio-1.jpg",alt:""}),_react.default.createElement("div",{className:"info"},_react.default.createElement("h3",null,"Project Here"),_react.default.createElement("p",null,"My creative ability is very difficult to measure because it can manifest in so many surprising and."))),_react.default.createElement("div",{className:"card  "},_react.default.createElement("img",{decoding:"async",src:"./imgaes/portfolio-2.jpg",alt:""}),_react.default.createElement("div",{className:"info"},_react.default.createElement("h3",null,"Project Here"),_react.default.createElement("p",null,"My creative ability is very difficult to measure because it can manifest in so many surprising and."))),_react.default.createElement("div",{className:"card  "},_react.default.createElement("img",{decoding:"async",src:"./imgaes/portfolio-3.jpg",alt:""}),_react.default.createElement("div",{className:"info"},_react.default.createElement("h3",null,"Project Here"),_react.default.createElement("p",null,"My creative ability is very difficult to measure because it can manifest in so many surprising and.")))))))},_default=Portfolio;exports.default=_default;
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIlBvcnRmb2xpby5qcyJdLCJuYW1lcyI6WyJPYmplY3QiLCJkZWZpbmVQcm9wZXJ0eSIsImV4cG9ydHMiLCJ2YWx1ZSIsImRlZmF1bHQiLCJfcmVhY3QiLCJfaW50ZXJvcFJlcXVpcmVEZWZhdWx0IiwicmVxdWlyZSIsIl9TcGVjaWFsSGVhZGluZyIsIm9iaiIsIl9fZXNNb2R1bGUiLCJQb3J0Zm9saW8iLCJjcmVhdGVFbGVtZW50IiwiRnJhZ21lbnQiLCJuYW1lX3AxIiwibmFtZV9wMiIsImNsYXNzTmFtZSIsImlkIiwiZGVjb2RpbmciLCJzcmMiLCJhbHQiLCJfZGVmYXVsdCJdLCJtYXBwaW5ncyI6IkFBQUEsYUFFQUEsT0FBT0MsZUFBZUMsUUFBUyxhQUFjLENBQzNDQyxNQUFPLENBQUEsQyxDQUNSLEVBQ0RELFFBQVFFLFFBQVUsS0FBQSxFQUNsQixJQUFJQyxPQUFTQyx1QkFBdUJDLFFBQVEsT0FBTyxDQUFDLEVBQ2hEQyxnQkFBa0JGLHVCQUF1QkMsUUFBUSxrQkFBa0IsQ0FBQyxFQUN4RSxTQUFTRCx1QkFBdUJHLEdBQU8sT0FBT0EsR0FBT0EsRUFBSUMsV0FBYUQsRUFBTSxDQUFFTCxRQUFTSyxDQUFHLENBQUcsQ0FDN0YsSUFBSUUsVUFBWSxXQUdkLE9BQW9CTixPQUFPRCxRQUFRUSxjQUFjUCxPQUFPRCxRQUFRUyxTQUFVLEtBQW1CUixPQUFPRCxRQUFRUSxjQUFjSixnQkFBZ0JKLFFBQVMsQ0FDakpVLFFBSFksWUFJWkMsUUFIWSwyQyxDQUliLEVBQWdCVixPQUFPRCxRQUFRUSxjQUFjLE1BQU8sQ0FDbkRJLFVBQVcsWUFDWEMsR0FBSSxXLEVBQ1VaLE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUNsREksVUFBVyxXLEVBQ0dYLE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUNsREksVUFBVyxvQixFQUNHWCxPQUFPRCxRQUFRUSxjQUFjLE1BQU8sQ0FDbERJLFVBQVcsTyxFQUNHWCxPQUFPRCxRQUFRUSxjQUFjLE1BQU8sQ0FDbERNLFNBQVUsUUFDVkMsSUFBSywyQkFDTEMsSUFBSyxFLENBQ04sRUFBZ0JmLE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUNuREksVUFBVyxNLEVBQ0dYLE9BQU9ELFFBQVFRLGNBQWMsS0FBTSxLQUFNLGNBQWMsRUFBZ0JQLE9BQU9ELFFBQVFRLGNBQWMsSUFBSyxLQUFNLHFHQUFxRyxDQUFDLENBQUMsRUFBZ0JQLE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUN4UkksVUFBVyxRLEVBQ0dYLE9BQU9ELFFBQVFRLGNBQWMsTUFBTyxDQUNsRE0sU0FBVSxRQUNWQyxJQUFLLDJCQUNMQyxJQUFLLEUsQ0FDTixFQUFnQmYsT0FBT0QsUUFBUVEsY0FBYyxNQUFPLENBQ25ESSxVQUFXLE0sRUFDR1gsT0FBT0QsUUFBUVEsY0FBYyxLQUFNLEtBQU0sY0FBYyxFQUFnQlAsT0FBT0QsUUFBUVEsY0FBYyxJQUFLLEtBQU0scUdBQXFHLENBQUMsQ0FBQyxFQUFnQlAsT0FBT0QsUUFBUVEsY0FBYyxNQUFPLENBQ3hSSSxVQUFXLFEsRUFDR1gsT0FBT0QsUUFBUVEsY0FBYyxNQUFPLENBQ2xETSxTQUFVLFFBQ1ZDLElBQUssMkJBQ0xDLElBQUssRSxDQUNOLEVBQWdCZixPQUFPRCxRQUFRUSxjQUFjLE1BQU8sQ0FDbkRJLFVBQVcsTSxFQUNHWCxPQUFPRCxRQUFRUSxjQUFjLEtBQU0sS0FBTSxjQUFjLEVBQWdCUCxPQUFPRCxRQUFRUSxjQUFjLElBQUssS0FBTSxxR0FBcUcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsQyxFQUV4T1MsU0FBV1YsVUFDZlQsUUFBUUUsUUFBVWlCIiwiZmlsZSI6IlBvcnRmb2xpby5qcyIsInNvdXJjZXNDb250ZW50IjpbIlwidXNlIHN0cmljdFwiO1xuXG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHtcbiAgdmFsdWU6IHRydWVcbn0pO1xuZXhwb3J0cy5kZWZhdWx0ID0gdm9pZCAwO1xudmFyIF9yZWFjdCA9IF9pbnRlcm9wUmVxdWlyZURlZmF1bHQocmVxdWlyZShcInJlYWN0XCIpKTtcbnZhciBfU3BlY2lhbEhlYWRpbmcgPSBfaW50ZXJvcFJlcXVpcmVEZWZhdWx0KHJlcXVpcmUoXCIuL1NwZWNpYWxIZWFkaW5nXCIpKTtcbmZ1bmN0aW9uIF9pbnRlcm9wUmVxdWlyZURlZmF1bHQob2JqKSB7IHJldHVybiBvYmogJiYgb2JqLl9fZXNNb2R1bGUgPyBvYmogOiB7IGRlZmF1bHQ6IG9iaiB9OyB9XG52YXIgUG9ydGZvbGlvID0gZnVuY3Rpb24gUG9ydGZvbGlvKCkge1xuICB2YXIgbmFtZV9wMSA9IFwiUG9ydGZvbGlvXCI7XG4gIHZhciBuYW1lX3AyID0gXCJJZiB5b3UgZG8gaXQgcmlnaHQsIGl0IHdpbGwgbGFzdCBmb3JldmVyLlwiO1xuICByZXR1cm4gLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoX3JlYWN0LmRlZmF1bHQuRnJhZ21lbnQsIG51bGwsIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KF9TcGVjaWFsSGVhZGluZy5kZWZhdWx0LCB7XG4gICAgbmFtZV9wMTogbmFtZV9wMSxcbiAgICBuYW1lX3AyOiBuYW1lX3AyXG4gIH0pLCAvKiNfX1BVUkVfXyovX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcImRpdlwiLCB7XG4gICAgY2xhc3NOYW1lOiBcInBvcnRmb2xpb1wiLFxuICAgIGlkOiBcInBvcnRmb2xpb1wiXG4gIH0sIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiZGl2XCIsIHtcbiAgICBjbGFzc05hbWU6IFwiY29udGFpbmVyXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIiwge1xuICAgIGNsYXNzTmFtZTogXCJwb3J0Zm9saW8tY29udGVudCBcIlxuICB9LCAvKiNfX1BVUkVfXyovX3JlYWN0LmRlZmF1bHQuY3JlYXRlRWxlbWVudChcImRpdlwiLCB7XG4gICAgY2xhc3NOYW1lOiBcImNhcmQgXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJpbWdcIiwge1xuICAgIGRlY29kaW5nOiBcImFzeW5jXCIsXG4gICAgc3JjOiBcIi4vaW1nYWVzL3BvcnRmb2xpby0xLmpwZ1wiLFxuICAgIGFsdDogXCJcIlxuICB9KSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIiwge1xuICAgIGNsYXNzTmFtZTogXCJpbmZvXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJoM1wiLCBudWxsLCBcIlByb2plY3QgSGVyZVwiKSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJwXCIsIG51bGwsIFwiTXkgY3JlYXRpdmUgYWJpbGl0eSBpcyB2ZXJ5IGRpZmZpY3VsdCB0byBtZWFzdXJlIGJlY2F1c2UgaXQgY2FuIG1hbmlmZXN0IGluIHNvIG1hbnkgc3VycHJpc2luZyBhbmQuXCIpKSksIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiZGl2XCIsIHtcbiAgICBjbGFzc05hbWU6IFwiY2FyZCAgXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJpbWdcIiwge1xuICAgIGRlY29kaW5nOiBcImFzeW5jXCIsXG4gICAgc3JjOiBcIi4vaW1nYWVzL3BvcnRmb2xpby0yLmpwZ1wiLFxuICAgIGFsdDogXCJcIlxuICB9KSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIiwge1xuICAgIGNsYXNzTmFtZTogXCJpbmZvXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJoM1wiLCBudWxsLCBcIlByb2plY3QgSGVyZVwiKSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJwXCIsIG51bGwsIFwiTXkgY3JlYXRpdmUgYWJpbGl0eSBpcyB2ZXJ5IGRpZmZpY3VsdCB0byBtZWFzdXJlIGJlY2F1c2UgaXQgY2FuIG1hbmlmZXN0IGluIHNvIG1hbnkgc3VycHJpc2luZyBhbmQuXCIpKSksIC8qI19fUFVSRV9fKi9fcmVhY3QuZGVmYXVsdC5jcmVhdGVFbGVtZW50KFwiZGl2XCIsIHtcbiAgICBjbGFzc05hbWU6IFwiY2FyZCAgXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJpbWdcIiwge1xuICAgIGRlY29kaW5nOiBcImFzeW5jXCIsXG4gICAgc3JjOiBcIi4vaW1nYWVzL3BvcnRmb2xpby0zLmpwZ1wiLFxuICAgIGFsdDogXCJcIlxuICB9KSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJkaXZcIiwge1xuICAgIGNsYXNzTmFtZTogXCJpbmZvXCJcbiAgfSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJoM1wiLCBudWxsLCBcIlByb2plY3QgSGVyZVwiKSwgLyojX19QVVJFX18qL19yZWFjdC5kZWZhdWx0LmNyZWF0ZUVsZW1lbnQoXCJwXCIsIG51bGwsIFwiTXkgY3JlYXRpdmUgYWJpbGl0eSBpcyB2ZXJ5IGRpZmZpY3VsdCB0byBtZWFzdXJlIGJlY2F1c2UgaXQgY2FuIG1hbmlmZXN0IGluIHNvIG1hbnkgc3VycHJpc2luZyBhbmQuXCIpKSkpKSkpO1xufTtcbnZhciBfZGVmYXVsdCA9IFBvcnRmb2xpbztcbmV4cG9ydHMuZGVmYXVsdCA9IF9kZWZhdWx0OyJdfQ==
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _SpecialHeading = _interopRequireDefault(require("./SpecialHeading"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Portfolio = function Portfolio() {
+  var name_p1 = "Portfolio";
+  var name_p2 = "If you do it right, it will last forever.";
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_SpecialHeading.default, {
+    name_p1: name_p1,
+    name_p2: name_p2
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "portfolio",
+    id: "portfolio"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "portfolio-content "
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "card "
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    decoding: "async",
+    src: "./imgaes/portfolio-1.jpg",
+    alt: ""
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "info"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Project Here"), /*#__PURE__*/_react.default.createElement("p", null, "My creative ability is very difficult to measure because it can manifest in so many surprising and."))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card  "
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    decoding: "async",
+    src: "./imgaes/portfolio-2.jpg",
+    alt: ""
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "info"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Project Here"), /*#__PURE__*/_react.default.createElement("p", null, "My creative ability is very difficult to measure because it can manifest in so many surprising and."))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card  "
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    decoding: "async",
+    src: "./imgaes/portfolio-3.jpg",
+    alt: ""
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "info"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Project Here"), /*#__PURE__*/_react.default.createElement("p", null, "My creative ability is very difficult to measure because it can manifest in so many surprising and.")))))));
+};
+var _default = Portfolio;
+exports.default = _default;
+//# sourceMappingURL=Portfolio.js.map
