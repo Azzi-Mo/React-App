@@ -6,7 +6,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="contact">
+      <div className="contact" id="contact">
         <SpecialHeading name_p1={name_p1} name_p2={name_p2} />
         <div className="container">
           <div className="info row">

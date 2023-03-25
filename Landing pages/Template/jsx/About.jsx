@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <SpecialHeading name_p1={name_p1} name_p2={name_p2} />
-      <div className="about">
+      <div className="about" id="about">
         <div className="container ">
           <div className="about-content ">
             <div className="image">

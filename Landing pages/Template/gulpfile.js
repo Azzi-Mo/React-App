@@ -10,6 +10,9 @@ const cleanCSS = require("gulp-clean-css");
 const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const eslint = require("gulp-eslint");
+const failedReporter = require("gulp-eslint-failed-reporter");
+const plumber = require('gulp-plumber');
+const eslintReact = require('eslint-plugin-react');
 // const concat = require("gulp-concat");
 // const responsive = require('gulp-responsive');
 
@@ -35,18 +38,52 @@ function compileSass() {
 }
 //NavBar
 gulp.task("NavBar", function () {
-  return gulp
-    .src(["./jsx/NavBar.jsx"])
-    .pipe(
-      babel({
-        presets: ["@babel/env", "@babel/preset-react"],
-      })
-    )
-    .pipe(sourcemaps.init())
-    .pipe(react())
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./src/Component"));
+  return (
+    gulp
+      .src(["./jsx/NavBar.jsx"])
+      // .pipe(
+      //   babel({
+      //     presets: ["@babel/env", "@babel/preset-react"],
+      //   })
+      // )
+      .pipe(sourcemaps.init())
+      .pipe(react())
+      .pipe(uglify())
+      .pipe(sourcemaps.write())
+      .pipe(eslint())
+      // .pipe(eslint({ fix: true }))
+      .pipe(eslint.format())
+      .pipe(eslint.failAfterError())
+      .pipe(
+        eslint.results((results) => {
+          console.log(`Total Results: ${results.length}`);
+          console.log(`Total Warnings: ${results.warningCount}`);
+          console.log(`Total Errors: ${results.errorCount}`);
+        })
+      )
+      .pipe(plumber())
+    .pipe(eslint({
+      plugins: ['react'],
+      parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      rules: {
+        'react/jsx-uses-vars': 'error',
+        'no-func-assign': 'error',
+        'no-unsafe-finally': 'error',
+        'no-unused-vars': 'error',
+        'no-unused-labels': 'error',
+        'no-unsafe-negation': 'error'
+      }
+    }))
+    .pipe(eslint.format())
+      .pipe(failedReporter())
+      .pipe(gulp.dest("./src/Component"))
+  );
 });
 //Landing
 gulp.task("Landing", function () {
@@ -161,6 +198,22 @@ gulp.task("Contact", function () {
     .pipe(gulp.dest("./src/Component"));
 });
 
+// Data
+gulp.task("Data", function () {
+  return gulp
+    .src(["./jsx/Data.js"])
+    .pipe(
+      babel({
+        presets: ["@babel/env", "@babel/preset-react"],
+      })
+    )
+    .pipe(sourcemaps.init())
+    .pipe(react())
+    .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./src/Component"));
+});
+
 gulp.task("sass", compileSass);
 gulp.task("default", gulp.series("NavBar"));
 gulp.task("default", gulp.series("Landing"));
@@ -170,14 +223,35 @@ gulp.task("default", gulp.series("SpecialHeading"));
 gulp.task("default", gulp.series("Portfolio"));
 gulp.task("default", gulp.series("About"));
 gulp.task("default", gulp.series("Contact"));
+gulp.task("default", gulp.series("Data"));
 
 gulp.task("lint", function () {
   return gulp
     .src(["./jsx/*.jsx", "!node_modules/**"])
     .pipe(eslint())
+    .pipe(plumber())
+    .pipe(eslint({
+      plugins: ['react'],
+      parserOptions: {
+        ecmaVersion: 2021,
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      rules: {
+        'react/jsx-uses-vars': 'error',
+        'no-func-assign': 'error',
+        'no-unsafe-finally': 'error',
+        'no-unused-vars': 'error',
+        'no-unused-labels': 'error',
+        'no-unsafe-negation': 'error'
+      }
+    }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
 });
+// gulp.task('build', gulp.series('lint', /* other build tasks */));
 
 gulp.task("watch", function () {
   gulp.watch("./Style/Styles.scss", compileSass);
@@ -189,4 +263,5 @@ gulp.task("watch", function () {
   gulp.watch(["./jsx/Portfolio.jsx"], gulp.series("Portfolio"));
   gulp.watch(["./jsx/About.jsx"], gulp.series("About"));
   gulp.watch(["./jsx/Contact.jsx"], gulp.series("Contact"));
+  gulp.watch(["./jsx/Data.js"], gulp.series("Data"));
 });

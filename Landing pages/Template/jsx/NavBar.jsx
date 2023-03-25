@@ -1,4 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import items from "./Data";
+
+// eslint-disable-next-line no-undef
+const allCategories = [...new Set(items.map((item) => item.category))];
+const [categories, setCategories] = useState(allCategories);
+
 const NavBar = () => {
   return (
     <section className="navbar container">
@@ -12,16 +18,25 @@ const NavBar = () => {
       </div>
       <div className="icon">
         <i className="fa-solid fa-bars"></i>
+        {
+          // <ul>
+          //     <li><a href="#services">Services</a></li>
+          //     <li><a href="#portfolio">Portfolio</a></li>
+          //     <li><a href="#contact">Contact</a></li>
+          //     <li><a href="#about">About</a></li>
+          //   </ul>
+        }
         <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#about">About</a></li>
-          </ul>
+          {categories.map((categorie, indx) => {
+            return (
+              <li key={indx}>
+                <a>{categorie}</a>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
-
-
   );
 };
 
