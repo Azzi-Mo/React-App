@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import items from "./Data";
+import React from "react";
+// import items from "./Data";
 
 // eslint-disable-next-line no-undef
-const allCategories = [...new Set(items.map((item) => item.category))];
+// const allCategories = [...new Set(items.map((item) => item.category))];
 // eslint-disable-next-line react-hooks/rules-of-hooks
-const [categories] = useState(allCategories);
+// const [categories] = useState(allCategories);
 
 const NavBar = () => {
-  if (!categories.length) {
-    return null;
-  }
+  // if (!categories.length) {
+  //   return null;
+  // }
 
   return (
     <section className="navbar container">
@@ -24,24 +24,22 @@ const NavBar = () => {
       <div className="icon">
         <i className="fa-solid fa-bars"></i>
 
-        {
-          // <ul>
-          //   <li>
-          //     <a href="#services">Services</a>
-          //   </li>
-          //   <li>
-          //     <a href="#portfolio">Portfolio</a>
-          //   </li>
-          //   <li>
-          //     <a href="#contact">Contact</a>
-          //   </li>
-          //   <li>
-          //     <a href="#about">About</a>
-          //   </li>
-          // </ul>
-        }
-
         <ul>
+          <li>
+            <a href="#services">Services</a>
+          </li>
+          <li>
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="#about">About</a>
+          </li>
+        </ul>
+
+        {/* <ul>
           {categories.map((categorie, indx) => {
             return (
               <li key={indx}>
@@ -49,7 +47,7 @@ const NavBar = () => {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

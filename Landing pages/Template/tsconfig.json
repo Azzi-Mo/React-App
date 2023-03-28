@@ -1,21 +1,20 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "lib": ["es6", "dom"],
-    "strict": true,
-    "esModuleInterop": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true
-  },
-  "include": [
-    "./jsx/**.jsx"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.test.ts"
-  ]
-}
+    "compilerOptions": {
+      "jsx": "react",
+      "target": "es5",
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "sourceMap": true
+    },
+    "files": [
+      "jsx/About.jsx",
+      "jsx/Contact.jsx",
+      "./jsx/Features.tsx",
+      "./jsx/Landing.tsx",
+      "./jsx/NavBar.tsx",
+      "./jsx/Portfolio.tsx",
+      "./jsx/Services.tsx",
+      "./jsx/SpecialHeading.tsx"
+    ],
+    "exclude": ["node_modules", "**/*.test.ts"]
+  }

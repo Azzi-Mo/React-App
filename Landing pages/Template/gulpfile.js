@@ -12,7 +12,7 @@
 // const cleanCSS = require("gulp-clean-css");
 // const autoprefixer = require("gulp-autoprefixer");
 // const browserSync = require("browser-sync").create();
-const eslint = require("gulp-eslint");
+// const eslint = require("gulp-eslint");
 // const failedReporter = require("gulp-eslint-failed-reporter");
 // const plumber = require("gulp-plumber");
 // const eslintReact = require('eslint-plugin-react');
@@ -60,56 +60,55 @@ const eslint = require("gulp-eslint");
 //     .pipe(babel({
 //       presets: ['@babel/preset-react']
 //     }))
-  //     .pipe(
-  //       babel({
-  //         presets: ["@babel/env", "@babel/preset-react"],
-  //       })
-  //     )
-  //     .pipe(sourcemaps.init())
-  //     .pipe(react())
-  //     .pipe(uglify())
-  //     .pipe(sourcemaps.write())
-  //     .pipe(eslint())
-  //     .pipe(eslint({ fix: true }))
-  //     .pipe(eslint({ configFile: '.eslintrc.json' }))
-  //     .pipe(eslint({ configFile: '.eslintrc.json' }))
-  //     .pipe(eslint.format())
-  //     .pipe(eslint.failAfterError())
-  //     .pipe(
-  //       eslint.results((results) => {
-  //         console.log(`Total Results: ${results.length}`);
-  //         console.log(`Total Warnings: ${results.warningCount}`);
-  //         console.log(`Total Errors: ${results.errorCount}`);
-  //       })
-  //     )
-  //     .pipe(plumber())
-  //     .pipe(
-  //       eslint({
-  //         plugins: ["react"],
-  //         parserOptions: {
-  //           ecmaVersion: 2021,
-  //           sourceType: "module",
-  //           ecmaFeatures: {
-  //             jsx: true,
-  //           },
-  //         },
-  //         rules: {
-  //           "react/jsx-uses-vars": "error",
-  //           "no-func-assign": "error",
-  //           "no-unsafe-finally": "error",
-  //           "no-unused-vars": "error",
-  //           "no-unused-labels": "error",
-  //           "no-unsafe-negation": "error",
-  //           "no-console": "off",
-  //         },
-  //       })
-  //     )
-  //     .pipe(eslint.format())
-  //     .pipe(failedReporter())
+//     .pipe(
+//       babel({
+//         presets: ["@babel/env", "@babel/preset-react"],
+//       })
+//     )
+//     .pipe(sourcemaps.init())
+//     .pipe(react())
+//     .pipe(uglify())
+//     .pipe(sourcemaps.write())
+//     .pipe(eslint())
+//     .pipe(eslint({ fix: true }))
+//     .pipe(eslint({ configFile: '.eslintrc.json' }))
+//     .pipe(eslint({ configFile: '.eslintrc.json' }))
+//     .pipe(eslint.format())
+//     .pipe(eslint.failAfterError())
+//     .pipe(
+//       eslint.results((results) => {
+//         console.log(`Total Results: ${results.length}`);
+//         console.log(`Total Warnings: ${results.warningCount}`);
+//         console.log(`Total Errors: ${results.errorCount}`);
+//       })
+//     )
+//     .pipe(plumber())
+//     .pipe(
+//       eslint({
+//         plugins: ["react"],
+//         parserOptions: {
+//           ecmaVersion: 2021,
+//           sourceType: "module",
+//           ecmaFeatures: {
+//             jsx: true,
+//           },
+//         },
+//         rules: {
+//           "react/jsx-uses-vars": "error",
+//           "no-func-assign": "error",
+//           "no-unsafe-finally": "error",
+//           "no-unused-vars": "error",
+//           "no-unused-labels": "error",
+//           "no-unsafe-negation": "error",
+//           "no-console": "off",
+//         },
+//       })
+//     )
+//     .pipe(eslint.format())
+//     .pipe(failedReporter())
 //       .pipe(gulp.dest("./src/Component"))
 //   );
 // });
-
 
 // gulp.task("sass", compileSass);
 // gulp.task("default", gulp.series("NavBar"));
@@ -121,7 +120,6 @@ const eslint = require("gulp-eslint");
 // gulp.task("default", gulp.series("About"));
 // gulp.task("default", gulp.series("Contact"));
 // gulp.task("default", gulp.series("Data"));
-
 
 // gulp.task("watch", function () {
 //   gulp.watch("./Style/Styles.scss", compileSass);
@@ -139,7 +137,7 @@ const eslint = require("gulp-eslint");
 
 // gulp.task('watch', function() {
 //   return watch(jsxFiles, gulp.series('babel'))
-  
+
 // });
 
 // gulp.task('default', gulp.series('babel', 'watch'));
@@ -243,49 +241,45 @@ const eslint = require("gulp-eslint");
 //       .pipe(gulp.dest('./src/Component'));
 // });
 
-
-
-
-const gulp = require('gulp');
-const babel = require('gulp-babel');
-const plumber = require('gulp-plumber');
-const rename = require('gulp-rename');
-const sourcemaps = require('gulp-sourcemaps');
-const ts = require('gulp-typescript');
-gulp.task("lint", function () {
-  return (
-    gulp
-      .src(["./jsx/*.js", "!node_modules/**"])
-      .pipe(plumber())
-      .pipe(eslint())
-.pipe(eslint({ configFile: '.eslintrc.json' }))
-.pipe(eslint.format())
-.pipe(
-  eslint({
-    plugins: ["react"],
-    parserOptions: {
-      ecmaVersion: 2021,
-      sourceType: "module",
-      ecmaFeatures: {
-        jsx: true,
-      },
-    },
-    rules: {
-      "react/jsx-uses-vars": "error",
-      "no-func-assign": "error",
-      "no-unsafe-finally": "error",
-      "no-unused-vars": "error",
-      "no-unused-labels": "error",
-      "no-unsafe-negation": "error",
-      "no-console": "error",
-    },
-  })
-)
-      .pipe(eslint.failAfterError())
-  );
-});
-gulp.task("build", gulp.series("lint" /* other build tasks */));
-
+// const gulp = require('gulp');
+// const babel = require('gulp-babel');
+// const plumber = require('gulp-plumber');
+// const rename = require('gulp-rename');
+// const sourcemaps = require('gulp-sourcemaps');
+// const ts = require('gulp-typescript');
+// gulp.task("lint", function () {
+//   return (
+//     gulp
+//       .src(["./jsx/*.js", "!node_modules/**"])
+//       .pipe(plumber())
+//       .pipe(eslint())
+// .pipe(eslint({ configFile: '.eslintrc.json' }))
+// .pipe(eslint.format())
+// .pipe(
+//   eslint({
+//     plugins: ["react"],
+//     parserOptions: {
+//       ecmaVersion: 2021,
+//       sourceType: "module",
+//       ecmaFeatures: {
+//         jsx: true,
+//       },
+//     },
+//     rules: {
+//       "react/jsx-uses-vars": "error",
+//       "no-func-assign": "error",
+//       "no-unsafe-finally": "error",
+//       "no-unused-vars": "error",
+//       "no-unused-labels": "error",
+//       "no-unsafe-negation": "error",
+//       "no-console": "error",
+//     },
+//   })
+// )
+//       .pipe(eslint.failAfterError())
+//   );
+// });
+// gulp.task("build", gulp.series("lint" /* other build tasks */));
 
 // const jsxFiles = [
 //   "./jsx/NavBar.jsx",
@@ -299,46 +293,111 @@ gulp.task("build", gulp.series("lint" /* other build tasks */));
 //   "./jsx/Data.js"
 // ];
 // Define source and destination paths
-const paths = {
-  src: './jsx/*.jsx',
-  dest: './src/components',
-};
+// const paths = {
+//   src: './jsx/*.tsx',
+//   dest: './src/components',
+// };
 
-// Initialize TypeScript compiler
-const tsProject = ts.createProject('tsconfig.json');
+// // Initialize TypeScript compiler
+// const tsProject = ts.createProject('tsconfig.json');
 
-// Define the task to convert JSX to TypeScript
-gulp.task('jsx2ts', function() {
-  return gulp.src(paths.src)
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['@babel/env'],
-      plugins: [
-        ['transform-react-jsx', { pragma: "React.createElement" }]
-      ]
-    }))
-    // .pipe(babel({
-    //   presets: ['@babel/preset-env', '@babel/preset-react'],
-    // }))
-    .pipe(tsProject())
-    .pipe(rename(function(path) {
-      path.extname = '.tsx';
-    }))
-    .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(paths.dest));
-});
+// // Define the task to convert JSX to TypeScript
+// gulp.task('jsx2ts', function() {
+//   return gulp.src(paths.src)
+//     .pipe(plumber())
+//     .pipe(sourcemaps.init())
+//     .pipe(babel({
+//       presets: ['@babel/env'],
+//       plugins: [
+//         ['transform-react-jsx', { pragma: "React.createElement" }]
+//       ]
+//     }))
+//     // .pipe(babel({
+//     //   presets: ['@babel/preset-env', '@babel/preset-react'],
+//     // }))
+//     .pipe(tsProject())
+//     .pipe(rename(function(path) {
+//       path.extname = '.tsx';
+//     }))
+//     .pipe(sourcemaps.write('.'))
+//     .pipe(gulp.dest(paths.dest));
+// });
 
-// Define the task to watch for changes
-gulp.task('watch', function() {
-  gulp.watch(paths.src, gulp.series('jsx2ts'));
-});
+// // Define the task to watch for changes
+// gulp.task('watch', function() {
+//   gulp.watch(paths.src, gulp.series('jsx2ts'));
+// });
 
-// Define the default task
-gulp.task('default', gulp.series('jsx2ts', 'watch'));
+// // Define the default task
+// gulp.task('default', gulp.series('jsx2ts', 'watch'));
 
 // const tsProject = ts.createProject('tsconfig.json');
 
-
-
 // gulp.task('default', gulp.series('babel', 'watch'));
+
+// _______________________________________________________________
+
+/* eslint-disable no-undef */
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const babel = require("gulp-babel");
+const sourcemaps = require("gulp-sourcemaps");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
+const autoprefixer = require("gulp-autoprefixer");
+// const sassGlob = require("gulp-sass-glob");
+const cleanCSS = require("gulp-clean-css");
+// const { series, parallel } = require("gulp");
+
+// Set up the source and destination file paths
+const paths = {
+  src: ["./jsx/*.jsx", "./jsx/*.js", "./Style/Styles.scss"],
+  dest: "./src/Components",
+};
+
+function compieSass() {
+  return gulp
+    .src("./Style/Styles.scss")
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sassGlob())
+    .pipe(sass().on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("./Style"))
+    .pipe(cleanCSS())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(sass().on("error", sass.logError))
+    .pipe(gulp.dest("./src/components/"));
+}
+
+// gulp.task("watch", function () {
+//   gulp.watch("./Style/Styles.scss", gulp.series("sass"));
+// });
+
+// Define the function to compile the JSX file
+function compile() {
+  return gulp
+    .src(paths.src.map((src) => src))
+    .pipe(plumber()) // Prevents gulp from stopping on error
+    .pipe(sourcemaps.init()) // Creates sourcemaps for debugging
+    .pipe(babel()) // Transpile JSX to ES5 JavaScript
+    .pipe(rename({ extname: ".js" })) // Rename the file extension
+    .pipe(sourcemaps.write(".")) // Writes the sourcemaps
+    .pipe(gulp.dest(paths.dest)); // Outputs the compiled file
+}
+
+// Define the gulp task
+function watch() {
+  gulp.watch(
+    paths.src.map((src) => src),
+    compile
+  );
+  gulp.watch("./Style/Styles.scss", compieSass);
+}
+
+// Expose the gulp task for command line usage
+
+// exports.compile = compile;
+exports.watch = watch;
+// exports.watch = series(compile, watch);

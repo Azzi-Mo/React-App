@@ -10,7 +10,7 @@ import Contact from "./Component/Contact"
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "./Component/style/style.css";
+import "./Components/style/style.css";
 
 
 const App = () => {
