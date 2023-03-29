@@ -338,66 +338,68 @@
 // _______________________________________________________________
 
 /* eslint-disable no-undef */
-const gulp = require("gulp");
-const plumber = require("gulp-plumber");
-const babel = require("gulp-babel");
-const sourcemaps = require("gulp-sourcemaps");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-const autoprefixer = require("gulp-autoprefixer");
-// const sassGlob = require("gulp-sass-glob");
-const cleanCSS = require("gulp-clean-css");
-// const { series, parallel } = require("gulp");
+// const gulp = require("gulp");
+// const plumber = require("gulp-plumber");
+// const babel = require("gulp-babel");
+// const sourcemaps = require("gulp-sourcemaps");
+// const rename = require("gulp-rename");
+// const autoprefixer = require("gulp-autoprefixer");
+// // const sassGlob = require("gulp-sass-glob");
+// const sass = require('gulp-sass')(require('sass'));
+// const cleanCSS = require("gulp-clean-css");
+// // const { series, parallel } = require("gulp");
 
-// Set up the source and destination file paths
-const paths = {
-  src: ["./jsx/*.jsx", "./jsx/*.js", "./Style/Styles.scss"],
-  dest: "./src/Components",
-};
+// // Set up the source and destination file paths
+// const paths = {
+//   src: ["./jsx/*.jsx", "./jsx/*.js", "./Style/Styles.scss"],
+//   dest: "./src/Components",
+// };
 
-function compieSass() {
-  return gulp
-    .src("./Style/Styles.scss")
-    .pipe(plumber())
-    .pipe(sourcemaps.init())
-    .pipe(sassGlob())
-    .pipe(sass().on("error", sass.logError))
-    .pipe(autoprefixer())
-    .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./Style"))
-    .pipe(cleanCSS())
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./src/components/"));
-}
+// function compieSass() {
+//   return gulp
+//     .src("./Style/Styles.scss")
+//     .pipe(plumber())
+//     .pipe(sass())
+//     .pipe(babel({
+//       presets: ['@babel/preset-env']
+//     }))
+//     // .pipe(sassGlob())
+//     .pipe(autoprefixer())
+//     .pipe(sourcemaps.init())
+//     .pipe(sourcemaps.write("."))
+//     .pipe(cleanCSS())
+//     .pipe(rename({ suffix: ".min" }))
+//     .pipe(sass({ outputStyle: 'compressed' }).on("error", sass.logError))
+//     .pipe(gulp.dest("./src/components/"));
+// }
 
-// gulp.task("watch", function () {
-//   gulp.watch("./Style/Styles.scss", gulp.series("sass"));
-// });
+// // gulp.task("watch", function () {
+// //   gulp.watch("./Style/Styles.scss", gulp.series("sass"));
+// // });
 
-// Define the function to compile the JSX file
-function compile() {
-  return gulp
-    .src(paths.src.map((src) => src))
-    .pipe(plumber()) // Prevents gulp from stopping on error
-    .pipe(sourcemaps.init()) // Creates sourcemaps for debugging
-    .pipe(babel()) // Transpile JSX to ES5 JavaScript
-    .pipe(rename({ extname: ".js" })) // Rename the file extension
-    .pipe(sourcemaps.write(".")) // Writes the sourcemaps
-    .pipe(gulp.dest(paths.dest)); // Outputs the compiled file
-}
+// // Define the function to compile the JSX file
+// function compile() {
+//   return gulp
+//     .src(paths.src.map((src) => src))
+//     .pipe(plumber()) // Prevents gulp from stopping on error
+//     .pipe(sourcemaps.init()) // Creates sourcemaps for debugging
+//     .pipe(babel()) // Transpile JSX to ES5 JavaScript
+//     .pipe(rename({ extname: ".js" })) // Rename the file extension
+//     .pipe(sourcemaps.write(".")) // Writes the sourcemaps
+//     .pipe(gulp.dest(paths.dest)); // Outputs the compiled file
+// }
 
-// Define the gulp task
-function watch() {
-  gulp.watch(
-    paths.src.map((src) => src),
-    compile
-  );
-  gulp.watch("./Style/Styles.scss", compieSass);
-}
+// // Define the gulp task
+// function watch() {
+//   gulp.watch(
+//     paths.src.map((src) => src),
+//     compile
+//   );
+//   gulp.watch("./Style/Styles.scss", compieSass);
+// }
 
-// Expose the gulp task for command line usage
+// // Expose the gulp task for command line usage
 
-// exports.compile = compile;
-exports.watch = watch;
-// exports.watch = series(compile, watch);
+// // exports.compile = compile;
+// exports.watch = watch;
+// // exports.watch = series(compile, watch);
