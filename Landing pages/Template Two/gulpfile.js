@@ -1,18 +1,19 @@
 /* eslint-disable no-undef */
 const gulp = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
-// import plumber from "gulp-plumber";
-// import babel from "gulp-babel";
-// import { init, write } from "gulp-sourcemaps";
-// import rename from "gulp-rename";
+// const babel = require('gulp-babel');
+const  { init, write } = require("gulp-sourcemaps");
+const  rename = require("gulp-rename");
+const tsx = require('gulp-tsx');
+
 
 // Set up the source and destination file paths
 const paths = {
-  src: ["./jsx/*.jsx", "./jsx/*.js"],
+  src: ["./jsx/*.jsx"],
   dest: "./src/Component",
 };
 
@@ -35,7 +36,7 @@ function compielSass()
   return gulp.src('./Style/Styles.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(postcss([autoprefixer()]))
-  .pipe(dest('./src/Component'));
+  .pipe(gulp.dest('./src/Component'));
 }
 
 // Define the function to compile the JSX file
@@ -46,13 +47,13 @@ function compile() {
     .pipe(babel()) // Transpile JSX to ES5 JavaScript
     .pipe(rename({ extname: ".js" })) // Rename the file extension
     .pipe(write(".")) // Writes the sourcemaps
-    .pipe(dest(paths.dest)); // Outputs the compiled file
+    .pipe(gulp.dest(paths.dest)); // Outputs the compiled file
 }
 
 
 
 // Define the gulp task
 
-exports.styles = styles;
-exports.scripts = scripts;
+exports.compielSass = compielSass;
+exports.compile = compile;
 exports.watch = watch;
