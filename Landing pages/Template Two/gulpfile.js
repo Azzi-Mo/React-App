@@ -5,11 +5,12 @@ const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const babel = require('gulp-babel');
 const plumber = require('gulp-plumber');
-// const babel = require('gulp-babel');
 const  { init, write } = require("gulp-sourcemaps");
 const  rename = require("gulp-rename");
-const tsx = require('gulp-tsx');
-
+// const tsx = require('gulp-tsx');
+const ts = require('gulp-typescript');
+const tsProject = ts.createProject('tsconfig.json');
+// const react = require('gulp-react');
 
 // Set up the source and destination file paths
 const paths = {
@@ -45,9 +46,15 @@ function compile() {
     .pipe(plumber()) // Prevents gulp from stopping on error
     .pipe(init()) // Creates sourcemaps for debugging
     .pipe(babel()) // Transpile JSX to ES5 JavaScript
-    .pipe(rename({ extname: ".js" })) // Rename the file extension
     .pipe(write(".")) // Writes the sourcemaps
-    .pipe(gulp.dest(paths.dest)); // Outputs the compiled file
+    // .pipe(react())
+    .pipe(babel({
+      // presets: ['@babel/preset-react', '@babel/preset-typescript']
+      presets: ['@babel/preset-env']
+    }))
+    .pipe(tsProject())
+    .pipe(rename({ extname: ".js" })) // Rename the file extension
+    .js.pipe(gulp.dest(paths.dest)); // Outputs the compiled file
 }
 
 

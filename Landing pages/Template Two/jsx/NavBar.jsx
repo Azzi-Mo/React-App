@@ -1,11 +1,8 @@
 import React from "react";
 
-
 const NavBar = () => {
-
-  return ( 
-<></>
-  );
+  // const data = 52;
+  return <></>;
 };
 
 export default NavBar;
