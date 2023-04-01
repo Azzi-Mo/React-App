@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 
 const Landing = () => {
   return (
     <div className="Landing">
+
       <img src="./imgaes/landing.jpg" className="Landing_img"></img>
       <div>
         <h1 className="p1">Hello There</h1>
