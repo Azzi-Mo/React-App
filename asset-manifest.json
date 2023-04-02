@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/React-App/designify-website/static/js/main.0c5a81f6.js",
-    "index.html": "/React-App/designify-website/index.html",
-    "main.0c5a81f6.js.map": "/React-App/designify-website/static/js/main.0c5a81f6.js.map"
+    "main.js": "/designify-website/static/js/main.e71e9800.js",
+    "index.html": "/designify-website/index.html",
+    "main.e71e9800.js.map": "/designify-website/static/js/main.e71e9800.js.map"
   },
   "entrypoints": [
-    "static/js/main.0c5a81f6.js"
+    "static/js/main.e71e9800.js"
   ]
 }
