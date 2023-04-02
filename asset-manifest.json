@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Landing%20pages/Designify-Website/static/js/main.b5eda27f.js",
-    "index.html": "/Landing%20pages/Designify-Website/index.html",
-    "main.b5eda27f.js.map": "/Landing%20pages/Designify-Website/static/js/main.b5eda27f.js.map"
+    "main.js": "/styled-components/static/js/main.39013c26.js",
+    "index.html": "/styled-components/index.html",
+    "main.39013c26.js.map": "/styled-components/static/js/main.39013c26.js.map"
   },
   "entrypoints": [
-    "static/js/main.b5eda27f.js"
+    "static/js/main.39013c26.js"
   ]
 }
