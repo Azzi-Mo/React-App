@@ -106,7 +106,8 @@ export const Button = styled.button`
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;
-  color: #fff;
+  // color: #fff;
+  color:red;
   outline: none;
   border: 2px solid #fff;
   cursor: pointer;
@@ -133,4 +134,35 @@ export const Button = styled.button`
   }
 `;
 
+
+//export const Button = styled.button
+// `
+// @import "sass/mixins";
+  
+//   @include button-styles($bg-color, $text-color);
+  
+
+//   @mixin button-styles($bg-color, $text-color) {
+//     background-color: $bg-color;
+//     color: $text-color;
+//     font-size: 16px;
+//     padding: 10px 20px;
+//     border: none;
+//     border-radius: 5px;
+//     cursor: pointer;
+  
+//     &:hover {
+//       background-color: darken($bg-color, 10%);
+//     }
+//   }
+//   `
 export default GlobalStyle;
+
+// export const Container = styled.div`
+// export const MainHeading = styled.h1`
+// export const Heading = styled.h2`
+// export const TextWrapper = styled.span`
+// export const Section = styled.section`
+// export const Row = styled.div`
+// export const Column = styled.div`
+// export const Button = styled.button`

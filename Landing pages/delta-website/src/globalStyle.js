@@ -102,7 +102,7 @@ export const Column = styled.div`
 
 export const Button = styled.button`
   border-radius: 4px;
-  background: none;
+   background: none;
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;
