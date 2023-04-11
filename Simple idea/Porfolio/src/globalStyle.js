@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import "./normalize.css";
 
 const GlobalStyle = createGlobalStyle`
 *{
