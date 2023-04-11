@@ -1,0 +1,38 @@
+export const data = [
+  {
+    title: "BASIC",
+    price: "19",
+    mo: "Mo",
+    f1: "Feature No 1",
+    f2: "Extra Feature",
+    f3: "Extra Feature No 2",
+    f4: "Feature",
+  },
+  {
+    title: "PREMIUM",
+    price: "29",
+    mo: "Mo",
+    f1: "Feature No 1",
+    f2: "Extra Feature",
+    f3: "Extra Feature No 2",
+    f4: "Feature",
+  },
+  {
+    title: "PRO",
+    price: "39",
+    mo: "Mo",
+    f1: "Feature No 1",
+    f2: "Extra Feature",
+    f3: "Extra Feature No 2",
+    f4: "Feature",
+  },
+  {
+    title: "PLATINUM",
+    price: "49",
+    mo: "Mo",
+    f1: "Feature No 1",
+    f2: "Extra Feature",
+    f3: "Extra Feature No 2",
+    f4: "Feature",
+  },
+];

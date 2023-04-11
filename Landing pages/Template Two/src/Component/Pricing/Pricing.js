@@ -1,11 +1,14 @@
-import React from 'react'
+import React from "react";
+import { Container, Section , Button } from "../../globalStyle";
 
 function Pricing() {
   return (
-    <div>
-      pricing
-    </div>
-  )
+    <Section>
+      <Container>
+     
+      </Container>
+    </Section>
+  );
 }
 
-export default Pricing
+export default Pricing;
