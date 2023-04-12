@@ -1,9 +1,96 @@
 import React from "react";
-import { Section } from "./ContactStyle";
-import styled from 'styled-components';
+import { Container, TextWrapper, Heading } from "../../globalStyle";
+import { InfoContent, FootContent } from "./ContactStyle";
+export const Contact = ({ props, size, mobileBreakpoint }) => {
+  const textWrapper = {
+    contact: "Contact ",
+    heading:
+      "Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.",
+    largeBreakpoint: "60px",
+    tabletBreakpoint: "25px",
+    phoneBreakpoint: "15px",
+  };
 
+  const getSizePage = (resize) => {
+    if (resize <= "480") {
+      return "small";
+    } else if (resize > "480" && resize <= "768") {
+      return "medium";
+    } else if (resize > "768" && resize <= "1024") {
+      return "large";
+    } else {
+      return "x_large"; // default value
+    }
+  };
 
+  setInterval(() => {
+    console.log(getSizePage(window.innerWidth));
+  }, 1000);
 
-export const Contact = ({ inverse }) => {
-  return <Section gray >this content</Section>;
+  return (
+    <Container gray>
+      <InfoContent>
+        <TextWrapper snow1 size={textWrapper.size1}>
+          {textWrapper.contact}
+        </TextWrapper>
+
+        {
+          // (mobileBreakpoint = "small" ? (
+          //   <Heading snow2 size="11px">
+          //     {textWrapper.heading}
+          //   </Heading>
+          // ) : (
+          //   (mobileBreakpoint = "medium" ? (
+          //     <Heading snow2 size="19px">
+          //       {textWrapper.heading}
+          //     </Heading>
+          //   ) : (
+          //     (mobileBreakpoint = "large" ? (
+          //       <Heading snow2 size="25px">
+          //         {textWrapper.heading}
+          //       </Heading>
+          //     ) : null)
+          //   ))
+          // ))
+        }
+
+        {
+          // <Heading { size == "small" ? ...(mobileBreakpoint = "480px") : ''}>
+          //       {textWrapper.heading}
+          //     </Heading>
+        }
+
+        {
+          // window.innerWidth === "small" ? (
+          //   <Heading snow2 size="11px">
+          //     {textWrapper.heading}
+          //   </Heading>
+          // ) : window.innerWidth === "medium" ? (
+          //   <Heading snow2 size="18px">
+          //     {textWrapper.heading}
+          //   </Heading>
+          // ) : window.innerWidth === "large" ? (
+          //   <Heading snow2 size="25px">
+          //     {textWrapper.heading}
+          //   </Heading>
+          // ) : null
+        }
+
+        <Heading
+          size={
+            getSizePage(window.innerWidth) === "small"
+              ? "15px"
+              : getSizePage(window.innerWidth) === "medium"
+              ? "20px"
+              : getSizePage(window.innerWidth) === "large"
+              ? "25px"
+              : "30px"
+          }
+        >
+          {textWrapper.heading}
+        </Heading>
+      </InfoContent>
+      <FootContent></FootContent>
+    </Container>
+  );
 };
