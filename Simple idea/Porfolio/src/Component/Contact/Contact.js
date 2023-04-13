@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, TextWrapper, Heading } from "../../globalStyle";
-import { InfoContent, FootContent } from "./ContactStyle";
-export const Contact = ({ props, size, mobileBreakpoint }) => {
+import { Container, HeadingSize1 , HeadingSize4} from "../../globalStyle";
+import { FooterUp , FooterDown, InfoBox1, InfoBox2 } from "./ContactStyle";
+import { useState } from "react";
+import { useEffect } from "react";
+export const Contact = ({}) => {
   const textWrapper = {
     contact: "Contact ",
     heading:
@@ -11,6 +13,23 @@ export const Contact = ({ props, size, mobileBreakpoint }) => {
     phoneBreakpoint: "15px",
   };
 
+  const [size, setSize] = useState("");
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setSize(
+        getSizePage(window.innerWidth) === "small"
+          ? "15px"
+          : getSizePage(window.innerWidth) === "medium"
+          ? "20px"
+          : getSizePage(window.innerWidth) === "large"
+          ? "25px"
+          : "30px"
+      );
+    }, 10);
+    return () => clearInterval(intervalId);
+  }, []);
+
   const getSizePage = (resize) => {
     if (resize <= "480") {
       return "small";
@@ -19,36 +38,28 @@ export const Contact = ({ props, size, mobileBreakpoint }) => {
     } else if (resize > "768" && resize <= "1024") {
       return "large";
     } else {
-      return "x_large"; // default value
+      return "x_large";
     }
   };
 
-  setInterval(() => {
-    console.log(getSizePage(window.innerWidth));
-  }, 1000);
-
   return (
     <Container gray>
-      <InfoContent>
-        <TextWrapper snow1 size={textWrapper.size1}>
-          {textWrapper.contact}
-        </TextWrapper>
+      <FooterUp >
+        <InfoBox1>
+          <HeadingSize1 snow1 size={size}>
+            {textWrapper.contact}
+          </HeadingSize1>
 
-        <Heading
-          size={
-            getSizePage(window.innerWidth) === "small"
-              ? "15px"
-              : getSizePage(window.innerWidth) === "medium"
-              ? "20px"
-              : getSizePage(window.innerWidth) === "large"
-              ? "25px"
-              : "30px"
-          }
-        >
-          {textWrapper.heading}
-        </Heading>
-      </InfoContent>
-      <FootContent></FootContent>
+          <HeadingSize4 size={size}>{textWrapper.heading}</HeadingSize4>
+        </InfoBox1>
+
+        
+        <InfoBox2>
+         
+        </InfoBox2>
+      </FooterUp>
+
+      <FooterDown></FooterDown>
     </Container>
   );
 };

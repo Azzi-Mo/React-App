@@ -4,23 +4,22 @@ import "./normalize.css";
 const color = {
   midnight: "#141514",
   gray: "#252425",
-  light_green: "#4CE3A0",
+  green: "#4CE3A0",
   snow1: "#FEFFFE",
-  snow2:'#DBDBDB'
+  snow2: "#DBDBDB",
 };
 
-const getSizeValue = (size) => {
-  if (size === "small") {
-    return "480px";
-  } else if (size === "medium") {
-    return "768px";
-  } else if (size === "large") {
-    return "1024px";
-  } else {
-    return "768px"; // default value
-  }
-};
-
+// const getSizeValue = (size) => {
+//   if (size === "small") {
+//     return "480px";
+//   } else if (size === "medium") {
+//     return "768px";
+//   } else if (size === "large") {
+//     return "1024px";
+//   } else {
+//     return "768px"; // default value
+//   }
+// };
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -76,38 +75,127 @@ export const TextWrapper = styled.h2`
   margin: ${({ margin }) => (margin ? margin : "")};
   margin-bottom: ${({ mb }) => (mb ? mb : "")};
   margin-top: ${({ mt }) => (mt ? mt : "")};
-
 `;
-export const Heading = styled.h3`
+
+// section Heading size start
+
+
+export const HeadingSize1 = styled.h1`
+
   /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
   font-size: ${({ size }) => (size ? size : "100%")};
   margin: ${({ margin }) => (margin ? margin : "")};
   margin-bottom: ${({ mb }) => (mb ? mb : "")};
   margin-top: ${({ mt }) => (mt ? mt : "")};
   color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
-  /* letter-spacing: 0.4rem; */
   line-height: 1.06;
-  /* text-align: center; */
+  letter-spacing: ${({ spacing }) => (spacing ? spacing : "")};
+  padding: ${({ padding }) => (padding ? padding : "")};
   width: ${({ width }) => (width ? width : "100%")};
-  
-   /* Media query */
-   /* @media (max-width: ${props => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
+  font-weight: ${({ weight }) => (weight ? weight : "")};
 
+  /* Media query */
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
   }
-  @media (max-width: ${props => props.mobileBreakpoint}) {
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
     font-size: ${({ size }) => (size ? size : "100%")};
-
   }
-  @media (max-width: ${props => props.mobileBreakpoint}) {
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
     font-size: ${({ size }) => (size ? size : "100%")};
+  }
 
-  } */
+`;
 
-  @media (max-width: ${props => getSizeValue(props.mobileBreakpoint)}) {
+export const HeadingSize2 = styled.h2`
+  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
+  font-size: ${({ size }) => (size ? size : "100%")};
+  margin: ${({ margin }) => (margin ? margin : "")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  margin-top: ${({ mt }) => (mt ? mt : "")};
+  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
+  line-height: 1.06;
+  width: ${({ width }) => (width ? width : "100%")};
+
+  /* Media query */
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
     font-size: ${({ size }) => (size ? size : "100%")};
   }
 `;
+
+export const HeadingSize3 = styled.h3`
+  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
+  font-size: ${({ size }) => (size ? size : "100%")};
+  margin: ${({ margin }) => (margin ? margin : "")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  margin-top: ${({ mt }) => (mt ? mt : "")};
+  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
+  line-height: 1.06;
+  width: ${({ width }) => (width ? width : "100%")};
+
+  /* Media query */
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+`;
+
+export const HeadingSize4 = styled.h4`
+  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
+  font-size: ${({ size }) => (size ? size : "100%")};
+  margin: ${({ margin }) => (margin ? margin : "")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  margin-top: ${({ mt }) => (mt ? mt : "")};
+  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
+  line-height: 1.06;
+  width: ${({ width }) => (width ? width : "100%")};
+
+  /* Media query */
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+`;
+
+export const HeadingSize5 = styled.h5`
+  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
+  font-size: ${({ size }) => (size ? size : "100%")};
+  margin: ${({ margin }) => (margin ? margin : "")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  margin-top: ${({ mt }) => (mt ? mt : "")};
+  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
+  line-height: 1.06;
+  width: ${({ width }) => (width ? width : "100%")};
+
+  /* Media query */
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+  @media (max-width: ${(props) => props.mobileBreakpoint}) {
+    font-size: ${({ size }) => (size ? size : "100%")};
+  }
+`;
+
+// section Heading size end
 
 export const Section = styled.section`
   padding: ${({ padding }) => (padding ? padding : "140px 0")};
