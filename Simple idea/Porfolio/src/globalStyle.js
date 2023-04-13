@@ -89,6 +89,7 @@ export const Heading = styled.h3`
   line-height: 1.06;
   /* text-align: center; */
   width: ${({ width }) => (width ? width : "100%")};
+  
    /* Media query */
    /* @media (max-width: ${props => props.mobileBreakpoint}) {
     font-size: ${({ size }) => (size ? size : "100%")};

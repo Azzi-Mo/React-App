@@ -34,48 +34,6 @@ export const Contact = ({ props, size, mobileBreakpoint }) => {
           {textWrapper.contact}
         </TextWrapper>
 
-        {
-          // (mobileBreakpoint = "small" ? (
-          //   <Heading snow2 size="11px">
-          //     {textWrapper.heading}
-          //   </Heading>
-          // ) : (
-          //   (mobileBreakpoint = "medium" ? (
-          //     <Heading snow2 size="19px">
-          //       {textWrapper.heading}
-          //     </Heading>
-          //   ) : (
-          //     (mobileBreakpoint = "large" ? (
-          //       <Heading snow2 size="25px">
-          //         {textWrapper.heading}
-          //       </Heading>
-          //     ) : null)
-          //   ))
-          // ))
-        }
-
-        {
-          // <Heading { size == "small" ? ...(mobileBreakpoint = "480px") : ''}>
-          //       {textWrapper.heading}
-          //     </Heading>
-        }
-
-        {
-          // window.innerWidth === "small" ? (
-          //   <Heading snow2 size="11px">
-          //     {textWrapper.heading}
-          //   </Heading>
-          // ) : window.innerWidth === "medium" ? (
-          //   <Heading snow2 size="18px">
-          //     {textWrapper.heading}
-          //   </Heading>
-          // ) : window.innerWidth === "large" ? (
-          //   <Heading snow2 size="25px">
-          //     {textWrapper.heading}
-          //   </Heading>
-          // ) : null
-        }
-
         <Heading
           size={
             getSizePage(window.innerWidth) === "small"
