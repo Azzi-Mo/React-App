@@ -1,21 +1,29 @@
 import React from "react";
 import {
   Section,
-  Container,
   HeadingSize1,
   HeadingSize4,
 } from "../../globalStyle";
-import { FooterUp, FooterDown, InfoBox1, InfoBox2 } from "./ContactStyle";
+import {
+  FooterContainer,
+  FooterUp,
+  FooterDown,
+  InfoBox1,
+  InfoBox2,
+  InfoBox2Input,
+  InfoBox2textarea,
+  InfoBox2Span
+} from "./ContactStyle";
 import { useState } from "react";
 import { useEffect } from "react";
 export const Contact = () => {
-  const textWrapper = {
+  const ContactData = {
     contact: "Contact ",
     heading:
       "Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.",
-    largeBreakpoint: "60px",
-    tabletBreakpoint: "25px",
-    phoneBreakpoint: "15px",
+    inputs:{email: "email",
+    password: "password",},
+    infoBox2Span:'send message'
   };
 
   const [size, setSize] = useState("");
@@ -48,8 +56,8 @@ export const Contact = () => {
   };
 
   return (
-    <Section smPadding='50px 0 0' padding='50px 0 0'>
-      <Container >
+    <Section smPadding="50px 0 0" padding="50px 0 0">
+      <FooterContainer>
         <FooterUp>
           <InfoBox1>
             <HeadingSize1
@@ -66,7 +74,7 @@ export const Contact = () => {
                   : size
               }
             >
-              {textWrapper.contact}
+              {ContactData.contact}
             </HeadingSize1>
 
             <HeadingSize4
@@ -82,15 +90,20 @@ export const Contact = () => {
                   : size
               }
             >
-              {textWrapper.heading}
+              {ContactData.heading}
             </HeadingSize4>
           </InfoBox1>
 
-          <InfoBox2></InfoBox2>
+          <InfoBox2>
+            <InfoBox2Input type={ContactData.inputs.email}></InfoBox2Input>
+            <InfoBox2Input type={ContactData.inputs.password}></InfoBox2Input>
+            <InfoBox2textarea rows="4" cols="50" ></InfoBox2textarea>
+            <InfoBox2Span color={'#FEFFFE'}>{ContactData.infoBox2Span}</InfoBox2Span>
+          </InfoBox2>
         </FooterUp>
 
         <FooterDown></FooterDown>
-      </Container>
+      </FooterContainer>
     </Section>
   );
 };
