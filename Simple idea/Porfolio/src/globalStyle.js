@@ -27,19 +27,22 @@ const GlobalStyle = createGlobalStyle`
     margin:0;
     padding:0;
     font-family:'Montserrat' , sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }`;
 
 export const Container = styled.div`
   width: 100%;
   min-height: 500px;
-  background-color: ${(props) => (props.gray ? color.gray : color.midnight)};
-  color: ${(props) => (props.primary ? "white" : "white")};
-  display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  padding: 0 50px;
   margin-left: auto;
   margin-right: auto;
+  background-color: ${(props) => (props ? color.gray : color.midnight)};
+  /* color: ${(props) => (props.primary ? "white" : "white")}; */
+  /* display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+  padding: 0 50px;
   /* Small */
   @media (min-width: 768px) {
     /* width: 750px; */
@@ -83,7 +86,7 @@ export const TextWrapper = styled.h2`
 export const HeadingSize1 = styled.h1`
 
   /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "100%")};
+  font-size: ${({ size }) => (size ? size : '')};
   margin: ${({ margin }) => (margin ? margin : "")};
   margin-bottom: ${({ mb }) => (mb ? mb : "")};
   margin-top: ${({ mt }) => (mt ? mt : "")};
@@ -153,7 +156,7 @@ export const HeadingSize3 = styled.h3`
 
 export const HeadingSize4 = styled.h4`
   /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "100%")};
+  font-size: ${({ size }) => (size ? size : "")};
   margin: ${({ margin }) => (margin ? margin : "")};
   margin-bottom: ${({ mb }) => (mb ? mb : "")};
   margin-top: ${({ mt }) => (mt ? mt : "")};
@@ -200,7 +203,7 @@ export const HeadingSize5 = styled.h5`
 export const Section = styled.section`
   padding: ${({ padding }) => (padding ? padding : "140px 0")};
   margin: ${({ margin }) => (margin ? margin : "")};
-  background: ${({ inverse }) => (inverse ? "white" : "#071c2f")};
+  background: ${({ inverse }) => (inverse ? "white" : "#141514")};
   position: ${({ position }) => (position ? position : "")};
   width: ${({ width }) => (width ? width : "auto")};
   min-width: ${({ minWidth }) => (minWidth ? minWidth : "auto")};

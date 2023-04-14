@@ -1,9 +1,14 @@
 import React from "react";
-import { Container, HeadingSize1 , HeadingSize4} from "../../globalStyle";
-import { FooterUp , FooterDown, InfoBox1, InfoBox2 } from "./ContactStyle";
+import {
+  Section,
+  Container,
+  HeadingSize1,
+  HeadingSize4,
+} from "../../globalStyle";
+import { FooterUp, FooterDown, InfoBox1, InfoBox2 } from "./ContactStyle";
 import { useState } from "react";
 import { useEffect } from "react";
-export const Contact = ({}) => {
+export const Contact = () => {
   const textWrapper = {
     contact: "Contact ",
     heading:
@@ -43,23 +48,49 @@ export const Contact = ({}) => {
   };
 
   return (
-    <Container gray>
-      <FooterUp >
-        <InfoBox1>
-          <HeadingSize1 snow1 size={size}>
-            {textWrapper.contact}
-          </HeadingSize1>
+    <Section smPadding='50px 0 0' padding='50px 0 0'>
+      <Container >
+        <FooterUp>
+          <InfoBox1>
+            <HeadingSize1
+              snow1
+              size={
+                getSizePage(window.innerWidth) === "small"
+                  ? "20px"
+                  : getSizePage(window.innerWidth) === "medium"
+                  ? "35px"
+                  : getSizePage(window.innerWidth) === "large"
+                  ? "40px"
+                  : getSizePage(window.innerWidth) === "x_large"
+                  ? "70px"
+                  : size
+              }
+            >
+              {textWrapper.contact}
+            </HeadingSize1>
 
-          <HeadingSize4 size={size}>{textWrapper.heading}</HeadingSize4>
-        </InfoBox1>
+            <HeadingSize4
+              size={
+                getSizePage(window.innerWidth) === "small"
+                  ? "11px"
+                  : getSizePage(window.innerWidth) === "medium"
+                  ? "15px"
+                  : getSizePage(window.innerWidth) === "large"
+                  ? "18px"
+                  : getSizePage(window.innerWidth) === "x_large"
+                  ? "22px"
+                  : size
+              }
+            >
+              {textWrapper.heading}
+            </HeadingSize4>
+          </InfoBox1>
 
-        
-        <InfoBox2>
-         
-        </InfoBox2>
-      </FooterUp>
+          <InfoBox2></InfoBox2>
+        </FooterUp>
 
-      <FooterDown></FooterDown>
-    </Container>
+        <FooterDown></FooterDown>
+      </Container>
+    </Section>
   );
 };
