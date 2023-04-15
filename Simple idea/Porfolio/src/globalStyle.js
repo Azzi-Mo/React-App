@@ -9,17 +9,6 @@ const color = {
   snow2: "#DBDBDB",
 };
 
-// const getSizeValue = (size) => {
-//   if (size === "small") {
-//     return "480px";
-//   } else if (size === "medium") {
-//     return "768px";
-//   } else if (size === "large") {
-//     return "1024px";
-//   } else {
-//     return "768px"; // default value
-//   }
-// };
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -35,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 export const Section = styled.section`
   padding: ${({ padding }) => (padding ? padding : "140px 0")};
   margin: ${({ margin }) => (margin ? margin : "")};
-  background: ${({ inverse }) => (inverse ? "#141514" : "#141514")};
+  background: ${({ inverse }) => (inverse ? "#252425" : "#141514")};
   position: ${({ position }) => (position ? position : "")};
   width: ${({ width }) => (width ? width : "auto")};
   min-width: ${({ minWidth }) => (minWidth ? minWidth : "auto")};
@@ -59,17 +48,28 @@ export const Container = styled.div`
   }
 `;
 
-// export const MainHeading = styled.h1`
-//   font-size: clamp(2.3rem, 6vw, 4.5rem);
-//   margin-bottom: 2rem;
-//   color: ${({ inverse }) => (inverse ? "$403ae3" : "#fff")};
-//   width: 100%;
-//   letter-spacing: 4px;
-//   text-align: center;
-// `;
+export const MainHeading = styled.h1`
+  font-size: clamp(2.3rem, 6vw, 4.5rem);
+  margin-bottom: 2rem;
+  color: ${({ inverse }) => (inverse ? "$403ae3" : "#fff")};
+  width: 100%;
+  letter-spacing: 4px;
+  text-align: center;
+`;
 
-export const TextWrapper = styled.h2`
-  color: ${(props) => (props.snow1 ? color.snow1 : color.snow1)};
+export const Heading = styled.h2`
+  font-size: clamp(1.3rem, 13vw, 3.1rem);
+  margin: ${({ margin }) => (margin ? margin : "")};
+  margin-bottom: ${({ mb }) => (mb ? mb : "")};
+  margin-top: ${({ mt }) => (mt ? mt : "")};
+  color: ${({ inverse }) => (inverse ? "$403ae3" : "#fff")};
+  letter-spacing: 0.4rem;
+  line-height: 1.06;
+  text-align: center;
+  width: ${({ width }) => (width ? width : "100%")};
+`;
+export const TextWrapper = styled.span`
+  color: ${({ color }) => (color ? color : "")};
   font-size: ${({ size }) => (size ? size : "")};
   font-weight: ${({ weight }) => (weight ? weight : "")};
   letter-spacing: ${({ spacing }) => (spacing ? spacing : "")};
@@ -79,57 +79,6 @@ export const TextWrapper = styled.h2`
   margin-top: ${({ mt }) => (mt ? mt : "")};
 `;
 
-// section Heading size start
-
-export const Heading = styled.h1`
-  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "")};
-  margin: ${({ margin }) => (margin ? margin : "")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "")};
-  margin-top: ${({ mt }) => (mt ? mt : "")};
-  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
-  line-height: 1.06;
-  letter-spacing: ${({ spacing }) => (spacing ? spacing : "")};
-  padding: ${({ padding }) => (padding ? padding : "")};
-  width: ${({ width }) => (width ? width : "100%")};
-  /* font-weight: ${({ weight }) => (weight ? weight : "")}; */
-  font-weight: ${(props) => props.weight};
-
-  /* Media query */
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-`;
-
-export const HeadingSize2 = styled.h2`
-  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "100%")};
-  margin: ${({ margin }) => (margin ? margin : "")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "")};
-  margin-top: ${({ mt }) => (mt ? mt : "")};
-  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
-  line-height: 1.06;
-  width: ${({ width }) => (width ? width : "100%")};
-
-  /* Media query */
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-`;
-
-// section Heading size end
 
 export const Row = styled.div`
   display: flex;
@@ -167,17 +116,17 @@ export const Column = styled.div`
 
 export const Button = styled.button`
   border-radius: 4px;
-  background: none;
+   background: none;
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;
-  color: black;
+  color: #fff;
   outline: none;
   border: 2px solid #fff;
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  */ &:before {
+  &:before {
     background: #fff;
     content: "";
     position: absolute;
@@ -196,7 +145,6 @@ export const Button = styled.button`
   &:hover {
     color: black;
   }
-  background: ${(props) => (props.x === "outline" ? " red " : "blue")};
 `;
 
 export default GlobalStyle;
