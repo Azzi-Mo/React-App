@@ -30,6 +30,7 @@ export const FeatureWrapper = styled.div`
 `;
 
 export const FeatureColumn = styled(motion.div)`
+
 	display: flex;
 	flex-flow: column;
 	justify-content: center;

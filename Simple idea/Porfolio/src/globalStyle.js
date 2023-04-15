@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import "./normalize.css";
+// import "./normalize.css";
 
 const color = {
   midnight: "#141514",
@@ -32,31 +32,30 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Work Sans', sans-serif;
 }`;
 
+export const Section = styled.section`
+  padding: ${({ padding }) => (padding ? padding : "140px 0")};
+  margin: ${({ margin }) => (margin ? margin : "")};
+  background: ${({ inverse }) => (inverse ? "#141514" : "#141514")};
+  position: ${({ position }) => (position ? position : "")};
+  width: ${({ width }) => (width ? width : "auto")};
+  min-width: ${({ minWidth }) => (minWidth ? minWidth : "auto")};
+  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "auto")};
+  height: ${({ height }) => (height ? height : "auto")};
+  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "auto")};
+  min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
+  @media screen and (max-width: 768px) {
+    padding: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
+  }
+`;
+
 export const Container = styled.div`
   width: 100%;
-  min-height: 500px;
-  margin-left: auto;
+  max-width: 1300px;
   margin-right: auto;
-  background-color: ${(props) => (props ? color.gray : color.midnight)};
-  /* color: ${(props) => (props.primary ? "white" : "white")}; */
-  /* display: flex;
-  flex-direction: column;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+  margin-left: auto;
   padding: 0 50px;
-  /* Small */
-  @media (min-width: 768px) {
-    /* width: 750px; */
-    padding: 0 50px;
-  }
-  /* Medium */
-  @media (min-width: 992px) {
-    /* width: 970px; */
-    padding: 0 100px;
-  }
-  /* Large */
-  @media (min-width: 1200px) {
-    /* width: 1170px; */
-    padding: 0 150px;
+  @media screen and (max-width: 960px) {
+    padding: 0 30px;
   }
 `;
 
@@ -82,7 +81,7 @@ export const TextWrapper = styled.h2`
 
 // section Heading size start
 
-export const HeadingSize1 = styled.h1`
+export const Heading = styled.h1`
   /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
   font-size: ${({ size }) => (size ? size : "")};
   margin: ${({ margin }) => (margin ? margin : "")};
@@ -130,94 +129,7 @@ export const HeadingSize2 = styled.h2`
   }
 `;
 
-export const HeadingSize3 = styled.h3`
-  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "100%")};
-  margin: ${({ margin }) => (margin ? margin : "")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "")};
-  margin-top: ${({ mt }) => (mt ? mt : "")};
-  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
-  line-height: 1.06;
-  width: ${({ width }) => (width ? width : "100%")};
-
-  /* Media query */
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-`;
-
-export const HeadingSize4 = styled.h4`
-  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "")};
-  margin: ${({ margin }) => (margin ? margin : "")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "")};
-  margin-top: ${({ mt }) => (mt ? mt : "")};
-  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
-  line-height: 2.06;
-  width: ${({ width }) => (width ? width : "100%")};
-  padding: ${({ padding }) => (padding ? padding : "")};
-  word-wrap: ${(props) => props.wrap};
-
-  @media screen and (max-width: 768px) {
-    padding: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
-  }
-  /* Media query */
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-`;
-
-export const HeadingSize5 = styled.h5`
-  /* font-size: clamp(1.3rem, 13vw, 3.1rem); */
-  font-size: ${({ size }) => (size ? size : "100%")};
-  margin: ${({ margin }) => (margin ? margin : "")};
-  margin-bottom: ${({ mb }) => (mb ? mb : "")};
-  margin-top: ${({ mt }) => (mt ? mt : "")};
-  color: ${(props) => (props.snow2 ? color.snow2 : color.snow2)};
-  line-height: 1.06;
-  width: ${({ width }) => (width ? width : "100%")};
-
-  /* Media query */
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-  @media (max-width: ${(props) => props.mobileBreakpoint}) {
-    font-size: ${({ size }) => (size ? size : "100%")};
-  }
-`;
-
 // section Heading size end
-
-export const Section = styled.section`
-  padding: ${({ padding }) => (padding ? padding : "140px 0")};
-  margin: ${({ margin }) => (margin ? margin : "")};
-  background: ${({ inverse }) => (inverse ? "white" : "#141514")};
-  position: ${({ position }) => (position ? position : "")};
-  width: ${({ width }) => (width ? width : "auto")};
-  min-width: ${({ minWidth }) => (minWidth ? minWidth : "auto")};
-  max-width: ${({ maxWidth }) => (maxWidth ? maxWidth : "auto")};
-  height: ${({ height }) => (height ? height : "auto")};
-  max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "auto")};
-  min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
-  @media screen and (max-width: 768px) {
-    padding: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
-  }
-`;
 
 export const Row = styled.div`
   display: flex;
