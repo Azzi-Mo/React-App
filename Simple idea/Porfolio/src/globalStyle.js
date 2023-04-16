@@ -42,6 +42,8 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 0 50px;
+  background: ${({ inverse }) => (inverse ? "#252425" : "#141514")};
+
   @media screen and (max-width: 960px) {
     padding: 0 30px;
   }

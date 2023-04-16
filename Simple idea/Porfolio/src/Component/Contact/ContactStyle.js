@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const ContactWrapper = styled.div`
 
-    display: grid;
+   display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	margin-top: 4rem;
+   margin-bottom: 4rem;
 	grid-gap: 2rem;
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
@@ -23,13 +24,15 @@ export const ContactWrapper = styled.div`
     
     position: relative;
     margin-top: 2rem;
+    border: 1px solid red;
+
     `;
 
 
             export const ContactTitle = styled.div`
-            	font-size: clamp(2rem, 5vw, 3.5rem);
                 color: white;
-
+                font-size: clamp(2.6rem, 5vw, 3.5rem);
+                font-weight: ${(props) => props.weight };
             `;
 
             export const ContactHeading = styled.div`
@@ -41,12 +44,12 @@ export const ContactWrapper = styled.div`
 
     export const ContactInfo = styled.div`
     
-    display: grid;
-	grid-template-columns: repeat(1, 1fr);
-	margin-top: 4rem;
-	grid-gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 4rem;
+      grid-gap: 2rem;
 	@media screen and (max-width: 1100px) {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 		grid-row-gap: 4rem;
 	}
 	@media screen and (max-width: 992px) {
@@ -77,19 +80,69 @@ export const ContactWrapper = styled.div`
                padding: ${(props) => props.padding};
             `;
 
-            export const ContactWrapperSendMessage = styled.div``;
+            export const ContactWrapperSendMessage = styled.div`
+               text-align: end;
+             `;
 
+             
             export const ContactSendMessage = styled.span`
                color: white;
+               border-bottom: 1px solid   #4CE3A0;
+               padding: ${(props) => props.padding};
+               
             `;
             
-export const ContactSoicalslide = styled.div``;
+export const ContactSoicalslide = styled.div`
 
-            export const ContactNameWrapper = styled.div``;
+  
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      grid-gap: 2rem;
+      border-top:1px solid white ;
 
-                   export const ContactName = styled.div``;
+	@media screen and (max-width: 1100px) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-row-gap: 4rem;
+	}
+	@media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
 
-            export const ContactIconWrapper = styled.div``;
+	}
+   @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 2rem;
+
+	}
+
+`;
+            export const ContactNameWrapper = styled.div`
+                     display: grid;
+                     font-size: clamp(1.1rem, 2vw, 1.5rem);
+                  @media screen and (max-width: 768px) {
+                     text-align: center;
+                  }
+                  @media screen and (max-width: 992px) {
+               
+                     align-items: center;
+
+                  }
+            `;
+
+                   export const ContactName = styled.div`
+                      color: white;
+                      font-weight: ${(props) => props.weight };
+                     `;
+
+            export const ContactIconWrapper = styled.div`
+                      text-align: end;
+                  @media screen and (max-width: 768px) {
+                      text-align: center;
+
+                  }
+                  @media screen and (max-width: 992px) {}
+                   `;
 
                    export const ContactIcons = styled.i`          
                    `;

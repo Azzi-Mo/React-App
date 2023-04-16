@@ -38,13 +38,13 @@ export const Contact = () => {
   console.log(getSizePage(window.innerWidth));
 
   return (
-    <Section smPadding="50px 10px" position="relative" inverse id="Contact">
-      <Container>
+    <Section smPadding="50px 10px" position="relative" id="Contact" inverse>
+      <Container   inverse>
         <ContactWrapper>
 
             <ContactTextWrapper>
 
-               <ContactTitle>Contact</ContactTitle> 
+               <ContactTitle weight='bolder'>Contact</ContactTitle> 
 
                <ContactHeading>
                I would love to hear about your project
@@ -61,7 +61,7 @@ export const Contact = () => {
                <ContactTextArea padding ={'0 10px'}  placeholder="TextArea" type='TextArea'></ContactTextArea>
                <ContactWrapperSendMessage>
                
-                  <ContactSendMessage >
+                  <ContactSendMessage padding='10px 0 '>
                     SEND MESSAGE
                   </ContactSendMessage>
                
@@ -75,7 +75,7 @@ export const Contact = () => {
         
             <ContactNameWrapper>
             
-              <ContactName>MOSTAFAELHAWARY</ContactName>
+              <ContactName  weight='bolder'>MOSTAFAELHAWARY</ContactName>
 
             </ContactNameWrapper>
 
