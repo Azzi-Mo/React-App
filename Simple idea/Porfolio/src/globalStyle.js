@@ -1,14 +1,13 @@
 import styled, { createGlobalStyle } from "styled-components";
 // import "./normalize.css";
 
-const color = {
-  midnight: "#141514",
-  gray: "#252425",
-  green: "#4CE3A0",
-  snow1: "#FEFFFE",
-  snow2: "#DBDBDB",
-};
-
+// const color = {
+//   midnight: "#141514",
+//   gray: "#252425",
+//   green: "#4CE3A0",
+//   snow1: "#FEFFFE",
+//   snow2: "#DBDBDB",
+// };
 
 const GlobalStyle = createGlobalStyle`
 *{
@@ -19,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Rubik', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Work Sans', sans-serif;
+    color:white
 }`;
 
 export const Section = styled.section`
@@ -43,6 +43,7 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 0 50px;
+  border: 1px solid red;
   @media screen and (max-width: 960px) {
     padding: 0 30px;
   }
@@ -78,7 +79,6 @@ export const TextWrapper = styled.span`
   margin-bottom: ${({ mb }) => (mb ? mb : "")};
   margin-top: ${({ mt }) => (mt ? mt : "")};
 `;
-
 
 export const Row = styled.div`
   display: flex;
@@ -116,7 +116,7 @@ export const Column = styled.div`
 
 export const Button = styled.button`
   border-radius: 4px;
-   background: none;
+  background: none;
   white-space: nowrap;
   padding: 10px 20px;
   font-size: 16px;

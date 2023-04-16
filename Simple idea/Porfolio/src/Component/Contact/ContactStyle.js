@@ -1,7 +1,6 @@
 import styled from "styled-components";
-// import { Container } from "../../globalStyle";
 
-export const ContactWrapper = styled`div`;
+export const ContactWrapper = styled.div``;
 
 
     export const ContactTextWrapper = styled.div``;
@@ -18,11 +17,11 @@ export const ContactWrapper = styled`div`;
 
             export const ContactTextArea = styled.textarea``;
 
-            export const ContactWrapperSendMessage= styled.div``;
+            export const ContactWrapperSendMessage = styled.div``;
 
             export const ContactSendMessage = styled.span``;
             
-export const ContactSoicalslide = styled``;
+export const ContactSoicalslide = styled.div``;
 
             export const ContactNameWrapper = styled.div``;
 
