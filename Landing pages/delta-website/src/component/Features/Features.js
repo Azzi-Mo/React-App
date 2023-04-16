@@ -28,6 +28,7 @@ const Features = () => {
 					<FeatureTitle>What We Offer</FeatureTitle>
 				</FeatureTextWrapper>
 				<FeatureWrapper>
+				
 					{featuresData.map((el, index) => (
 						<FeatureColumn
 							initial={initial}
@@ -42,6 +43,7 @@ const Features = () => {
 							<FeatureText>{el.description}</FeatureText>
 						</FeatureColumn>
 					))}
+				
 				</FeatureWrapper>
 			</Container>
 		</Section>

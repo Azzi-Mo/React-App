@@ -1,39 +1,49 @@
 import styled from "styled-components";
-import { Container } from "../../globalStyle";
+// import { Container } from "../../globalStyle";
 
-export const FooterContainer = styled(Container)``;
+export const ContactWrapper = styled`div`;
 
-// FooterDownUp //////////////
 
-export const FooterUp = styled.div``;
+    export const ContactTextWrapper = styled.div``;
 
-// FooterDown //////////////
 
-export const FooterDown = styled.div``;
+            export const ContactTitle = styled.div``;
 
-export const InfoBox1 = styled.div``;
+            export const ContactHeading = styled.div``;
 
-export const InfoBox2 = styled.div``;
+    export const ContactInfo = styled.div``;
 
-// inputs /////////
 
-export const InfoBox2Input = styled.input``;
+            export const Contactinpts = styled.input``;
 
-export const InfoBox2textarea = styled.textarea``;
+            export const ContactTextArea = styled.textarea``;
 
-export const InfoBox2SpanUp = styled.div``;
+            export const ContactWrapperSendMessage= styled.div``;
 
-export const InfoBox2Span = styled.span``;
+            export const ContactSendMessage = styled.span``;
+            
+export const ContactSoicalslide = styled``;
+
+            export const ContactNameWrapper = styled.div``;
+
+                   export const ContactName = styled.div``;
+
+            export const ContactIconWrapper = styled.div``;
+
+                   export const ContactIcons = styled.i``;
+
 
 // ContactWrapper
-  //ContactTextWrapper
-      //ContactTitle
-      //ContactHeading
-  //ContactInfo
-      //Contactinpts
-      //ContactTextArea
-      //ContactWrapperSendMessage
-      //ContactSendMessage
-//ContactSoicalslide
-   //ContactName
-   //ContactIcon
+  // ContactTextWrapper
+      // ContactTitle
+      // ContactHeading
+  // ContactInfo
+      // Contactinpts
+      // ContactTextArea
+      // ContactWrapperSendMessage
+      // ContactSendMessage
+// ContactSoicalslide
+   // ContactNameWrapper
+      //ContactName
+   // ContactIconWrapper
+      // ContactIcons

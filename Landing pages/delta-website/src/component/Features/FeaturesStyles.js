@@ -30,7 +30,7 @@ export const FeatureWrapper = styled.div`
 `;
 
 export const FeatureColumn = styled(motion.div)`
-
+   /* border: 1px solid red; */
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
@@ -38,7 +38,7 @@ export const FeatureColumn = styled(motion.div)`
 	background: white;
 	padding: 10px;
 	box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
-	border-radius: 20px;
+	border-radius: 10px;
 `;
 
 export const FeatureImageWrapper = styled.div`
