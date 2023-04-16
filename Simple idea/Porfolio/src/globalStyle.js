@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Rubik', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Work Sans', sans-serif;
-    color:white
 }`;
 
 export const Section = styled.section`
@@ -43,7 +42,6 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 0 50px;
-  border: 1px solid red;
   @media screen and (max-width: 960px) {
     padding: 0 30px;
   }

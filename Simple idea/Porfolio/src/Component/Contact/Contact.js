@@ -56,9 +56,9 @@ export const Contact = () => {
 
             <ContactInfo>
                
-               <Contactinpts type='NAME'></Contactinpts>
-               <Contactinpts  type='EMAIL'></Contactinpts>
-               <ContactTextArea  type='TextArea'></ContactTextArea>
+               <Contactinpts padding ={'0 10px'} placeholder="NAME" type='NAME'></Contactinpts>
+               <Contactinpts padding ={'0 10px'} placeholder="EMAIL" type='EMAIL'></Contactinpts>
+               <ContactTextArea padding ={'0 10px'}  placeholder="TextArea" type='TextArea'></ContactTextArea>
                <ContactWrapperSendMessage>
                
                   <ContactSendMessage >
