@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 export const ContactWrapper = styled.div`
 
@@ -19,26 +20,32 @@ export const ContactWrapper = styled.div`
 `;
 
 
-    export const ContactTextWrapper = styled.div`
+    export const ContactTextWrapper = styled(motion.div)`
     
     
     position: relative;
     margin-top: 2rem;
-    border: 1px solid red;
 
+
+      @media screen and (max-width: 992px) {
+         text-align: center;
+      }
     `;
 
-
-            export const ContactTitle = styled.div`
+            export const ContactTitle = styled(motion.div)`
                 color: white;
                 font-size: clamp(2.6rem, 5vw, 3.5rem);
                 font-weight: ${(props) => props.weight };
+ 
             `;
 
-            export const ContactHeading = styled.div`
+            export const ContactHeading = styled(motion.div)`
             
-            font-size: clamp(.9rem,1.2vw, 1rem);
-            color: white;
+                  font-size: clamp(.9rem,1.2vw, 1rem);
+                  color: white;
+            @media screen and (max-width: 992px) {
+                  padding: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
+               }
 
             `;
 
@@ -60,7 +67,7 @@ export const ContactWrapper = styled.div`
     `;
 
 
-            export const Contactinpts = styled.input`
+            export const Contactinputs = styled(motion.input)`
               
                border: none;
                border-bottom: 1px solid white;
@@ -70,7 +77,7 @@ export const ContactWrapper = styled.div`
                padding: ${(props) => props.padding};
             `;
 
-            export const ContactTextArea = styled.textarea`
+            export const ContactTextArea = styled(motion.textarea)`
             
                border: none;
                border-bottom: 1px solid white;
@@ -94,7 +101,6 @@ export const ContactWrapper = styled.div`
             
 export const ContactSoicalslide = styled.div`
 
-  
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding-top: 4rem;

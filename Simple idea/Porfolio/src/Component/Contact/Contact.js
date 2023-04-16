@@ -7,7 +7,7 @@ import {
       ContactTitle,
       ContactHeading,
     ContactInfo,
-      Contactinpts,
+      Contactinputs,
       ContactTextArea,
       ContactWrapperSendMessage,
       ContactSendMessage,
@@ -23,6 +23,15 @@ import {
  import { featuresData } from '../../data/ContactData';
 
 export const Contact = () => {
+  const initial = {
+		y: 40,
+		opacity: 0,
+	};
+	const animate = {
+		y: 0,
+		opacity: 1,
+	};
+
   const getSizePage = (resize) => {
     if (resize <= "480") {
       return "small";
@@ -44,11 +53,22 @@ export const Contact = () => {
 
             <ContactTextWrapper>
 
-               <ContactTitle weight='bolder'>Contact</ContactTitle> 
+               <ContactTitle 
+               weight='bolder'
+               initial={initial}
+               animate={animate}
+               transition={{ duration: 0.5 + 2 * 0.1 }}
+               >Contact</ContactTitle> 
 
-               <ContactHeading>
-               I would love to hear about your project
-                and how I could help. Please fill in the form,
+               <ContactHeading 
+               smPadding={'20px 70px'}
+               weight='bolder'
+               initial={initial}
+               animate={animate}
+               transition={{ duration: 0.5 + 6 * 0.1 }}
+               >
+                 I would love to hear about your project
+                 and how I could help. Please fill in the form,
                  and I'll get back to you as soon as possible.
                </ContactHeading>
 
@@ -56,9 +76,33 @@ export const Contact = () => {
 
             <ContactInfo>
                
-               <Contactinpts padding ={'0 10px'} placeholder="NAME" type='NAME'></Contactinpts>
-               <Contactinpts padding ={'0 10px'} placeholder="EMAIL" type='EMAIL'></Contactinpts>
-               <ContactTextArea padding ={'0 10px'}  placeholder="TextArea" type='TextArea'></ContactTextArea>
+               <Contactinputs 
+               padding ={'0 15px 25px'} 
+               placeholder="NAME" 
+               type='NAME'
+               initial={initial}
+               animate={animate}
+               transition={{ duration: 0.5 + 1 * 0.1 }}
+               ></Contactinputs>
+
+               <Contactinputs 
+               padding ={'0 15px  25px'} 
+               placeholder="EMAIL" 
+               type='EMAIL'
+               initial={initial}
+               animate={animate}
+               transition={{ duration: 0.5 + 3 * 0.1 }}
+               ></Contactinputs>
+                
+               <ContactTextArea 
+
+               padding ={'0 15px  25px'} 
+               placeholder="TextArea" 
+               type='TextArea' 
+               initial={initial}
+               animate={animate}
+               transition={{ duration: 0.5 + 6 * 0.1 }}
+               ></ContactTextArea>
                <ContactWrapperSendMessage>
                
                   <ContactSendMessage padding='10px 0 '>
@@ -81,7 +125,6 @@ export const Contact = () => {
 
             <ContactIconWrapper>
              {featuresData.map((el) => (
-
                <ContactIcons className={el.imgClass}>
                {el.icon}
                </ContactIcons>
