@@ -7,7 +7,7 @@ export const ContactWrapper = styled.div`
 	grid-template-columns: repeat(2, 1fr);
 	margin-top: 4rem;
    margin-bottom: 4rem;
-	grid-gap: 2rem;
+	grid-gap: 6rem;
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 4rem;
@@ -25,7 +25,7 @@ export const ContactWrapper = styled.div`
     
     position: relative;
     margin-top: 2rem;
-
+ 
 
       @media screen and (max-width: 992px) {
          text-align: center;
@@ -34,7 +34,7 @@ export const ContactWrapper = styled.div`
 
             export const ContactTitle = styled(motion.div)`
                 color: white;
-                font-size: clamp(2.6rem, 5vw, 3.5rem);
+                font-size: clamp(3.6rem, 5vw, 3.5rem);
                 font-weight: ${(props) => props.weight };
  
             `;
@@ -87,17 +87,17 @@ export const ContactWrapper = styled.div`
                padding: ${(props) => props.padding};
             `;
 
-            export const ContactWrapperSendMessage = styled.div`
+            export const ContactWrapperSendMessage = styled(motion.div)`
                text-align: end;
              `;
 
              
-            export const ContactSendMessage = styled.span`
-               color: white;
-               border-bottom: 1px solid   #4CE3A0;
-               padding: ${(props) => props.padding};
-               
-            `;
+                  export const ContactSendMessage = styled.span`
+                     color: white;
+                     border-bottom: 1px solid   #4CE3A0;
+                     padding: ${(props) => props.padding};
+                     
+                  `;
             
 export const ContactSoicalslide = styled.div`
 

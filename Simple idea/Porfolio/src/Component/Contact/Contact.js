@@ -20,7 +20,7 @@ import {
 
 
  } from "./ContactStyle";
- import { featuresData } from '../../data/ContactData';
+ import {contactData } from '../../data/ContactData';
 
 export const Contact = () => {
   const initial = {
@@ -103,7 +103,11 @@ export const Contact = () => {
                animate={animate}
                transition={{ duration: 0.5 + 6 * 0.1 }}
                ></ContactTextArea>
-               <ContactWrapperSendMessage>
+               <ContactWrapperSendMessage
+               initial={initial}
+               animate={animate}
+               transition={{ duration: 0.5 + 7 * 0.1 }}
+               >
                
                   <ContactSendMessage padding='10px 0 '>
                     SEND MESSAGE
@@ -124,7 +128,7 @@ export const Contact = () => {
             </ContactNameWrapper>
 
             <ContactIconWrapper>
-             {featuresData.map((el) => (
+             {contactData.map((el) => (
                <ContactIcons className={el.imgClass}>
                {el.icon}
                </ContactIcons>
