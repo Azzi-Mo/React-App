@@ -47,10 +47,11 @@ export const Content = ({
           <ContentColumn>
             <TextWrapper>
               <TopLine
+              
                 initial={initial}
                 transition={{ delay: 0.3, duration: 0.6 }}
                 animate={animation}
-              >
+              > 
                 {topLine.text}
               </TopLine>
               <Heading

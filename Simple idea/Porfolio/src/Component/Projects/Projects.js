@@ -17,7 +17,7 @@ import { useInView } from "react-intersection-observer";
 import { useAnimation } from "framer-motion";
 
 
-export const  Projects = ({img}) => {
+export const  Projects = ({img,  alt}) => {
   const initial = { opacity: 0, y: 30 };
   const animation = useAnimation();
 
@@ -53,7 +53,12 @@ export const  Projects = ({img}) => {
                   
                    <ProjectImgWrapper>
 
-                      <ProjectImg src={img}></ProjectImg>
+                      <ProjectImg 
+                      src={img} 
+                      alt={alt}
+                      whileHover={{ rotate: 2, scale: 1.02 }}
+                      transition={{ duration: 0.5 }}
+                      ></ProjectImg>
                    
                    </ProjectImgWrapper>
                    <ProjectName ></ProjectName>
