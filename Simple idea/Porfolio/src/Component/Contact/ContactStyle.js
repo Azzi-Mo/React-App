@@ -34,7 +34,7 @@ export const ContactWrapper = styled.div`
 
             export const ContactTitle = styled(motion.div)`
                 color: white;
-                font-size: clamp(3.6rem, 5vw, 3.5rem);
+                font-size: clamp(3.6rem, 3vw, 3.5rem);
                 font-weight: ${(props) => props.weight };
  
             `;

@@ -14,6 +14,7 @@ export const ContentRow = styled.div`
 `;
 
 export const ContentColumn = styled(motion.div)`
+    border: 1px solid red;
 	margin-bottom: 15px;
 	padding-right: 15px;
 	padding-left: 15px;

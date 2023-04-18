@@ -129,7 +129,7 @@ export const Contact = () => {
 
             <ContactIconWrapper>
              {contactData.map((el) => (
-               <ContactIcons className={el.imgClass}>
+               <ContactIcons className={el.imgClass} key={el.imgClass}>
                {el.icon}
                </ContactIcons>
 
