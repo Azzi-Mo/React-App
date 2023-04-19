@@ -29,6 +29,7 @@ export const ProjectsWrapper = styled.div``
             `
         export const ProjectName = styled.div``
         export const ProjectTech = styled.div``
+           export const ProjectTechName = styled.span``
         export const ProjectView = styled.div``
 
 
@@ -41,4 +42,5 @@ export const ProjectsWrapper = styled.div``
         // ProjectImg
         // ProjectName
         // ProjectTech
+             //ProjectTechName 
         // ProjectView

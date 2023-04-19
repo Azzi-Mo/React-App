@@ -3,42 +3,42 @@ export const projectData = [
     {
 		id: 1,
 		name: 'TODO WEB APP',
-		tech: {html:'html', css:'css'},
+		tech: {one:'html', two:'css' , three:'React'},
 		soursCode:'http://www.example.com',
 		img:'./assets/images/ChartUp.svg'
 	},
 	{
 		id: 2,
-		name: 'TODO WEB APP',
-		tech: {html:'html', css:'css'},
+		name: 'DESIGN PORTFILIO',
+		tech: {one:'html', two:'css' , three:'js'},
 		soursCode:'http://www.example.com',
 		img:'./assets/images/ChartUp.svg'
 	},
 	{
 		id: 3,
-		name: 'TODO WEB APP',
-		tech: {html:'html', css:'css'},
+		name: 'E-LEARNING LANDING PAGE',
+		tech: {one:'html', two:'css'},
 		soursCode:'http://www.example.com',
 		img:'./assets/images/ChartUp.svg'
 	},
 	{
 		id: 4,
-		name: 'TODO WEB APP',
-		tech: {html:'html', css:'css'},
+		name: 'ENTERTAINMENT WEB APP',
+		tech: {one:'html', two:'css' , three:'React',four:'node'},
 		soursCode:'http://www.example.com',
 		img:'./assets/images/ChartUp.svg'
 	},
 	{
 		id: 5,
-		name: 'TODO WEB APP',
-		tech: {html:'html', css:'css'},
+		name: 'ART GALLAERY SHOWCASE',
+		tech: {one:'html', two:'css' , three:'node'},
 		soursCode:'http://www.example.com',
 		img:'./assets/images/ChartUp.svg'
 	},
 	{
 		id: 6,
-		name: 'TODO WEB APP',
-		tech: {html:'html', css:'css'},
+		name: 'MEMOR GAME',
+		tech: {one:'node', two:'react'},
 		soursCode:'http://www.example.com',
 		img:'./assets/images/ChartUp.svg'
 	},

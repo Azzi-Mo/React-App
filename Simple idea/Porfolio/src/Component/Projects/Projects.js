@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {Container , Section} from '../../globalStyle'
 import {
     ProjectTeaxtWrapper,
@@ -8,72 +8,75 @@ import {
         ProjectsInfoBox,
             ProjectImgWrapper,
               ProjectImg, 
-            ProjectName, 
+            ProjectName,
             ProjectTech,
+              ProjectTechName, 
             ProjectView
 } from './ProjectsStyle'
-import { projectData } from '../../data/ProjectsData'
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
+import { projectData } from "../../data/ProjectsData";
+
+const renderNestedData = (obj)=> {
 
 
-export const  Projects = ({img,  alt}) => {
-  const initial = { opacity: 0, y: 30 };
-  const animation = useAnimation();
 
-  const { ref, inView } = useInView({ threshold: 0.2 });
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-        y: 0,
-      });
-    }
-  }, [inView, animation]);
 
+
+}
+
+export const  Projects = () => {
   return (
     <Section smPadding="50px 10px" position="relative" id="Projects" ref={ref}>
-      <Container>
-          <ProjectTeaxtWrapper>
+    <Container>
 
-              <ProjectTitle>Projects</ProjectTitle>
-              <ProjectContactSpan>CONTACT ME</ProjectContactSpan>
+        <ProjectTeaxtWrapper>
 
-          </ProjectTeaxtWrapper>
-              
-          {
-            // Porject box
-          }
-          <ProjectsWrapper>  
+            <ProjectTitle>Projects</ProjectTitle>
+            <ProjectContactSpan>CONTACT ME</ProjectContactSpan>
 
-            {projectData.map((el)=>
-              
+        </ProjectTeaxtWrapper>
+            
+        {
+          // Porject box
+        }
 
-           (   <ProjectsInfoBox key={el.id} img={el.img}>
-                  
-                   <ProjectImgWrapper>
 
-                      <ProjectImg 
-                      src={img} 
-                      alt={alt}
-                      whileHover={{ rotate: 2, scale: 1.02 }}
-                      transition={{ duration: 0.5 }}
-                      ></ProjectImg>
-                   
-                   </ProjectImgWrapper>
-                   <ProjectName ></ProjectName>
-                   <ProjectTech></ProjectTech>
-                   <ProjectView></ProjectView>
-   
-                </ProjectsInfoBox>)
+        <ProjectsWrapper>  
 
-              )}
           
+            
 
-          </ProjectsWrapper>
+        
+        {projectData.map((item)=> (
+          
+          
+            <ProjectsInfoBox key={item.id} item={item}>
+                <ProjectImgWrapper>
 
-      </Container>
-    </Section>
+                  <ProjectImg></ProjectImg>
+        
+                </ProjectImgWrapper>
+
+                <ProjectName ></ProjectName>
+                <ProjectTech>
+                
+                      <ProjectTechName ></ProjectTechName>
+                    
+                </ProjectTech>
+                <ProjectView></ProjectView>
+            </ProjectsInfoBox>
+
+                 ))}
+
+              
+
+  
+
+        
+
+        </ProjectsWrapper>
+
+    </Container>
+  </Section>
   )
 }
 
