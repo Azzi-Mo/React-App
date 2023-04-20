@@ -10,7 +10,7 @@ import {
               ProjectImg, 
             ProjectName,
             ProjectTech,
-              // ProjectTechName, 
+              ProjectTechName, 
             ProjectView
 } from './ProjectsStyle'
 import { ProjectData } from "../../data/ProjectsData";
@@ -20,7 +20,7 @@ function TechList({ tech }) {
     <ul>
       {tech[0] &&
         Object.values(tech[0]).map((value) => (
-          <li key={value}>{value}</li>
+          <ProjectTechName key={value}>{value}</ProjectTechName>
         ))}
     </ul>
   );
@@ -28,7 +28,7 @@ function TechList({ tech }) {
 
 
 
-function Project({ project }) {
+function InfoBox({ project }) {
   return (
   
             <ProjectsInfoBox >
@@ -68,24 +68,14 @@ export const  Projects = () => {
 
         </ProjectTeaxtWrapper>
             
-        {
-          // Porject box
-        }
       
         <ProjectsWrapper>  
 
-     
+          {ProjectData.map((project) => (
+            <InfoBox key={project.id} project={project} />
+          ))}
 
-
-
-        {ProjectData.map((project) => (
-          <Project key={project.id} project={project} />
-        ))}
-
-      
-
-
-    </ProjectsWrapper>
+       </ProjectsWrapper>
 
     </Container>
   </Section>

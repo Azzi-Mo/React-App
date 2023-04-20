@@ -17,9 +17,9 @@ export const ProjectsWrapper = styled.div``
                   
                   `
             export const ProjectImg = styled(motion.img)`
-                  border: 1px solid red;
+                  /* border: 1px solid red; */
                   padding-right: 0;
-                  /* border: 0; */
+                  border: 0;
                   max-width: 100%;
                   vertical-align: middle;
                   display: inline-block;
