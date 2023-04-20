@@ -1,36 +1,33 @@
-import React from 'react';
-import data from './data';
+import projectData from "../../data/ProjectsData";
 
-function Item({ item }) {
-  const renderChildren = (children) => {
-    if (children && children.length > 0) {
-      return (
-        <ul>
-          {children.map((child) => (
-            <Item key={child.id} item={child} />
-          ))}
-        </ul>
-      );
-    }
-    return null;
-  };
-
+function TechList({ tech }) {
   return (
-    <li>
-      {item.title}
-      {renderChildren(item.children)}
-    </li>
+    <ul>
+      {tech[0] &&
+        Object.values(tech[0]).map((value) => (
+          <li className="li" key={value}>{value}</li>
+        ))}
+    </ul>
+  );
+}
+
+function Project({ project }) {
+  return (
+    <div className="box">
+      <h2>{project.name}</h2>
+      <TechList tech={project.tech} />
+      <a href={project.soursCode}>Source code</a>
+      <img src={project.img} alt={project.name} />
+    </div>
   );
 }
 
 function Nested() {
   return (
-    <div>
-      <ul>
-        {data.map((item) => (
-          <Item key={item.id} item={item} />
-        ))}
-      </ul>
+    <div className="main">
+      {projectData.map((project) => (
+        <Project key={project.id} project={project} />
+      ))}
     </div>
   );
 }

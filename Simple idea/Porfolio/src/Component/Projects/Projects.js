@@ -10,22 +10,55 @@ import {
               ProjectImg, 
             ProjectName,
             ProjectTech,
-              ProjectTechName, 
+              // ProjectTechName, 
             ProjectView
 } from './ProjectsStyle'
-import { projectData } from "../../data/ProjectsData";
+import { ProjectData } from "../../data/ProjectsData";
 
-const renderNestedData = (obj)=> {
-
-
-
-
-
+function TechList({ tech }) {
+  return (
+    <ul>
+      {tech[0] &&
+        Object.values(tech[0]).map((value) => (
+          <li key={value}>{value}</li>
+        ))}
+    </ul>
+  );
 }
 
-export const  Projects = () => {
+
+
+function Project({ project }) {
   return (
-    <Section smPadding="50px 10px" position="relative" id="Projects" ref={ref}>
+  
+            <ProjectsInfoBox >
+
+               <ProjectImgWrapper>
+
+                  <ProjectImg src={project.img}></ProjectImg>
+      
+               </ProjectImgWrapper>
+
+               <ProjectName >{project.name}</ProjectName>
+               <ProjectTech>
+              
+                     <TechList tech={project.tech}>
+                    
+                     </TechList>
+                  
+               </ProjectTech>
+               <ProjectView href={project.soursCode}>Source code</ProjectView>
+
+           </ProjectsInfoBox>
+        
+  );
+}
+
+
+export const  Projects = () => {
+
+  return (
+    <Section smPadding="50px 10px" position="relative" id="Projects" >
     <Container>
 
         <ProjectTeaxtWrapper>
@@ -38,42 +71,21 @@ export const  Projects = () => {
         {
           // Porject box
         }
-
-
+      
         <ProjectsWrapper>  
 
-          
-            
+     
 
-        
-        {projectData.map((item)=> (
-          
-          
-            <ProjectsInfoBox key={item.id} item={item}>
-                <ProjectImgWrapper>
 
-                  <ProjectImg></ProjectImg>
-        
-                </ProjectImgWrapper>
 
-                <ProjectName ></ProjectName>
-                <ProjectTech>
-                
-                      <ProjectTechName ></ProjectTechName>
-                    
-                </ProjectTech>
-                <ProjectView></ProjectView>
-            </ProjectsInfoBox>
+        {ProjectData.map((project) => (
+          <Project key={project.id} project={project} />
+        ))}
 
-                 ))}
+      
 
-              
 
-  
-
-        
-
-        </ProjectsWrapper>
+    </ProjectsWrapper>
 
     </Container>
   </Section>
