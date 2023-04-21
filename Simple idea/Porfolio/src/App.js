@@ -3,6 +3,7 @@ import GlobalStyle from "./globalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // Rout
 import { Contact } from "./Component/Contact/Contact";
 import { Projects } from "./Component/Projects/Projects";
+import { Techno } from './Component/Techno/Techno'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -17,7 +18,7 @@ function App() {
 
         }
         
-        
+        <Techno/>
         <Projects/>
         <Contact />
       </Router>

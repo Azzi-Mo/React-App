@@ -12,7 +12,6 @@ export const ProjectTeaxtWrapper = styled.div`
     export const ProjectTitle = styled.div`
     
                position: absolute;
-
                 bottom: 0;
                 font-size: clamp(.5rem, 7vw, 5rem);
                 margin: ${(props)=> props.margin };
@@ -42,13 +41,11 @@ export const ProjectTeaxtWrapper = styled.div`
     `
 export const ProjectsWrapper = styled.div`
 
-            border: 1px solid red;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             margin-top: 4rem;
             margin-bottom: 4rem;
             grid-gap: 4rem;
-            min-width: 100%;
 
           @media screen and (min-width: 1101px) {
             grid-template-columns: repeat(2, 1fr);
@@ -74,14 +71,10 @@ export const ProjectsWrapper = styled.div`
 
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-            border: 1px solid blue;
-            min-width: 100%;
     `
 
         export const ProjectImgWrapper = styled(motion.div)`
 
-                  border: 2px solid orange;
-                  max-width: 100%;
 
                   `
             export const ProjectImg = styled(motion.img)`                  padding-right: 0;
