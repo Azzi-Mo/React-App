@@ -103,10 +103,11 @@ export const ContactSoicalslide = styled.div`
 
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding-top: 4rem;
-      padding-bottom: 4rem;
+      padding-top: ${({ pt }) => (pt ? pt : "")};
+      padding-bottom:${({ pb }) => (pb  ? pb  : "")};
       grid-gap: 2rem;
-      border-top:1px solid white ;
+      border-bottom: ${({ bb }) => (bb ? bb : "")};
+      border-top: ${({ bt }) => (bt ? bt : "")};
 
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);

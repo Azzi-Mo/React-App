@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyle from "./globalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // Rout
+import { Head } from "./Component/Head/Head";
 import { Contact } from "./Component/Contact/Contact";
 import { Projects } from "./Component/Projects/Projects";
 import { Techno } from './Component/Techno/Techno'
@@ -17,7 +18,7 @@ function App() {
           // <Route path="/Contact" component={Contact} />
 
         }
-        
+         <Head/>
         <Techno/>
         <Projects/>
         <Contact />

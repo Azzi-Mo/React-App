@@ -119,7 +119,7 @@ export const Contact = () => {
 
         </ContactWrapper>
 
-        <ContactSoicalslide>
+        <ContactSoicalslide bt='1px solid ' pt='4rem' pb='4rem'>
         
             <ContactNameWrapper>
             

@@ -22,8 +22,7 @@ export const TechWrapper = styled.div`
             grid-row-gap: 4rem;
             border-bottom: 1px solid #DBDBDB;
           }
-          /* @media screen and (min-width: 992px) {
-          } */
+
           @media screen and (max-width: 768px) {
             grid-template-columns: repeat(1, 1fr);
             grid-row-gap: 4rem;
@@ -40,7 +39,6 @@ export const TechWrapper = styled.div`
                 margin-top: ${({ mt }) => (mt ? mt : "")};
                 color:${(props)=> props.align ? props.align : '#FEFFFE'};
                 text-align: ${(props)=> props.align };
-
         `
         export const TechEx = styled.span`
                 font-size: clamp(1rem, 3vw, 1rem);

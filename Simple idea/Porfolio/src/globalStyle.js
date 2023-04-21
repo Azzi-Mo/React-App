@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family:'Montserrat' , sans-serif;
+    font-family: 'Chivo Mono', monospace;
     font-family: 'Rubik', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     font-family: 'Work Sans', sans-serif;
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 }`;
 
 export const Section = styled.section`
-  padding: ${({ padding }) => (padding ? padding : "140px 0")};
+  /* padding: ${({ padding }) => (padding ? padding : "140px 0")}; */
   margin: ${({ margin }) => (margin ? margin : "")};
   background: ${({ inverse }) => (inverse ? "#252425" : "#141514")};
   position: ${({ position }) => (position ? position : "")};
@@ -32,9 +32,11 @@ export const Section = styled.section`
   height: ${({ height }) => (height ? height : "auto")};
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : "auto")};
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
-  @media screen and (max-width: 768px) {
-    padding: ${({ smPadding }) => (smPadding ? smPadding : "70px 0")};
-  }
+  padding-top: ${({ pt }) => (pt ? pt : "")};
+  padding-bottom:${({ pb }) => (pb  ? pb  : "")};
+  /* @media screen and (max-width: 768px) {
+    padding: ${({ smPadding }) => (smPadding ? smPadding : "")};
+  } */
 `;
 
 export const Container = styled.div`
