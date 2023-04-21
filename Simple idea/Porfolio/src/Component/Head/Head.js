@@ -5,8 +5,17 @@ import {
     ContactName,
   ContactIconWrapper,
     ContactIcons ,} from '../Contact/ContactStyle'
-import {contactData } from '../../data/ContactData';
+import { 
+         HeadInfoWrapper , 
+         HeadImgWrapper, 
+            HeadImg , 
+         HeadInfoDetail,
+            HeadName , 
+            HeadDes , 
+            HeadContact } from './HeadStyle';
 
+import {contactData } from '../../data/ContactData';
+import { Data } from '../../data/HeadData';
 export const  Head  = () =>  {
   return (
     <Section pt='20px'>
@@ -22,7 +31,7 @@ export const  Head  = () =>  {
 
                 <ContactIconWrapper>
                     {contactData.map((el) => (
-                    <ContactIcons className={el.imgClass} key={el.imgClass}>
+                    <ContactIcons  className={el.imgClass} key={el.imgClass}>
                     {el.icon}
                     </ContactIcons>
 
@@ -31,6 +40,29 @@ export const  Head  = () =>  {
                 </ContactIconWrapper>
 
             </ContactSoicalslide>
+
+            
+            {Data.map((el)=>
+                (
+                    <HeadInfoWrapper>
+
+                         <HeadImgWrapper>
+                
+                           <HeadImg src={el.img}></HeadImg>
+        
+                        </HeadImgWrapper>
+
+                        <HeadInfoDetail>
+                        
+                          <HeadName>{el.HeadName}</HeadName>
+                          <HeadDes>{el.des}</HeadDes>
+                          <HeadContact href={el.contactLink}>contact me</HeadContact>
+                          
+                        </HeadInfoDetail>
+
+                  </HeadInfoWrapper>
+                ))}
+
 
        </Container>
     </Section>

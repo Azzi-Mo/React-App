@@ -105,10 +105,9 @@ export const ContactSoicalslide = styled.div`
       grid-template-columns: repeat(2, 1fr);
       padding-top: ${({ pt }) => (pt ? pt : "")};
       padding-bottom:${({ pb }) => (pb  ? pb  : "")};
-      grid-gap: 2rem;
+      grid-gap: 20rem;
       border-bottom: ${({ bb }) => (bb ? bb : "")};
       border-top: ${({ bt }) => (bt ? bt : "")};
-
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 4rem;
@@ -143,15 +142,27 @@ export const ContactSoicalslide = styled.div`
                      `;
 
             export const ContactIconWrapper = styled.div`
+                      display: grid;
+                      /* justify-content: space-between; */
+                      grid-template-columns: repeat(4,1fr);
                       text-align: end;
+                      /* column-gap: 5px; */
                   @media screen and (max-width: 768px) {
                       text-align: center;
+                      border: 1px solid red;
 
                   }
                   @media screen and (max-width: 992px) {}
                    `;
 
-                   export const ContactIcons = styled.i`          
+                   export const ContactIcons = styled.i`  
+                      svg{
+                         width: 10%;
+                         
+                         width: clamp(1.1rem, 4vw, 2.5rem);
+                         /* margin: 0 10px; */
+                      }
+              
                    `;
 
 
