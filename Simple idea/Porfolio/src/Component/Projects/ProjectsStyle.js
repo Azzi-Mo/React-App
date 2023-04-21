@@ -2,16 +2,54 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 
-export const ProjectTeaxtWrapper = styled.div``
-    export const ProjectTitle = styled.div``
-    export const ProjectContactSpan = styled.span``
+export const ProjectTeaxtWrapper = styled.div`
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            position: relative;
+           
+`
+    export const ProjectTitle = styled.div`
+    
+               position: absolute;
+
+                bottom: 0;
+                font-size: clamp(.5rem, 7vw, 5rem);
+                margin: ${(props)=> props.margin };
+                margin-bottom: ${({ mb }) => (mb ? mb : "")};
+                margin-top: ${({ mt }) => (mt ? mt : "")};
+                color:${(props)=> props.align ? props.align : '#FEFFFE'};
+                letter-spacing: 0.1rem;
+                text-align: ${(props)=> props.align };
+
+    `
+
+    export const ProjectContactSpan = styled.span`
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                font-size: clamp(.5rem, 4vw, 1rem);
+                margin: ${(props)=> props.margin };
+                margin-bottom: ${({ mb }) => (mb ? mb : "")};
+                margin-top: ${({ mt }) => (mt ? mt : "")};
+                color:${(props)=> props.align ? props.align : '#FEFFFE'};
+                letter-spacing: 0.1rem;
+                text-align: ${(props)=> props.align };
+                border-bottom: 1px solid #4CE3A0;
+                width: fit-content;
+                text-align: center;
+    
+    `
 export const ProjectsWrapper = styled.div`
 
+            border: 1px solid red;
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             margin-top: 4rem;
             margin-bottom: 4rem;
             grid-gap: 4rem;
+            min-width: 100%;
+
           @media screen and (min-width: 1101px) {
             grid-template-columns: repeat(2, 1fr);
             grid-row-gap: 4rem;
@@ -33,30 +71,25 @@ export const ProjectsWrapper = styled.div`
 
 `
     export const ProjectsInfoBox = styled.div`
-    
+
             display: grid;
             grid-template-columns: repeat(1, 1fr);
-
-            
+            border: 1px solid blue;
+            min-width: 100%;
     `
 
         export const ProjectImgWrapper = styled(motion.div)`
-                 	display: flex;
-                  justify-content: 'flex-end';
-                  max-height: 700px;
-                  justify-content: center;
-                  position: relative;
-                  
+
+                  border: 2px solid orange;
+                  max-width: 100%;
+
                   `
-            export const ProjectImg = styled(motion.img)`
-                  /* border: 1px solid red; */
-                  padding-right: 0;
+            export const ProjectImg = styled(motion.img)`                  padding-right: 0;
                   border: 0;
                   max-width: 100%;
                   vertical-align: middle;
                   display: inline-block;
-                  object-fit: cover;
-                  max-height: 700px;
+                  object-fit: contain;
                   z-index: 1;
             `
         export const ProjectName = styled.div`
@@ -75,7 +108,6 @@ export const ProjectsWrapper = styled.div`
                 width: fit-content;
                 grid-template-columns: repeat(6,1fr);
                 column-gap: 20px ;
-                /* grid-gap: 1rem; */
                 padding: 0;
                 margin: 0;
                 text-align: center;
@@ -85,7 +117,6 @@ export const ProjectsWrapper = styled.div`
                
                
                 font-size: clamp(.5rem, 5vw, 1rem);
-                
                 margin: ${(props)=> props.margin };
                 margin-bottom: ${({ mb }) => (mb ? mb : "")};
                 margin-top: ${({ mt }) => (mt ? mt : "")};
