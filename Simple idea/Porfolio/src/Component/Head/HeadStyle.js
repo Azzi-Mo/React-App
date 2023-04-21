@@ -11,10 +11,9 @@ export const HeadInfoWrapper = styled.div`
 
   display: grid;
 	grid-template-columns: repeat(2, 1fr);
-	/* padding-top: 4rem; */
    padding-bottom: 4rem;
-	grid-gap: 6rem;
    position: relative;
+   border: 1px solid red;
 
 
 
@@ -44,17 +43,46 @@ export const HeadInfoWrapper = styled.div`
               z-index: 1;
             
           `
-   export const HeadInfoDetail= styled.div``
+   export const HeadInfoDetail= styled.div`
+   
+                    position: relative;
+                    max-width: 100%;
+                    /* display: grid; */
+                    grid-column: 1 / 3;
+                    z-index: 1;
+   `
 
          export const HeadName = styled.div`
          
-         font-size: clamp(2.5rem, 7vw, 2.5rem);
+                     font-size: clamp(3.5rem, 7vw, 2.5rem);
+                     padding:  0 30% 0 0; 
                      margin: ${({ margin }) => (margin ? margin : "")};
                      margin-bottom: ${({ mb }) => (mb ? mb : "")};
                      margin-top: ${({ mt }) => (mt ? mt : "")};
                      color:${(props)=> props.align ? props.align : '#FEFFFE'};
                      text-align: ${(props)=> props.align };
-         `
+                     letter-spacing: .1rem;
+                     line-height: 4rem;
+                     @media screen and (max-width: 1100px) {
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-row-gap: 4rem;
+                        margin-bottom: ${({ mb }) => (mb ? mb : "")};
+                        margin-top: ${({ mt }) => (mt ? mt : "")};
+                     }
+                     @media screen and (max-width: 992px) {
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-row-gap: 4rem;
+                        margin-bottom: ${({ mb }) => (mb ? mb : "")};
+                        margin-top: ${({ mt }) => (mt ? mt : "")};
+                     }
+
+                     @media screen and (max-width: 768px) {
+                        grid-template-columns: repeat(1, 1fr);
+                        grid-row-gap: 4rem;
+                        margin-bottom: ${({ mb }) => (mb ? mb : "")};
+                        margin-top: ${({ mt }) => (mt ? mt : "")};
+                     }
+                     `
          export const HeadDes = styled.div`
          
          font-size: clamp(.5rem, 2.5vw, 1.5rem);

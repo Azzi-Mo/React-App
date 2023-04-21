@@ -111,10 +111,11 @@ export const ContactSoicalslide = styled.div`
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 4rem;
+      
 	}
 	@media screen and (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
-
+      grid-gap: 10rem;
 	}
    @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
@@ -157,10 +158,7 @@ export const ContactSoicalslide = styled.div`
 
                    export const ContactIcons = styled.i`  
                       svg{
-                         width: 10%;
-                         
-                         width: clamp(1.1rem, 4vw, 2.5rem);
-                         /* margin: 0 10px; */
+                         width: clamp(1.1rem, 5vw, 2.5rem);
                       }
               
                    `;

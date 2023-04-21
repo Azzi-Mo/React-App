@@ -54,7 +54,7 @@ export const  Head  = () =>  {
 
                         <HeadInfoDetail>
                         
-                          <HeadName>{el.HeadName}</HeadName>
+                          <HeadName  mt='20px' mb='20px'>{el.HeadName}</HeadName>
                           <HeadDes>{el.des}</HeadDes>
                           <HeadContact href={el.contactLink}>contact me</HeadContact>
                           
