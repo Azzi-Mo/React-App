@@ -20,7 +20,7 @@ function TechList({ tech }) {
     <ul>
       {tech[0] &&
         Object.values(tech[0]).map((value) => (
-          <ProjectTechName key={value}>{value}</ProjectTechName>
+          <ProjectTechName   key={value} className="ProjectTechName">{value}</ProjectTechName>
         ))}
     </ul>
   );
@@ -31,7 +31,7 @@ function TechList({ tech }) {
 function InfoBox({ project }) {
   return (
   
-            <ProjectsInfoBox >
+            <ProjectsInfoBox className="box">
 
                <ProjectImgWrapper>
 
@@ -39,15 +39,13 @@ function InfoBox({ project }) {
       
                </ProjectImgWrapper>
 
-               <ProjectName >{project.name}</ProjectName>
-               <ProjectTech>
+               <ProjectName align='#FEFFFE' mb='15px' mt='15px'>{project.name}</ProjectName>
+               <ProjectTech className="ul">
               
-                     <TechList tech={project.tech}>
-                    
-                     </TechList>
+                     <TechList tech={project.tech}></TechList>
                   
                </ProjectTech>
-               <ProjectView href={project.soursCode}>Source code</ProjectView>
+               <ProjectView mb='10px' mt='10px' href={project.soursCode}>Source code</ProjectView>
 
            </ProjectsInfoBox>
         
@@ -69,7 +67,7 @@ export const  Projects = () => {
         </ProjectTeaxtWrapper>
             
       
-        <ProjectsWrapper>  
+        <ProjectsWrapper className="ProjectsWrapper">  
 
           {ProjectData.map((project) => (
             <InfoBox key={project.id} project={project} />
