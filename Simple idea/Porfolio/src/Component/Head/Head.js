@@ -10,9 +10,10 @@ import {
          HeadImgWrapper, 
             HeadImg , 
          HeadInfoDetail,
+         HeadNameWrapper,
             HeadName , 
-            HeadDes , 
-            HeadContact } from './HeadStyle';
+         HeadDes , 
+         HeadContact } from './HeadStyle';
 
 import {contactData } from '../../data/ContactData';
 import { Data } from '../../data/HeadData';
@@ -25,7 +26,7 @@ export const  Head  = () =>  {
                     
                 <ContactNameWrapper>
                 
-                    <ContactName  weight='bolder'>MOSTAFAELHAWARY</ContactName>
+                    <ContactName  weight='bolder'>MOSTAFA EL HAWARY</ContactName>
 
                 </ContactNameWrapper>
 
@@ -48,13 +49,18 @@ export const  Head  = () =>  {
 
                          <HeadImgWrapper>
                 
-                           <HeadImg src={el.img}></HeadImg>
+                           <HeadImg src={el.img} ></HeadImg>
         
                         </HeadImgWrapper>
 
                         <HeadInfoDetail>
                         
-                          <HeadName  mt='20px' mb='20px'>{el.HeadName}</HeadName>
+                          <HeadNameWrapper  mt='30px' mb='30px'>
+                            <HeadName>
+                            {el.HeadName}
+                            
+                            </HeadName>
+                          </HeadNameWrapper>
                           <HeadDes>{el.des}</HeadDes>
                           <HeadContact href={el.contactLink}>contact me</HeadContact>
                           

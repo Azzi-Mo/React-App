@@ -108,6 +108,7 @@ export const ContactSoicalslide = styled.div`
       grid-gap: 20rem;
       border-bottom: ${({ bb }) => (bb ? bb : "")};
       border-top: ${({ bt }) => (bt ? bt : "")};
+
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 4rem;
@@ -139,19 +140,16 @@ export const ContactSoicalslide = styled.div`
 
                    export const ContactName = styled.div`
                       color: white;
-                      font-weight: ${(props) => props.weight };
+                      /* font-weight: ${(props) => props.weight }; */
                      `;
 
             export const ContactIconWrapper = styled.div`
                       display: grid;
-                      /* justify-content: space-between; */
                       grid-template-columns: repeat(4,1fr);
                       text-align: end;
-                      /* column-gap: 5px; */
                   @media screen and (max-width: 768px) {
                       text-align: center;
-                      border: 1px solid red;
-
+ 
                   }
                   @media screen and (max-width: 992px) {}
                    `;
@@ -159,6 +157,7 @@ export const ContactSoicalslide = styled.div`
                    export const ContactIcons = styled.i`  
                       svg{
                          width: clamp(1.1rem, 5vw, 2.5rem);
+                         z-index: 1;
                       }
               
                    `;
