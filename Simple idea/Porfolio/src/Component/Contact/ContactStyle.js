@@ -17,6 +17,7 @@ export const ContactWrapper = styled.div`
 	}
 
 
+
 `;
 
 
@@ -30,6 +31,8 @@ export const ContactWrapper = styled.div`
       @media screen and (max-width: 992px) {
          text-align: center;
       }
+
+
     `;
 
             export const ContactTitle = styled(motion.div)`
@@ -120,7 +123,7 @@ export const ContactSoicalslide = styled.div`
 	}
    @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
-      grid-row-gap: 2rem;
+      grid-row-gap: 1rem;
 
 	}
 
@@ -128,25 +131,27 @@ export const ContactSoicalslide = styled.div`
             export const ContactNameWrapper = styled.div`
                      display: grid;
                      font-size: clamp(1.1rem, 2vw, 1.5rem);
+                     align-items: center;
                   @media screen and (max-width: 768px) {
                      text-align: center;
                   }
                   @media screen and (max-width: 992px) {
                
                      align-items: center;
+                     font-size: clamp(1.6rem, 2.6vw, 1.6rem);
 
                   }
             `;
 
                    export const ContactName = styled.div`
                       color: white;
-                      /* font-weight: ${(props) => props.weight }; */
                      `;
 
             export const ContactIconWrapper = styled.div`
                       display: grid;
                       grid-template-columns: repeat(4,1fr);
                       text-align: end;
+
                   @media screen and (max-width: 768px) {
                       text-align: center;
  
@@ -158,7 +163,16 @@ export const ContactSoicalslide = styled.div`
                       svg{
                          width: clamp(1.1rem, 5vw, 2.5rem);
                          z-index: 1;
+                        
+                         @media screen and (max-width: 768px) {
+ 
+                            /* grid-gap: 1rem; */
+                        }
+                        @media screen and (max-width: 992px) {
+                           width: clamp(1.9rem, 6vw, 2.8rem);
+                        }
                       }
+                      
               
                    `;
 

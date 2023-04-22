@@ -123,7 +123,7 @@ export const Contact = () => {
         
             <ContactNameWrapper>
             
-              <ContactName  weight='bolder'>MOSTAFA EL HAWARY</ContactName>
+              <ContactName >MOSTAFA EL HAWARY</ContactName>
 
             </ContactNameWrapper>
 

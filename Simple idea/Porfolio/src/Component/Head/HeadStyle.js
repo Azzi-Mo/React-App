@@ -78,16 +78,17 @@ export const HeadInfoWrapper = styled.div`
                     `
 
                   export const HeadName = styled.span`
-                    font-size: clamp(3.5rem, 7vw, 2.5rem);
+                     font-size: clamp(3.5rem, 7vw, 2.5rem);
                      margin: ${({ margin }) => (margin ? margin : "")};
-                   
                      color:${(props)=> props.align ? props.align : '#FEFFFE'};
                      text-align: ${(props)=> props.align };
                      letter-spacing: .1rem;
                      line-height: 4rem;
                      font-weight: 600;
                      width: 70%;
-                     border-bottom: 5px solid  #4CE3A0;
+                     span{
+                        border-bottom: 5px solid  #4CE3A0;
+                     }
                      @media screen and (max-width: 1100px) {
                         grid-template-columns: repeat(2, 1fr);
                         grid-row-gap: 4rem;
@@ -119,13 +120,18 @@ export const HeadInfoWrapper = styled.div`
          `
          export const HeadContact = styled.a`
          
-         
-         font-size: clamp(2.5rem, 7vw, 2.5rem);
+                     
+                     font-size: clamp(1rem, 2.3vw, 2rem);
+                     padding-top: ${({ pt }) => (pt ? pt : "")};
+                     padding-bottom: ${({ pb }) => (pb ? pb : "")};;
                      margin: ${({ margin }) => (margin ? margin : "")};
                      margin-bottom: ${({ mb }) => (mb ? mb : "")};
                      margin-top: ${({ mt }) => (mt ? mt : "")};
                      color:${(props)=> props.align ? props.align : '#FEFFFE'};
                      text-align: ${(props)=> props.align };
+                     text-decoration: none;
+                     border-bottom: 2px solid rgb(76, 227, 160);
+                     width: fit-content;
 
          `
 

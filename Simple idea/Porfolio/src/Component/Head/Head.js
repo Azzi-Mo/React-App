@@ -55,14 +55,14 @@ export const  Head  = () =>  {
 
                         <HeadInfoDetail>
                         
-                          <HeadNameWrapper  mt='30px' mb='30px'>
+                          <HeadNameWrapper  mt='50px' mb='50px'>
                             <HeadName>
                             {el.HeadName}
-                            
+                             <span>Mostafa El Hawary.</span>
                             </HeadName>
                           </HeadNameWrapper>
-                          <HeadDes>{el.des}</HeadDes>
-                          <HeadContact href={el.contactLink}>contact me</HeadContact>
+                          <HeadDes >{el.des}</HeadDes>
+                          <HeadContact  mt='50px' mb='50px' href={el.contactLink}>contact me</HeadContact>
                           
                         </HeadInfoDetail>
 
