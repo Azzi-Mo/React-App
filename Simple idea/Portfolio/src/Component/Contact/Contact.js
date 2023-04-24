@@ -47,7 +47,7 @@ export const Contact = () => {
   console.log(getSizePage(window.innerWidth));
 
   return (
-    <Section smPadding="10px" position="relative" id="Contact" inverse>
+    <Section smPadding="10px" position="relative" id="Contact" inverse >
       <Container   inverse  pt='100px' pb='100px' >
         <ContactWrapper>
 
