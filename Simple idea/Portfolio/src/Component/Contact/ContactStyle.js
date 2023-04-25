@@ -119,7 +119,7 @@ export const ContactSoicalslide = styled.div`
 	}
    @media screen and (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
-      grid-row-gap: 1rem;
+      grid-row-gap: .1rem;
 
 	}
 

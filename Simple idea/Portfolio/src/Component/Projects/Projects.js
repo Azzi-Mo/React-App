@@ -57,7 +57,7 @@ export const  Projects = () => {
 
   return (
     <Section smPadding="10px" position="relative" id="Projects" >
-    <Container className="cont"  pt='100px' pb='100px' border='1px solid white'>
+    <Container className="cont"  pt='100px' pb='100px'>
 
         <ProjectTeaxtWrapper>
 

@@ -4,7 +4,7 @@ import { TechWrapper , TechBox , TechName , TechEx} from './TechnoStyle'
 import { Data } from '../../data/TechnoData'
 export const Techno = ()=>  {
   return (
-    <section>
+    <Section>
 
       <Container  pt='100px' pb='100px' border='1px solid white'>
       
@@ -32,7 +32,7 @@ export const Techno = ()=>  {
 
       </Container>
       
-    </section>
+    </Section>
   )
 }
 

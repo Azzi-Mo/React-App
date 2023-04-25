@@ -55,7 +55,7 @@ export const  Head  = () =>  {
 
                         <HeadInfoDetail>
                         
-                          <HeadNameWrapper  mt='50px' mb='50px'>
+                          <HeadNameWrapper  mt='40px' mb='40px'>
                             <HeadName>
                             {el.HeadName}
                              <span>Mostafa El Hawary.</span>
