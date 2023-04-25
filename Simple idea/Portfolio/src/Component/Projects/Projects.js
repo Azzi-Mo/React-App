@@ -56,8 +56,8 @@ function InfoBox({ project }) {
 export const  Projects = () => {
 
   return (
-    <Section smPadding="50px 10px" position="relative" id="Projects" >
-    <Container className="cont">
+    <Section smPadding="10px" position="relative" id="Projects" >
+    <Container className="cont"  pt='100px' pb='100px' border='1px solid white'>
 
         <ProjectTeaxtWrapper>
 

@@ -34,6 +34,7 @@ export const Section = styled.section`
   min-height: ${({ minHeight }) => (minHeight ? minHeight : "auto")};
   padding-top: ${({ pt }) => (pt ? pt : "")};
   padding-bottom:${({ pb }) => (pb  ? pb  : "")};
+
   /* @media screen and (max-width: 768px) {
     padding: ${({ smPadding }) => (smPadding ? smPadding : "")};
   } */
@@ -46,6 +47,9 @@ export const Container = styled.div`
   margin-left: auto;
   padding: 0 50px;
   background: ${({ inverse }) => (inverse ? "#252425" : "#141514")};
+  padding-top: ${({ pt }) => (pt ? pt : "")};
+  padding-bottom:${({ pb }) => (pb  ? pb  : "")};
+  border-bottom: ${(props)=> props.border ? props.border : '#FEFFFE'};
 
   @media screen and (max-width: 960px) {
     padding: 0 30px;

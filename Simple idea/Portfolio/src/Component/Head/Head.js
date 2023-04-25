@@ -19,8 +19,8 @@ import {contactData } from '../../data/ContactData';
 import { Data } from '../../data/HeadData';
 export const  Head  = () =>  {
   return (
-    <Section pt='20px'>
-       <Container>
+    <Section>
+       <Container  pt='20px' pb='100px' border='1px solid white'>
 
             <ContactSoicalslide >
                     
