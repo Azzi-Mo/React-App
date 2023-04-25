@@ -136,3 +136,5 @@ export const Button = styled.button`
 `;
 
 export default GlobalStyle;
+
+//// "react-slick": "^0.28.1",
