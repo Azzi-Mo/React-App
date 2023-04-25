@@ -6,24 +6,30 @@ const iconStyle = (Icon) => <Icon size="3rem" color="#0f0f0f" />;
 
 export const contactData = [
 	{
+		id: 1,
 		name: 'Twitter',
 		icon: iconStyle(AiFillTwitterSquare),
-		imgClass: 'one',
+		link:'https://twitter.com/oOMoSTafOo'
+		
 	},
 	{
+		id: 2,
 		name: 'Github',
 		icon: iconStyle(AiOutlineGithub),
-		imgClass: 'two',
+		link:'https://github.com/Mostafa-ElHawary'
+
 	},
 	{
+		id: 3,
 		name: 'Linkedin',
 		icon: iconStyle(AiFillLinkedin),
-		imgClass: 'three',
+		link:' https://www.linkedin.com/in/mostafa-el-hawary-542813248/'
 	},
 	{
+		id: 4,
 		name: 'Instagram',
 		icon: iconStyle(AiFillInstagram),
-		imgClass: 'four',
+		link:'https://www.instagram.com/mostafabinaziz/'
 	},
 
 ];

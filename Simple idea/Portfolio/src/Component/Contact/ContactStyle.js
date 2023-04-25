@@ -164,11 +164,11 @@ export const ContactSoicalslide = styled.div`
                   }
                    `;
 
-                   export const ContactIcons = styled.i`  
+                   export const ContactIcons = styled.a`  
                       svg{
                          /* width: clamp(1.1rem, 5vw, 2.5rem); */
                          z-index: 1;
-                        
+                         cursor: pointer;
                          @media screen and (max-width: 768px) {
  
                             /* grid-gap: 1rem; */
