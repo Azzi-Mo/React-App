@@ -17,6 +17,7 @@ import {
 
 import {contactData } from '../../data/ContactData';
 import { Data } from '../../data/HeadData';
+
 export const  Head  = () =>  {
   return (
     <Section>
@@ -32,7 +33,7 @@ export const  Head  = () =>  {
 
                 <ContactIconWrapper>
                     {contactData.map((el) => (
-                    <ContactIcons  className={el.imgClass} key={el.imgClass}>
+                    <ContactIcons  className={el.imgClass} key={el.imgClass}  href={el.link} target="_blanck" >
                     {el.icon}
                     </ContactIcons>
 
@@ -55,7 +56,7 @@ export const  Head  = () =>  {
 
                         <HeadInfoDetail>
                         
-                          <HeadNameWrapper  mt='40px' mb='40px'>
+                          <HeadNameWrapper  pt='50px' pb='50px' mt='20px' mb='20px'>
                             <HeadName>
                             {el.HeadName}
                              <span>Mostafa El Hawary.</span>

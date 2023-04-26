@@ -3,7 +3,7 @@ import {Container , Section} from '../../globalStyle'
 import {
     ProjectTeaxtWrapper,
         ProjectTitle,
-        ProjectContactSpan,
+        ProjectContactLink,
     ProjectsWrapper,
         ProjectsInfoBox,
             ProjectImgWrapper,
@@ -59,10 +59,10 @@ export const  Projects = () => {
     <Section smPadding="10px" position="relative" id="Projects" >
     <Container className="cont"  pt='100px' pb='100px'>
 
-        <ProjectTeaxtWrapper>
+        <ProjectTeaxtWrapper padding='30px 0'>
 
             <ProjectTitle  weight='bolder'>Projects</ProjectTitle>
-            <ProjectContactSpan>CONTACT ME</ProjectContactSpan>
+            <ProjectContactLink>CONTACT ME</ProjectContactLink>
 
         </ProjectTeaxtWrapper>
             

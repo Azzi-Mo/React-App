@@ -103,6 +103,7 @@ export const Contact = () => {
                animate={animate}
                transition={{ duration: 0.5 + 6 * 0.1 }}
                ></ContactTextArea>
+               
                <ContactWrapperSendMessage
                initial={initial}
                animate={animate}

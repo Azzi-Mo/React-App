@@ -53,6 +53,7 @@ export const ContactWrapper = styled.div`
       display: grid;
       grid-template-columns: repeat(1, 1fr);
       margin-top: 4rem;
+      margin-bottom: 4rem;
       grid-gap: 2rem;
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(1, 1fr);
@@ -91,7 +92,9 @@ export const ContactWrapper = styled.div`
              `;
 
              
-                  export const ContactSendMessage = styled.span`
+                  export const ContactSendMessage = styled.a`
+                    text-decoration: none;
+                    cursor:pointer;
                      color: white;
                      border-bottom: 1px solid   #4CE3A0;
                      padding: ${(props) => props.padding};

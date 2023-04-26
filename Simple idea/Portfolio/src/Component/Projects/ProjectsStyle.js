@@ -4,42 +4,28 @@ import { motion } from 'framer-motion';
 
 export const ProjectTeaxtWrapper = styled.div`
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* position: relative; */
-           
+            display: flex;
+            /* grid-template-columns: repeat(2, 1fr); */
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            padding: ${(props) => props.padding};
 `
     export const ProjectTitle = styled.div`
     
-               /* position: absolute;
-                bottom: 0;
-                font-size: clamp(.5rem, 7vw, 5rem);
-                margin: ${(props)=> props.margin };
-                margin-bottom: ${({ mb }) => (mb ? mb : "")};
-                margin-top: ${({ mt }) => (mt ? mt : "")};
-                color:${(props)=> props.align ? props.align : '#FEFFFE'};
-                letter-spacing: 0.1rem;
-                text-align: ${(props)=> props.align }; */
                 color: white;
                 font-size: clamp(3.6rem, 3vw, 3.5rem);
                 font-weight: ${(props) => props.weight };
 
     `
 
-    export const ProjectContactSpan = styled.span`
-                /* position: absolute; */
-                right: 0;
-                bottom: 0;
-                font-size: clamp(.5rem, 4vw, 1rem);
-                margin: ${(props)=> props.margin };
-                margin-bottom: ${({ mb }) => (mb ? mb : "")};
-                margin-top: ${({ mt }) => (mt ? mt : "")};
-                color:${(props)=> props.align ? props.align : '#FEFFFE'};
-                letter-spacing: 0.1rem;
-                text-align: ${(props)=> props.align };
-                border-bottom: 1px solid #4CE3A0;
-                width: fit-content;
-                text-align: center;
+    export const ProjectContactLink = styled.a`
+               
+        text-decoration: none;
+        color: white;
+        border-bottom: 1px solid   #4CE3A0;
+        padding: ${(props) => props.padding};
+        cursor: pointer;
     
     `
 export const ProjectsWrapper = styled.div`
