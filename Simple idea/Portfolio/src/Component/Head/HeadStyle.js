@@ -41,28 +41,23 @@ export const HeadInfoWrapper = styled.div`
           grid-column: 1/3;
           justify-content: center;
 
-
            }
 
     `
           export const HeadImg = styled.img`
-
-
-              /* border: 0;
-              vertical-align: middle;
-              display: inline-block;
-              object-fit: contain;
-              z-index: 2; */
-
+               position: relative;
+               top: -48px;
                padding-right: 0;
                border: 0;
-               max-width: 100%;
-               vertical-align: middle;
-               display: inline-block;
-               object-fit: cover;
-               max-height: 500px;
-               z-index: 2;
+               /* vertical-align: middle; */
+               /* display: inline-block; */
+               /* object-fit: cover; */
+               max-height: 600px;
+               z-index: 1;
                border-radius: 5px;
+               width: 100%;
+               @media screen and (max-width: 992px) {
+           }
 
           `
    export const HeadInfoDetail= styled.div`
