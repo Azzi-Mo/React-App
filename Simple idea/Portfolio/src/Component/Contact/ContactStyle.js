@@ -107,7 +107,6 @@ export const ContactSoicalslide = styled.div`
       grid-gap: 24.5rem;
       border-bottom: ${({ bb }) => (bb ? bb : "")};
       border-top: ${({ bt }) => (bt ? bt : "")};
-      border: 1px solid red;
 	@media screen and (max-width: 1100px) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-row-gap: 4rem;

@@ -34,7 +34,7 @@ export const HeadInfoWrapper = styled.div`
           order: 2;
           justify-content: center;
           align-items: center;
-          max-height: 500px;
+          max-height: 600px;
 	       position: relative;
           @media screen and (max-width: 992px) {
           order: 1;
@@ -82,8 +82,12 @@ export const HeadInfoWrapper = styled.div`
    `
 
          export const HeadNameWrapper = styled.div`
-                    margin-bottom: ${({ mb }) => (mb ? mb : "")};
+                    padding-bottom: ${({ pb }) => (pb ? pb : "")};
+                     padding-top: ${({ pt }) => (pt ? pt : "")};
+                     @media screen and (max-width: 992px){
+                        margin-bottom: ${({ mb }) => (mb ? mb : "")};
                      margin-top: ${({ mt }) => (mt ? mt : "")};
+                     }
                     `
 
                   export const HeadName = styled.span`
